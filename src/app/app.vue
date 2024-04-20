@@ -1,11 +1,7 @@
-<script setup lang='ts'>
-    
-</script>
+<script setup lang="ts"></script>
 <template>
-    <div>
-        app
-    </div>
+  <div>
+    <RouterView />
+  </div>
 </template>
-<style lang='scss'>
-        
-</style>
+<style lang="scss"></style>
