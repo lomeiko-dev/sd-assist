@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "yarn json-server ./server/db/json-server.json -p 5000",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "json-server": "^1.0.0-alpha.23",
     "vue": "^3.4.21"
   },
   "devDependencies": {
