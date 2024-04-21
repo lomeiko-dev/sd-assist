@@ -10,17 +10,18 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#163C66",
-      },
-      screens: {
-        mobile: "430px",
-        tablet: "768px",
-        sxga: "1024px",
-        "mini-laptop": "1280px",
-        laptop: "1440px",
-      },
-    },
+		colors: {
+			'primary': '#1C426D',
+			'smoky-white': '#F2F8FF'
+		},
+		screens: {
+			mobile: "430px",
+			tablet: "768px",
+			sxga: '1024px',
+			"mini-laptop": "1240px",
+			laptop: "1440px",
+		}
+	},
   },
   plugins: [],
 };
