@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-    
+    import {layoutApp} from 'widgets/layouts/layout-app'
 </script>
 <template>
     <div>
-        home
+        <layout-app/>
     </div>
 </template>
 <style lang='scss'>

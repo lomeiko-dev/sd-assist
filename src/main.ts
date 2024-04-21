@@ -3,7 +3,7 @@ import App from "./app/app.vue";
 import { router } from "app/routing";
 import { createPinia } from "pinia";
 import PrimeVue from "primevue/config";
-import 'primevue/resources/themes/aura-light-green/theme.css'
+import "primevue/resources/themes/aura-light-green/theme.css";
 
 const pinia = createPinia();
 
