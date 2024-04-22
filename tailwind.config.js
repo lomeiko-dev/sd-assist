@@ -12,6 +12,13 @@ export default {
     extend: {
 		colors: {
 			'primary': '#163C66',
+		},
+		screens: {
+			mobile: "430px",
+			tablet: "768px",
+			sxga: '1024px',
+			"mini-laptop": "1240px",
+			laptop: "1440px",
 		}
 	},
   },
