@@ -1,3 +1,9 @@
+interface IBid {
+  userId: number;
+  rate: number;
+  date: string;
+}
+
 export interface ILot {
   id: number;
   id_lot: string;
@@ -6,14 +12,14 @@ export interface ILot {
   images: string[];
   title: string;
   default_rate: number;
+  bids: IBid[];
   country: string;
   mileage: number;
   KPP: string;
   engine: string;
-  date: string;
+  date_create: Date;
   seller: string;
-  deadline_date: string;
-  deadline_time: string;
+  date_deadline: Date;
   release_year: number;
   type_insurance: string;
   VIN_number: number;
