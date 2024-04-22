@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ICar } from "../model/types";
+import { ILot } from "../model/types";
+
 interface IProps {
-  data: ICar;
+  data: ILot;
   isMobile?: boolean;
 }
 

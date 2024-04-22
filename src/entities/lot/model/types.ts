@@ -1,4 +1,4 @@
-export interface ICar {
+export interface ILot {
   id: number;
   id_lot: string;
   isOpen: boolean;
@@ -8,7 +8,7 @@ export interface ICar {
   default_rate: number;
   country: string;
   mileage: number;
-  KPP: string
+  KPP: string;
   engine: string;
   date: string;
   seller: string;
