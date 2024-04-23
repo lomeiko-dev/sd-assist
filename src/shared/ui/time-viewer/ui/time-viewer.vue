@@ -13,14 +13,13 @@ const props = defineProps<IProps>()
 const days = ref(0);
 const hours = ref(0);
 const minutes = ref(0);
-
 const isTrouble = ref(false)
 onMounted(() => {
   subtractionDates()
 })
 
 const subtractionDates = () => {
-  const result = Number(props.date_deadline) - Number(props.date.getTime())
+  const result = Number(props.date_deadline) - Number(props.date)
   const hour = 1000 * 60 * 60
   const day = (hour * 24)
   days.value = Math.floor(result / day + 1)

@@ -17,9 +17,9 @@ export interface ILot {
   mileage: number;
   KPP: string;
   engine: string;
-  date_create: Date;
+  date_create: string;
   seller: string;
-  date_deadline: Date;
+  date_deadline: string;
   release_year: number;
   type_insurance: string;
   VIN_number: number;
