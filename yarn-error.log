@@ -1,5 +1,5 @@
 Arguments: 
-  D:\App\nodejs\node.exe C:\Users\Thunderobot\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add sass
+  D:\App\nodejs\node.exe C:\Users\Thunderobot\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\App\nodejs\;D:\App\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Java\jdk-11\bin;C:\Users\Thunderobot\AppData\Local\Android\Sdk;C:\Users\Thunderobot\AppData\Local\Android\Sdk\platform-tools;C:\Users\Thunderobot\AppData\Local\Android\Sdk\watchman;C:\Users\Thunderobot\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\dotnet\;D:\App\CMake\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Thunderobot\AppData\Local\Microsoft\WindowsApps;D:\nodejs;C:\Program Files\JetBrains\WebStorm 2023.2\bin;D:\App\Microsoft VS Code\bin;C:\Users\Thunderobot\AppData\Local\atom\bin;D:\App\WebStorm 2023.2.5\bin;;C:\Users\Thunderobot\AppData\Roaming\npm;C:\Users\Thunderobot\AppData\Local\GitHubDesktop\bin;C:\Users\Thunderobot\.dotnet\tools;C:\Users\Thunderobot\AppData\Local\Microsoft\WindowsApps;
@@ -29,7 +29,7 @@ npm manifest:
       "preview": "vite preview"
     },
     "dependencies": {
-      "json-server": "^1.0.0-alpha.23",
+      "json-server": "^0.17.4",
       "pinia": "^2.1.7",
       "primevue": "^3.51.0",
       "vue": "^3.4.21",

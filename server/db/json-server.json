@@ -1,3 +1,839 @@
 {
-    
+    "lots": [
+    {
+      "id": "1",
+      "id_lot": "124124/2",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36.170Z",
+      "date_deadline": "2024-05-23T09:55:36.170Z",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "id_lot": "32523/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Легион`, Ростов",
+      "release_year": 2023,
+      "date_create": "2024-04-23T09:55:36.170Z",
+      "date_deadline": "'2024-07-16T12:32:00.170Z",
+      "mileage": 100,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "id_lot": "235233/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36.170Z",
+      "date_deadline": "'2024-06-00T09:55:36.170Z",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2025-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2026-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "id_lot": "124124/1",
+      "image_preview": "https://a.d-cd.net/84AAAgFFCOA-1920.jpg",
+      "seller": "ООО `Ромашка`, Москва",
+      "release_year": 1999,
+      "date_create": "2024-04-23T09:55:36",
+      "date_deadline": "'2024-05-23T09:55:36",
+      "mileage": 761000,
+      "isOpen": true,
+      "KPP": "АКПП",
+      "engine": "3.8 л | 250 л.с. | Бензин",
+      "default_rate": 1000000,
+      "title": "LADA sedan (Баклажан)",
+      "bids": [
+        {
+          "userId": 1,
+          "rate": 1500000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 2,
+          "rate": 3000000,
+          "date": "2021-01-01T12:00:00.000Z"
+        },
+        {
+          "userId": 3,
+          "rate": 3150000,
+          "date": "2021-01-01T12:00:00.000Z"
+        }
+      ]
+    }
+  ],
+  "lots-total-count": {
+    "total_count": 26
+  }
 }

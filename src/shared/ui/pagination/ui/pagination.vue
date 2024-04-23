@@ -8,6 +8,7 @@ interface IProps {
   totalCount: number;
 }
 
+const emit = defineEmits(["setPage"]);
 const props = defineProps<IProps>();
 
 const countes = Array.from({ length: props.totalCount }, (_, i) => i + 1);
@@ -15,29 +16,28 @@ const selectedNumber = ref(2);
 
 const changeSelectedNumber = (index: number) => {
   selectedNumber.value = index;
+  emit("setPage", index);
 };
 
 const incrementSelectedNumber = () => {
-  if (selectedNumber.value === 10) return;
-
-  selectedNumber.value = selectedNumber.value + 1;
+  if (selectedNumber.value === props.totalCount) return;
+  changeSelectedNumber(selectedNumber.value + 1);
 };
 
 const dicrementSelectedNumber = () => {
   if (selectedNumber.value === 0) return;
-
-  selectedNumber.value = selectedNumber.value - 1;
+  changeSelectedNumber(selectedNumber.value - 1);
 };
 </script>
 <template>
   <div class="flex flex-row items-center gap-[30px]">
-    <button class="text-base font-normal text-gray-400 duration-300 hover:text-black">Назад</button>
-    <div @click="dicrementSelectedNumber()" class="flex flex-row items-center gap-[10px]">
+    <button @click="dicrementSelectedNumber()" class="text-base font-normal text-gray-400 duration-300 hover:text-black">Назад</button>
+    <div class="flex flex-row items-center gap-[10px]">
       <Numbered
         v-for="item in countes.slice(selectedNumber - (selectedNumber === 1 ? 1 : 2), selectedNumber + 1)"
         :num="item"
         :is-selected="selectedNumber === item"
-        @click="changeSelectedNumber(item + 1)"
+        @click="changeSelectedNumber(item)"
       />
       <p v-if="selectedNumber < props.totalCount - 2" class="text-sm font-normal text-gray-400 select-none">| ... |</p>
       <Numbered
