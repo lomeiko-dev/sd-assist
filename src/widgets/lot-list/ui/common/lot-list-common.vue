@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import { lotItem } from 'entities/lot';
+import { pagination } from 'shared/ui/pagination';
 
 
 //@ts-ignore
@@ -198,6 +199,7 @@ const testData: ILot[] = [
           <div v-for="item in testData" class="w-full max-w-[904px] border-y border-solid border-primary/20 py-[23px]">
             <lotItem :data="item"/>
           </div>
+          <pagination class="my-10" :total-count="10"/>
         </div>
     </div>
 </template>
