@@ -31,7 +31,7 @@ const subtractionDates = () => {
 </script>
 <template>
   <div
-    class="px-[10px] py-2 flex flex-row items-center gap-[5px] border border-solid rounded-full h-[28px]"
+    class="px-[10px] py-2 flex flex-row items-center gap-[5px] border border-solid rounded-full select-none h-[28px]"
     :class="isTrouble ? 'border-red-500/70' : 'border-green-500/70'"
   >
     <inlineSvg :src="time" :class="isTrouble ? 'time-disable' : 'time-success'" />

@@ -12,7 +12,7 @@ const emit = defineEmits(["setPage"]);
 const props = defineProps<IProps>();
 
 const countes = Array.from({ length: props.totalCount }, (_, i) => i + 1);
-const selectedNumber = ref(2);
+const selectedNumber = ref(1);
 
 const changeSelectedNumber = (index: number) => {
   selectedNumber.value = index;
@@ -30,11 +30,23 @@ const dicrementSelectedNumber = () => {
 };
 </script>
 <template>
-  <div class="flex flex-row items-center gap-[30px]">
-    <button @click="dicrementSelectedNumber()" class="text-base font-normal text-gray-400 duration-300 hover:text-black">Назад</button>
+  <div class="flex flex-row flex-wrap justify-center items-center gap-[30px]">
+    <button
+      @click="dicrementSelectedNumber()"
+      class="text-base font-normal text-gray-400 duration-300 hover:text-black"
+    >
+      Назад
+    </button>
     <div class="flex flex-row items-center gap-[10px]">
+      <div class="flex flex-row items-center gap-[10px]" v-if="selectedNumber > 3">
+        <Numbered :num="1" :is-selected="selectedNumber === 1" @click="changeSelectedNumber(1)" />
+        <p class="text-sm font-normal text-gray-400 select-none">| ... |</p>
+      </div>
       <Numbered
-        v-for="item in countes.slice(selectedNumber - (selectedNumber === 1 ? 1 : 2), selectedNumber + 1)"
+        v-for="item in countes.slice(
+          selectedNumber - (selectedNumber === 1 ? 1 : 2),
+          selectedNumber + (selectedNumber === 1 ? 2 : 1)
+        )"
         :num="item"
         :is-selected="selectedNumber === item"
         @click="changeSelectedNumber(item)"
