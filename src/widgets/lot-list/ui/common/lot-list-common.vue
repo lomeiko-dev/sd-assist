@@ -11,7 +11,6 @@ const loadLots = async () => {
   const { data, total } = (await getLotPages(store.page, LIMIT)) || {};
   store.setLots(data || [], true);
   store.setTotalCount(total);
-  console.log(data)
 };
 
 watch(() => store.page, () => {
@@ -26,7 +25,7 @@ onMounted(async () => {
 <template>
   <div>
     <div class="flex flex-col">
-      <div v-for="item in store.lots" class="w-full max-w-[904px] border-y border-solid border-primary/20 py-[23px]">
+      <div v-for="item in store.lots" class="w-full border-y border-solid border-primary/20 py-[23px]">
         <lotItem :data="item" />
       </div>
       <pagination @set-page="(index) => store.setPage(index)" v-if="store.total_count !== 0" class="my-10" :total-count="Math.ceil(store.total_count / LIMIT)" />

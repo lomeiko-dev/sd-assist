@@ -4,7 +4,6 @@ import inlineSvg from "vue-inline-svg";
 import { onMounted, ref } from "vue";
 
 interface IProps {
-  date: Date;
   date_deadline: Date;
 }
 
@@ -19,7 +18,7 @@ onMounted(() => {
 })
 
 const subtractionDates = () => {
-  const result = Number(props.date_deadline) - Number(props.date)
+  const result = Number(props.date_deadline) - Number(new Date())
   const hour = 1000 * 60 * 60
   const day = (hour * 24)
   days.value = Math.floor(result / day + 1)
