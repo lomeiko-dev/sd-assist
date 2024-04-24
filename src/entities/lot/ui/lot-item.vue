@@ -3,6 +3,8 @@ import { ref, watch} from "vue";
 import { ILot } from "../model/types";
 import { timeViewer } from "shared/ui/time-viewer";
 import { useWindowSize } from "@vueuse/core";
+import ItemDataLot2 from "./components/item-data-lot-2.vue";
+
 interface IProps {
   data: ILot;
 }
@@ -32,35 +34,22 @@ const isHover = ref(false);
                <h3 class="text-lg font-bold leading-[19px]">{{ props.data.title }} - Лот № {{ props.data.id_lot }}</h3>
                <timeViewer :date_deadline="new Date(props.data.date_deadline)"/>
             </div>
-            <div class="flex items-start mt-[6px] gap-[5px]">
-              <p class="text-sm font-normal text-gray-500 gap-[4px] mt-[2px] leading-[16px]">Продавец:</p>
-              <h4 class="text-sm font-semibold text-black text-ellipsis whitespace-nowrap overflow-hidden w-full max-w-[280px]">{{ props.data.seller }}</h4>
-            </div>
+            <ItemDataLot2 name="Продавец" :data="props.data.seller"/>
         </div>
         <div class="flex flex-row flex-wrap w-full max-w-[498px] justify-between mt-[24px]">
             <div>
-               <div class="flex flex-row items-center gap-[5px]">
-                  <p class="text-sm font-normal text-gray-500 leading-[16px]">Год выпуска:</p>
-                  <h4 class="text-sm font-semibold text-black">{{ props.data.release_year }}</h4>
-               </div>
-               <div class="flex flex-row items-center gap-[5px]">
-                  <p class="text-sm font-normal text-gray-500 gap-[4px] leading-[16px]">Пробег:</p>
-                  <h4 class="text-sm font-semibold text-black">{{ props.data.mileage }} км</h4>
-               </div>
+               <ItemDataLot2 name="Год выпуска" :data="String(props.data.release_year)"/>
+               <ItemDataLot2 name="Пробег" :data="String(props.data.mileage)"/>
             </div>
             <div>
-              <div class="flex flex-row items-center gap-[5px]">
-                  <p class="text-sm font-normal text-gray-500 leading-[16px]">КПП:</p>
-                  <h4 class="text-sm font-semibold text-black">{{ props.data.KPP }}</h4>
-               </div>
-               <div class="flex flex-row items-center gap-[5px]">
-                  <p class="text-sm font-normal text-gray-500 gap-[4px] leading-[16px]">Двигатель:</p>
-                  <h4 class="text-sm font-semibold text-black">{{ props.data.engine }}</h4>
-               </div>
+               <ItemDataLot2 name="КПП" :data="String(props.data.KPP)"/>
+               <ItemDataLot2 name="Двигатель:" :data="String(props.data.engine)"/>
+
             </div>
         </div>
         <div class="flex flex-row items-center gap-4 mt-4">
-            <p class="text-sm font-normal flex items-center gap-[6px] text-primary">Текущая цена: <h4 class="text-base font-bold">{{ props.data.bids.length > 1 ? props.data.bids[props.data.bids.length-1].rate : props.data.default_rate }}₽</h4></p>
+            <p class="text-sm font-normal flex items-center gap-[6px] text-primary">Текущая цена:</p>
+            <h4 class="text-base font-bold text-primary">{{ props.data.bids.length > 1 ? props.data.bids[props.data.bids.length-1].rate : props.data.default_rate }}₽</h4>
             <h5 class="text-sm font-bold text-primary/50 line-through" v-if="props.data.bids.length > 2 && thisWidth > 768">{{  props.data.bids[props.data.bids.length-2].rate }}₽</h5>
         </div>
         <div class="duration-200" :class="isHover || thisWidth < 768 ? 'opacity-100' : 'opacity-0'">

@@ -8,7 +8,10 @@ import banner_intro from "shared/assets/img/banners/banner-intro.webp";
     >
       Автомобильный аукцион SD-assist.ru
     </h1>
-    <div :style="`background-image: url(${banner_intro})`" class="banner tablet:h-[493px] h-[213px] tablet:mt-[75px] mt-[42px]"></div>
+    <div
+      :style="`background-image: url(${banner_intro})`"
+      class="banner tablet:h-[493px] h-[213px] tablet:mt-[75px] mt-[42px]"
+    ></div>
   </div>
 </template>
 <style scoped lang="scss">
