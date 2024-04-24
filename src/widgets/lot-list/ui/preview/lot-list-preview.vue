@@ -6,7 +6,7 @@ import { onMounted, ref } from "vue";
 import inlineSvg from "vue-inline-svg";
 
 interface IProps {
-  title: string;
+  title?: string;
   toAllOffers: string;
 }
 
