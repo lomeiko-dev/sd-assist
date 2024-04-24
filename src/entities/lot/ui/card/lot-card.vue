@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ILot } from "../model/types";
+import { ILot } from "../../model/types";
 import { useWindowSize } from "@vueuse/core";
-import ItemDataLot1 from "./components/item-data-lot-1.vue";
+import ItemData from "./item-data.vue";
 
 interface IProps {
   data: ILot;
@@ -35,16 +35,16 @@ const emit = defineEmits(["to"]);
         <h3 class="tablet:text-[22px] text-lg font-medium leading-[24.2px]">{{ props.data.title }}</h3>
       </div>
       <div class="flex flex-col gap-[22px] mt-[19px]">
-        <ItemDataLot1 name="Лот">
+        <ItemData name="Лот">
           <div class="text-sm flex" :class="props.data.isOpen ? 'text-green-600' : 'text-red-600'">
             <p class="font-bold">{{ props.data.id_lot }}</p>
             <p>{{ props.data.isOpen ? "(Открытый)" : "(Закрытый)" }}</p>
           </div>
-        </ItemDataLot1>
-        <ItemDataLot1 name="Город" :data="props.data.country" />
-        <ItemDataLot1 name="Пробег" :data="String(props.data.mileage)" />
-        <ItemDataLot1 name="КПП" :data="props.data.KPP" />
-        <ItemDataLot1 name="Двигатель" :data="props.data.engine" />
+        </ItemData>
+        <ItemData name="Город" :data="props.data.country" />
+        <ItemData name="Пробег" :data="`${String(props.data.mileage)}км`" />
+        <ItemData name="КПП" :data="props.data.KPP" />
+        <ItemData name="Двигатель" :data="props.data.engine" />
       </div>
       <button
         @click="$emit('to')"

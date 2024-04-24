@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import time from "shared/assets/img/icons/time.svg";
+import time from "shared/assets/icons/time.svg";
 import inlineSvg from "vue-inline-svg";
 import { onMounted, ref } from "vue";
 

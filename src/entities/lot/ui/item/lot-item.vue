@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, watch} from "vue";
-import { ILot } from "../model/types";
+import { ILot } from "../../model/types";
 import { timeViewer } from "shared/ui/time-viewer";
 import { useWindowSize } from "@vueuse/core";
-import ItemDataLot2 from "./components/item-data-lot-2.vue";
+import ItemData from "./item-data.vue";
 
 interface IProps {
   data: ILot;
@@ -34,16 +34,16 @@ const isHover = ref(false);
                <h3 class="text-lg font-bold leading-[19px]">{{ props.data.title }} - Лот № {{ props.data.id_lot }}</h3>
                <timeViewer :date_deadline="new Date(props.data.date_deadline)"/>
             </div>
-            <ItemDataLot2 name="Продавец" :data="props.data.seller"/>
+            <ItemData name="Продавец" :data="props.data.seller"/>
         </div>
         <div class="flex flex-row flex-wrap w-full max-w-[498px] justify-between mt-[24px]">
             <div>
-               <ItemDataLot2 name="Год выпуска" :data="String(props.data.release_year)"/>
-               <ItemDataLot2 name="Пробег" :data="String(props.data.mileage)"/>
+               <ItemData name="Год выпуска" :data="`${String(props.data.release_year)}г.`"/>
+               <ItemData name="Пробег" :data="`${String(props.data.mileage)}км`"/>
             </div>
             <div>
-               <ItemDataLot2 name="КПП" :data="String(props.data.KPP)"/>
-               <ItemDataLot2 name="Двигатель:" :data="String(props.data.engine)"/>
+               <ItemData name="КПП" :data="String(props.data.KPP)"/>
+               <ItemData name="Двигатель:" :data="String(props.data.engine)"/>
 
             </div>
         </div>

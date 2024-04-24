@@ -6,4 +6,3 @@ import './style/style.css'
     <RouterView />
   </div>
 </template>
-<style lang="scss"></style>

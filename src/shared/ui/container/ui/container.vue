@@ -10,4 +10,3 @@ const props = defineProps<IProps>()
     <slot></slot>
   </div>
 </template>
-<style lang="scss"></style>

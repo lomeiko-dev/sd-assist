@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { IPropsItem } from "./types";
+import { IPropsItemData } from "../types";
 
-const props = defineProps<IPropsItem>();
+const props = defineProps<IPropsItemData>();
 </script>
 <template>
   <div class="tablet:text-base text-sm font-normal flex flex-wrap flex-row justify-between">

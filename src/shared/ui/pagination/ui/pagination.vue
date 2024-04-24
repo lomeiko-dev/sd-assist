@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Numbered from "./components/numbered.vue";
-import arrow_right from "shared/assets/img/icons/arrow-right.svg";
+import arrow_right from "shared/assets/icons/arrow-right.svg";
 import inlineSvg from "vue-inline-svg";
 
 interface IProps {
@@ -68,4 +68,3 @@ const dicrementSelectedNumber = () => {
     </button>
   </div>
 </template>
-<style lang="scss"></style>

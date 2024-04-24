@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import inlineSvg from "vue-inline-svg";
-import arrow_right from "shared/assets/img/icons/arrow-right.svg";
+import arrow_right from "shared/assets/icons/arrow-right.svg";
 
 interface IProps {
     to: string;

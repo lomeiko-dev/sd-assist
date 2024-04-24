@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { IPropsItem } from "./types";
+import { IPropsItemData } from "../types";
 
-const props = defineProps<IPropsItem>();
+const props = defineProps<IPropsItemData>();
 </script>
 <template>
   <div class="flex flex-row items-start gap-[5px]">
@@ -9,4 +9,3 @@ const props = defineProps<IPropsItem>();
     <h4 class="text-sm font-semibold text-black">{{ props.data }} км</h4>
   </div>
 </template>
-<style lang="scss"></style>
