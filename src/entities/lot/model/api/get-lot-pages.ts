@@ -7,7 +7,7 @@ export const getLotPages = async (page: number, limit: number) => {
   const resultTotalCount = await ApiClient({ url: Endpoints.LOTS_TOTAL });
 
   if (resultLot.status === 200 && resultTotalCount.status === 200) {
-    const data: ILot[] = resultLot.data;
+    const data: ILot[] = resultLot.data || [];
     const total = resultTotalCount.data.total_count;
 
     return { data, total };
