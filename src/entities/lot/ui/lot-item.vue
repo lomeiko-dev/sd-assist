@@ -30,7 +30,7 @@ const isHover = ref(false);
         <div>
             <div class="flex flex-wrap flex-row items-center justify-between gap-y-[10px]">
                <h3 class="text-lg font-bold leading-[19px]">{{ props.data.title }} - Лот № {{ props.data.id_lot }}</h3>
-               <timeViewer :date="new Date(props.data.date_create)" :date_deadline="new Date(props.data.date_deadline)"/>
+               <timeViewer :date_deadline="new Date(props.data.date_deadline)"/>
             </div>
             <div class="flex items-start mt-[6px] gap-[5px]">
               <p class="text-sm font-normal text-gray-500 gap-[4px] mt-[2px] leading-[16px]">Продавец:</p>
