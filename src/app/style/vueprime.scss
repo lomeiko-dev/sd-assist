@@ -1,0 +1,31 @@
+.p-float-label>label {
+    background: white;
+    padding: 0 5px;
+}
+
+.p-inputtext:enabled:focus {
+    outline: none !important;
+}
+.p-inputtext::placeholder{
+    opacity: 0;
+}
+
+.p-float-label .p-inputtext:focus~label {
+    transform: translate(0, .9rem);
+}
+
+.p-float-label .p-inputtext:not(:placeholder-shown) ~label {
+    transform: translate(0, .9rem);
+}
+
+.p-checkbox .p-checkbox-box {
+    box-shadow: none !important;
+}
+
+.p-checkbox.p-highlight .p-checkbox-box {
+    background-color: transparent;
+}
+
+.p-checkbox-box>svg>path {
+    fill: #333 !important;
+}

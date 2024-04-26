@@ -12,7 +12,8 @@ export default {
     extend: {
 		colors: {
 			'primary': '#1C426D',
-			'smoky-white': '#F2F8FF'
+			'smoky-white': '#F2F8FF',
+      'gray': '#8C9091'
 		},
 		screens: {
 			mobile: "430px",

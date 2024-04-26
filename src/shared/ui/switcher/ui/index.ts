@@ -1,0 +1,1 @@
+export {default as switcher} from './switcher.vue'

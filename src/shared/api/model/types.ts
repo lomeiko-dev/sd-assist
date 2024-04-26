@@ -1,5 +1,5 @@
 export interface IClient {
-  data?: never | undefined;
+  data?: any | undefined;
   method?: string | undefined;
   url: string | undefined;
   params?: string | undefined;
