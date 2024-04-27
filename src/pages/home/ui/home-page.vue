@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { authForm } from 'features/auth-form';
+
 // import Intro from "./components/intro.vue";
 // import CustomerBase from "./components/customer-base.vue";
 // import { layoutApp } from "widgets/layouts/layout-app";
 // import { lotListPreview } from "widgets/lot-list";
 // import { container } from "shared/ui/container";
-import { registrationForm } from "features/registration-form";
+ import { registrationForm } from "features/registration-form";
 </script>
 <template>
   <div>
@@ -16,6 +18,7 @@ import { registrationForm } from "features/registration-form";
       <CustomerBase />
     </layout-app> -->
 
-    <registrationForm/>
+    <!-- <registrationForm/> -->
+    <authForm/>
   </div>
 </template>

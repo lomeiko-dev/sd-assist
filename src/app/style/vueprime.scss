@@ -1,3 +1,17 @@
+.p-inputtext {
+    width: 100%;
+    padding: 0 20px !important;
+}
+
+.p-password-input{
+    border-radius: 10px;
+}
+
+.p-password-meter,
+.p-password-info {
+    display: none;
+}
+
 .p-float-label>label {
     background: white;
     padding: 0 5px;
@@ -6,26 +20,31 @@
 .p-inputtext:enabled:focus {
     outline: none !important;
 }
-.p-inputtext::placeholder{
+
+.p-inputtext::placeholder {
     opacity: 0;
-}
-
-.p-float-label .p-inputtext:focus~label {
-    transform: translate(0, .9rem);
-}
-
-.p-float-label .p-inputtext:not(:placeholder-shown) ~label {
-    transform: translate(0, .9rem);
 }
 
 .p-checkbox .p-checkbox-box {
     box-shadow: none !important;
 }
 
-.p-checkbox.p-highlight .p-checkbox-box {
+.p-checkbox.p-highlight .p-checkbox-box,
+.p-checkbox-box {
     background-color: transparent;
 }
 
 .p-checkbox-box>svg>path {
     fill: #333 !important;
+}
+
+@supports (not (-ms-ime-align:auto)) {
+    .p-float-label>label {
+        transform: translate(0.25rem, 0rem);
+    }
+
+    .p-float-label .p-inputtext:focus+label,
+    .p-inputtext:not(:placeholder-shown)+label {
+        transform: translate(0, .9rem);
+    }
 }

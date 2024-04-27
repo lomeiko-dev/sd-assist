@@ -13,7 +13,8 @@ export default {
 		colors: {
 			'primary': '#1C426D',
 			'smoky-white': '#F2F8FF',
-      'gray': '#8C9091'
+      'gray': '#8C9091',
+      'green-light': '#6F936B'
 		},
 		screens: {
 			mobile: "430px",

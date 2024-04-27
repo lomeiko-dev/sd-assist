@@ -19,14 +19,14 @@ const toggleSelected = (value: number) => {
 <template>
   <div>
     <button
-      :class="selectedIndex === props.switchPrimary.index ? 'bg-primary text-white' : 'text-gray hover:bg-primary/20'"
+      :class="selectedIndex === props.switchPrimary.index ? 'bg-green-light text-white' : 'text-gray hover:bg-green-light/20'"
       class="left-button"
       @click="toggleSelected(props.switchPrimary.index)"
     >
       {{ props.switchPrimary.title }}
     </button>
     <button
-      :class="selectedIndex === props.swtichSecondary.index ? 'bg-primary text-white' : 'text-gray hover:bg-primary/20'"
+      :class="selectedIndex === props.swtichSecondary.index ? 'bg-green-light text-white' : 'text-gray hover:bg-green-light/20'"
       class="right-button -ml-[1px]"
       @click="toggleSelected(props.swtichSecondary.index)"
     >

@@ -849,6 +849,19 @@
       "dateCreated": "2024-04-26T19:15:11.321Z",
       "dateUpdated": "2024-04-26T19:15:11.321Z",
       "id": 1
+    },
+    {
+      "username": "asfsfasf#4",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "asfsfasf",
+      "phone": "71241241241",
+      "email": "test@mail.ru",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-04-26T19:15:11.321Z",
+      "dateUpdated": "2024-04-26T19:15:11.321Z",
+      "id": 1
     }
   ]
 }
