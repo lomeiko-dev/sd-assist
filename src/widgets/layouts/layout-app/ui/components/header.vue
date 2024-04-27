@@ -7,8 +7,13 @@ import ButtonLogin from "./other/button-login.vue";
 import { useWindowSize } from "@vueuse/core";
 import inlineSvg from "vue-inline-svg";
 import search from "shared/assets/icons/search.svg";
+import { ref } from "vue";
+import Dialog from "primevue/dialog";
+import { authForm } from "features/auth-form";
 
 const { width } = useWindowSize();
+const showAuth = ref(false)
+
 </script>
 <template>
   <div class="border-b border-solid border-primary/20 tablet:h-[108px] h-[68px]">
@@ -51,9 +56,11 @@ const { width } = useWindowSize();
             : 'sxga:w-full max-w-[180px]'
         "
       >
-        <ButtonLogin />
+        <ButtonLogin @click="showAuth = true" />
       </div>
     </container>
   </div>
+  <Dialog class="w-[550px] p-0" modal v-model:visible="showAuth">
+    <authForm/>
+  </Dialog>
 </template>
-<style lang="scss"></style>

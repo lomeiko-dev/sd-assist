@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import { IRegistrationScheme } from "../types";
+import { IRegistrationScheme } from "../../../registration-form/model/types";
 import { validateValue } from "./lib/validate";
 import { IErrors } from "./types";
 

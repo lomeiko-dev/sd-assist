@@ -1,24 +1,19 @@
 <script setup lang="ts">
-import { authForm } from 'features/auth-form';
+import Intro from "./components/intro.vue";
+import CustomerBase from "./components/customer-base.vue";
+import { layoutApp } from "widgets/layouts/layout-app";
+import { lotListPreview } from "widgets/lot-list";
+import { container } from "shared/ui/container";
 
-// import Intro from "./components/intro.vue";
-// import CustomerBase from "./components/customer-base.vue";
-// import { layoutApp } from "widgets/layouts/layout-app";
-// import { lotListPreview } from "widgets/lot-list";
-// import { container } from "shared/ui/container";
- import { registrationForm } from "features/registration-form";
 </script>
 <template>
   <div>
-    <!-- <layout-app>
+    <layout-app>
       <Intro class="tablet:mt-[73px] mt-[41px]" />
       <container is-mobile-padding>
         <lotListPreview class="tablet:my-[100px] my-[41px]" title="Недавно размещенные лоты" to-all-offers="/" />
       </container>
       <CustomerBase />
-    </layout-app> -->
-
-    <!-- <registrationForm/> -->
-    <authForm/>
+    </layout-app>
   </div>
 </template>

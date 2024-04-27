@@ -1,9 +1,9 @@
 import { ApiClient } from "shared/api";
 import { Endpoints } from "shared/api/model/endpoints";
-import { IRequetOptions } from "./types";
+import { IRegRequetOptions } from "./types";
 import { IRegistrationScheme } from "../types";
 
-export const registration = async (body: IRegistrationScheme, options?: IRequetOptions) => {
+export const registration = async (body: IRegistrationScheme, options?: IRegRequetOptions) => {
   const checkEmail = await ApiClient({ url: `${Endpoints.USERS}?email_like=${body.email}` });
 
   if (checkEmail.data.length !== 0) {

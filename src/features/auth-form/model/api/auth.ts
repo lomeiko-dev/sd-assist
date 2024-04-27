@@ -1,10 +1,10 @@
 import { ApiClient } from "shared/api";
 import { Endpoints } from "shared/api/model/endpoints";
-import { IRequetOptions } from "./types";
+import { IAuthRequetOptions } from "./types";
 
 const ERROR_MESSAGE = "Неверный логин или пароль";
 
-export const auth = async (login: string, password: string, options?: IRequetOptions) => {
+export const auth = async (login: string, password: string, options?: IAuthRequetOptions) => {
   const resultAuthByEmail = await ApiClient({
     url: `${Endpoints.USERS}?email_like=${login}&password_like=${password}`,
   });

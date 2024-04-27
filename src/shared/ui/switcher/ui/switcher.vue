@@ -38,7 +38,7 @@ const toggleSelected = (value: number) => {
 .left-button,
 .right-button {
   border: 1px solid #8c9091;
-  padding: 17px 22px;
+  padding: 17px 18.8px;
   font-size: 14px;
   line-height: 16.8px;
   font-weight: 400;
@@ -49,5 +49,9 @@ const toggleSelected = (value: number) => {
 }
 .right-button {
   border-radius: 0 10px 10px 0;
+}
+
+.p-dialog .p-dialog-header{
+  padding: .5rem;
 }
 </style>

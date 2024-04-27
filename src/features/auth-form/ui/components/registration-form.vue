@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { selection } from "shared/ui/selection";
 import { switcher } from "shared/ui/switcher";
-import { registrationStore } from "../model/store/registration-store";
+import { registrationStore } from "../../model/store/registration-store"
 
-import { registration } from "../model/api/registration";
+import { registration } from "../../model/api/registration"
 import { inputMask, inputText, checkBox, inputPassword } from "shared/ui/input";
 
 const store = registrationStore();
