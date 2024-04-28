@@ -10,12 +10,18 @@ export const auth = async (login: string, password: string, options?: IAuthReque
   });
 
   if (resultAuthByEmail.data.length === 0) options?.setError?.(ERROR_MESSAGE);
-  else return resultAuthByEmail.data[0];
+  else {
+    options?.clearField?.();
+    return resultAuthByEmail.data[0];
+  }
 
   const resultAuthByPhone = await ApiClient({
-    url: `${Endpoints.USERS}?phone_like=${login}&password_like=${password}`,
+    url: `${Endpoints.USERS}?phone_like=${login.replace("+", "").replace(" ", "")}&password_like=${password}`,
   });
 
   if (resultAuthByPhone.data.length === 0) options?.setError?.(ERROR_MESSAGE);
-  else return resultAuthByPhone.data[0];
+  else {
+    options?.clearField?.();
+    return resultAuthByPhone.data[0];
+  }
 };

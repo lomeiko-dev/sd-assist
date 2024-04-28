@@ -4,6 +4,8 @@ import { authFormStore } from "../../model/store/auth-form-store";
 import { auth as authApi } from "../../model/api/auth";
 import { authStore } from "entities/auth/model";
 
+const emit = defineEmits(['onLogin'])
+
 const storeForm = authFormStore();
 const storeAuth = authStore();
 
@@ -13,12 +15,14 @@ const auth = async () => {
   if (isValid) {
     const user = await authApi(storeForm.valueLogin, storeForm.valuePassword, {
       setError: (err) => (storeForm.error = err),
+      clearField: storeForm.clearAllError
     });
 
     if (user) {
       storeAuth.login({ id: user.id, username: user.username });
       storeForm.clearAllError();
       storeForm.clearAllValue();
+      emit('onLogin');
 
       if(storeForm.isRememberMy){
         storeAuth.saveAuth();

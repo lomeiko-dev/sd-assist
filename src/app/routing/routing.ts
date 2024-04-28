@@ -1,9 +1,8 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter, RouteRecordRaw } from "vue-router";
+import { generateRoute } from "./lib/utils/generate-route";
+import { pages } from "./lib/config/pages";
 
-import { homePage } from "pages/home";
-import { Routes } from "shared/config/routes";
-
-const routes = [{ path: Routes.HOME.path, name: Routes.HOME.name, component: homePage }];
+const routes: RouteRecordRaw[] = generateRoute(pages);
 
 export const router = createRouter({
   history: createWebHistory(),

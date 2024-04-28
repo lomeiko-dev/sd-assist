@@ -13,11 +13,13 @@ export const authStore = defineStore("auth", () => {
 
   const loadAuth = () => {
     const jsonData = localStorage.getItem("auth");
-    const auth = JSON.parse(jsonData || "") as IAuth;
 
-    if (auth) {
-      authData.value = auth;
-      isAuth.value = true;
+    if (jsonData) {
+      const auth = JSON.parse(jsonData || "") as IAuth;
+      if (auth) {
+        authData.value = auth;
+        isAuth.value = true;
+      }
     }
   };
 

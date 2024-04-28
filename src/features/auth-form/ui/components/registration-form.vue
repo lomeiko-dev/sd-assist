@@ -6,18 +6,25 @@ import { registrationStore } from "../../model/store/registration-store"
 import { registration } from "../../model/api/registration"
 import { inputMask, inputText, checkBox, inputPassword } from "shared/ui/input";
 
+const emit = defineEmits(['onRegister'])
+
 const store = registrationStore();
 
 const registrationHandle = async () => {
   const isValid = store.validate();
 
-  if (isValid)
-    await registration(store.getBodyData(), {
+  if (isValid){
+    const result = await registration(store.getBodyData(), {
       setErrorEmail: (value) => (store.errors.errorEmail = value),
       setErrorPhone: (value) => (store.errors.errorPhone = value),
       setErrorINN: (value) => (store.errors.errorINN = value),
       clearField: store.clearAllValue,
     });
+
+    if(result !== null){
+      emit('onRegister');
+    }
+  }
 };
 </script>
 <template>
@@ -55,7 +62,7 @@ const registrationHandle = async () => {
       </div>
 
       <inputMask
-        v-model="store.valueINN"
+        v-model="store.valuePhone"
         id="phone"
         mask="+7 (999) 999-99-99"
         placeholder="Введите ваш номер телефона*"

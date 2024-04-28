@@ -8,14 +8,14 @@ export const registration = async (body: IRegistrationScheme, options?: IRegRequ
 
   if (checkEmail.data.length !== 0) {
     options?.setErrorEmail?.("Пользователь с такой почтой уже зарегестрирован");
-    return false;
+    return null;
   }
 
   const checkPhone = await ApiClient({ url: `${Endpoints.USERS}?phone_like=${body.phone}` });
 
   if (checkPhone.data.length !== 0) {
     options?.setErrorPhone?.("Пользователь с таким телефоном уже зарегестрирован");
-    return false;
+    return null;
   }
 
   if (body.typeAccount === 2) {
@@ -23,7 +23,7 @@ export const registration = async (body: IRegistrationScheme, options?: IRegRequ
 
     if (checkINN.data.length !== 0) {
       options?.setErrorINN?.("Пользователь с таким ИНН уже зарегестрирован");
-      return false;
+      return null;
     }
   }
 

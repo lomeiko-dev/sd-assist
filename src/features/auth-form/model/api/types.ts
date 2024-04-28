@@ -1,5 +1,6 @@
 export interface IAuthRequetOptions {
   setError?: (err: string) => void;
+  clearField?: () => void;
 }
 
 export interface IRegRequetOptions {
