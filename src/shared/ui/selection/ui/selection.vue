@@ -37,7 +37,7 @@ onMounted(() => {
 <template>
   <div>
     <div class="flex flex-col w-fit">
-      <div class="flex flex-row gap-4 text-[20px] font-bold">
+      <div class="flex flex-row gap-4 tablet:text-[20px] text-base tablet:font-bold font-semibold">
         <button
           ref="buttonRef"
           v-for="(item, index) in props.selections"
@@ -57,4 +57,3 @@ onMounted(() => {
     </div>
   </div>
 </template>
-<style lang="scss"></style>

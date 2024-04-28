@@ -7,8 +7,11 @@ import ButtonLogin from "./other/button-login.vue";
 import { useWindowSize } from "@vueuse/core";
 import inlineSvg from "vue-inline-svg";
 import search from "shared/assets/icons/search.svg";
+import ButtonAccount from "./other/button-account.vue";
+import { authStore } from "entities/auth";
 
 const { width } = useWindowSize();
+const {isAuth} = authStore()
 
 </script>
 <template>
@@ -52,7 +55,8 @@ const { width } = useWindowSize();
             : 'sxga:w-full max-w-[180px]'
         "
       >
-        <ButtonLogin />
+        <ButtonLogin v-if="!isAuth" />
+        <ButtonAccount v-else/>
       </div>
     </container>
   </div>

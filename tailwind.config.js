@@ -18,6 +18,7 @@ export default {
 		},
 		screens: {
 			mobile: "430px",
+      "mini-tablet": "640px",
 			tablet: "768px",
 			sxga: '1024px',
 			"mini-laptop": "1240px",

@@ -27,7 +27,7 @@ const registerHandle = () => {
     </Teleport>
 
     <div class="flex flex-col items-center w-full" v-if="isLogin">
-      <h2 class="text-[32px] font-bold leading-[38.4px]">Авторизация</h2>
+      <h2 class="tablet:text-[32px] text-[22px] font-bold leading-[38.4px]">Авторизация</h2>
       <loginForm @on-login="$emit('closeModal')" class="mt-[34px] w-full" />
       <button
         @click="isLogin = false"

@@ -849,6 +849,45 @@
       "dateCreated": "2024-04-27T23:56:33.856Z",
       "dateUpdated": "2024-04-27T23:56:33.856Z",
       "id": 1
+    },
+    {
+      "username": "ыавпощлвыэпвыалздм#270de86d429f3",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "ыавпощлвыэпвыалздм",
+      "phone": "75346765432",
+      "email": "fdgdfhdsgdfh@mail.ru",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-04-28T08:32:28.185Z",
+      "dateUpdated": "2024-04-28T08:32:28.185Z",
+      "id": 2
+    },
+    {
+      "username": "никита#87f9a05426073",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "никита",
+      "phone": "71111111111",
+      "email": "test@mail.ru",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-04-28T09:27:10.576Z",
+      "dateUpdated": "2024-04-28T09:27:10.576Z",
+      "id": 3
+    },
+    {
+      "username": "никита#1b3e3bdc7220c",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "никита",
+      "phone": "72222222222",
+      "email": "aba@mail.ru",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-04-28T09:34:05.419Z",
+      "dateUpdated": "2024-04-28T09:34:05.419Z",
+      "id": 4
     }
   ]
 }

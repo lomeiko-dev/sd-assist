@@ -29,6 +29,7 @@ export const authFormStore = defineStore("auth-form", () => {
   const clearAllError = () => {
     errorPassword.value = "";
     errorLogin.value = "";
+    error.value = "";
   };
 
   const clearAllValue = () => {

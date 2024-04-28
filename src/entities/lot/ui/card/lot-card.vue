@@ -20,7 +20,7 @@ const emit = defineEmits(["to"]);
     @mouseleave="width > 640 ? (isHover = false) : null"
     @click="width > 640 ? $emit('to') : null"
     :class="!isHover ? 'hovered-mobile' : 'hovered'"
-    class="relative border border-solid overflow-hidden border-gray-300 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
+    class="relative border border-solid overflow-hidden border-gray/30 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
   >
     <div class="relative">
       <div :style="`background-image: url(${props.data.image_preview})`" class="preview rounded-[10px]"></div>
