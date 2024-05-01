@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import FileUploader from "./components/file-uploader.vue";
+import FileUploader from "../components/file-uploader.vue";
 
+const emits = defineEmits(['get-image'])
 const images = ref<string[]>([]);
 
 const converFilesToImages = (Files: File[]) => {
   Files.forEach((file) => {
     images.value.push(URL.createObjectURL(file));
+    emits("get-image", images.value);
   });
 };
 </script>

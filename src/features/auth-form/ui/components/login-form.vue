@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { checkBox, inputPassword, floatInputText } from "shared/ui/input";
+import { checkBox, floatInputPassword, floatInputText } from "shared/ui/input";
 import { authFormStore } from "../../model/store/auth-form-store";
 import { auth as authApi } from "../../model/api/auth";
 import { authStore } from "entities/auth/model";
@@ -40,7 +40,7 @@ const auth = async () => {
         id="login"
         v-model="storeForm.valueLogin"
       />
-      <inputPassword
+      <floatInputPassword
         placeholder="Пароль"
         :error-placeholder="storeForm.errorPassword"
         id="password"

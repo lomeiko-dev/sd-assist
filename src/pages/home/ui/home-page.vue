@@ -10,31 +10,31 @@ import { groupDropdownSelect, groupInputText, groupInputDate, groupInputMask, gr
 </script>
 <template>
   <div>
-    <!-- <layout-app>
+    <layout-app>
       <Intro class="tablet:mt-[73px] mt-[41px]" />
       <container is-mobile-padding>
         <lotListPreview class="tablet:my-[100px] my-[41px]" title="Недавно размещенные лоты" to-all-offers="/" />
       </container>
       <CustomerBase />
-    </layout-app> -->
+    </layout-app>
 
-    <div class="test1 flex flex-col gap-2">
-      <!-- <groupDropdownSelect options=""  placeholder="Не выбрано" title="Объект торгов*"/>
+    <!-- <div class="test1 flex flex-col gap-2">
+      <groupDropdownSelect options=""  placeholder="Не выбрано" title="Объект торгов*"/>
       <groupInputText title="Имя какое то*"/>
       <groupInputDate title="Имя какое то*"/>
       <groupInputMask placeholder="sdgdsg" title="Код" mask="9 9 9 9 9 9 9 9 9 9"/>
       <groupColorPicker title="sdgsdg"/>
-      <groupTextarea title="dsgsdg"/> -->
+      <groupTextarea title="dsgsdg"/>
       <pdfUploader/>
       <imageUploader/>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style lang="scss">
 .test1{
   background-color: #F2F8FF;
-  height: 1000px;
+  height: 3000px;
   padding: 10px;
 }
 </style>

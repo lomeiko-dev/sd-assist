@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import InputGroup from "primevue/inputgroup";
 import InputGroupAddon from "primevue/inputgroupaddon";
-import InputText from "primevue/inputtext";
 
 interface IProps {
   title: string;
 }
 
 const props = defineProps<IProps>();
-const model = defineModel<string>();
 
 </script>
 <template>
@@ -18,8 +16,6 @@ const model = defineModel<string>();
         {{ props.title }}
       </p>
     </InputGroupAddon>
-    <InputText
-      v-model="model"
-    />
+    <slot></slot>
   </InputGroup>
 </template>

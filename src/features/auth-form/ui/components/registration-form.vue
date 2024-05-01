@@ -4,7 +4,7 @@ import { switcher } from "shared/ui/switcher";
 import { registrationStore } from "../../model/store/registration-store"
 
 import { registration } from "../../model/api/registration"
-import { floatInputMask, floatInputText, checkBox, inputPassword } from "shared/ui/input";
+import { floatInputMask, floatInputText, checkBox, floatInputPassword } from "shared/ui/input";
 
 const emit = defineEmits(['onRegister'])
 
@@ -68,7 +68,7 @@ const registrationHandle = async () => {
         placeholder="Введите ваш номер телефона*"
         :error-placeholder="store.errors.errorPhone"
       />
-      <inputPassword
+      <floatInputPassword
         placeholder="Придумайте пароль*"
         v-model="store.valuePassword"
         id="password"
