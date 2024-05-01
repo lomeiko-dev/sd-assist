@@ -32,7 +32,7 @@ const { isOverDropZone } = useDropZone(dropZoneRef, {
     @click="fileInputRef?.click?.()"
     ref="dropZoneRef"
     :class="`${isOverDropZone ? 'bg-gray/20' : ''} ${props.isAvailableContent ? 'h-[86px]' : ''}`"
-    class="bg-white rounded-[5px] h-[230px] flex items-center justify-center flex-col duration-300 cursor-pointer hover:bg-gray/20"
+    class="bg-white rounded-[5px] mini-tablet:h-[230px] h-[168px] flex items-center justify-center flex-col duration-300 cursor-pointer hover:bg-gray/20"
   >
     <div v-if="!isOverDropZone" class="text-center">
       <p class="text-base font-normal text-gray">{{ props.title }}</p>

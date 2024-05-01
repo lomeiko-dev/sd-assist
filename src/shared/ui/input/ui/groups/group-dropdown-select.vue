@@ -15,6 +15,7 @@ const model = defineModel<any>();
 <template>
   <GroupContainer :title="props.title">
     <Dropdown
+      class="select-none outline-none"
       v-model="model"
       :options="props.options"
       :optionLabel="props.optionLabel"

@@ -27,7 +27,13 @@ onMounted(() => {
   </button>
   <inlineSvg @click="showAuth = true" class="min-w-[47px]" v-else :src="loginSvg" />
 
-  <Dialog class="w-[550px] p-0" modal v-model:visible="showAuth">
+  <Dialog class="w-[550px] p-0 dialog-button-login" modal v-model:visible="showAuth">
     <authForm @close-modal="showAuth = false" />
   </Dialog>
 </template>
+<style lang="scss">
+.dialog-button-login.p-dialog .p-dialog-content {
+  padding: 0 70px;
+  padding-bottom: 71px;
+}
+</style>

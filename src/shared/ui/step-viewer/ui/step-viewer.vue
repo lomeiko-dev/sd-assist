@@ -4,6 +4,7 @@ import Node from "./components/node.vue";
 interface IProps {
   steps: string[];
   selectedIndex?: number;
+  passedNumber?: number;
 }
 
 const props = defineProps<IProps>();
@@ -14,6 +15,7 @@ const props = defineProps<IProps>();
       v-for="(item, index) in props.steps"
       :is-active="index < (props.selectedIndex || 0)"
       :is-start-node="index === 0"
+      :is-passed="index < (props.passedNumber || 0)"
       :index="index"
       :title="item"
     />

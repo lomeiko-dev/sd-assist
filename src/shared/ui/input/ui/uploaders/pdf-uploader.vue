@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import FileUploader from "../components/file-uploader.vue";
+import { useWindowSize } from "@vueuse/core";
 
 const emits = defineEmits(['get-file'])
 const files = ref<File[]>([]);
+
+const {width} = useWindowSize()
 
 const converFiles = (Files: File[]) => {
     Files.forEach(file => {
@@ -19,7 +22,7 @@ const converFiles = (Files: File[]) => {
     <div v-if="files.length !== 0" class="flex flex-row flex-wrap gap-[5px] mb-[13px]">
       <div
         v-for="file in files"
-        class="w-[230px] h-[230px] bg-white rounded-[10px] flex items-center justify-center flex-col text-center px-2"
+        class="mini-tablet:w-[230px] mini-tablet:h-[230px] w-[144px] h-[155px] bg-white rounded-[10px] flex items-center justify-center flex-col text-center px-2"
       >
         <h3 class="text-sm font-normal text-gray">{{ file.name }}</h3>
         <h4 class="text-xs font-normal text-gray flex gap-[5px]">
@@ -29,8 +32,8 @@ const converFiles = (Files: File[]) => {
       </div>
     </div>
     <FileUploader
-      title="Перетащите PDF-документы, чтобы добавить их к лоту"
-      subtitle="или нажмите, чтобы выбрать их на компьютере"
+      :title="width < 640 ? 'Добавить документы' : 'Перетащите PDF-документы, чтобы добавить их к лоту'"
+      :subtitle="width < 640 ? '' : 'или нажмите, чтобы выбрать их на компьютере'"
       accept="application/pdf, application/zip"
       @get-files="converFiles"
       :data-types="[`application/pdf`, `application/zip`]"

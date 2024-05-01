@@ -8,5 +8,5 @@ export interface IInputProps {
 
 export interface IColorItem {
   title: string;
-  style: CSSProperties
+  style: CSSProperties;
 }

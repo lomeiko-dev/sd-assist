@@ -14,6 +14,7 @@ interface IProps {
 
 const props = defineProps<IProps>();
 const isHovered = ref(false);
+
 </script>
 <template>
   <div class="relative">

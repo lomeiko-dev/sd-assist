@@ -10,16 +10,17 @@ import { groupDropdownSelect, groupInputText, groupInputDate, groupInputMask, gr
 </script>
 <template>
   <div>
-    <layout-app>
+    <!-- <layout-app>
       <Intro class="tablet:mt-[73px] mt-[41px]" />
       <container is-mobile-padding>
         <lotListPreview class="tablet:my-[100px] my-[41px]" title="Недавно размещенные лоты" to-all-offers="/" />
       </container>
       <CustomerBase />
-    </layout-app>
+    </layout-app> -->
 
-    <!-- <div class="test1 flex flex-col gap-2">
-      <groupDropdownSelect options=""  placeholder="Не выбрано" title="Объект торгов*"/>
+    <div class="test1 flex flex-col gap-2">
+      <stepViewer :passed-number="2" :selected-index="3" :steps="['шаг 1', 'шаг 2', 'шаг 3', 'шаг 3']"/>
+      <groupDropdownSelect :options="['Текст1', 'Текст2', 'Текст3', 'Текст4', 'Текст5', 'Текст6']"  placeholder="Не выбрано" title="Объект торгов*"/>
       <groupInputText title="Имя какое то*"/>
       <groupInputDate title="Имя какое то*"/>
       <groupInputMask placeholder="sdgdsg" title="Код" mask="9 9 9 9 9 9 9 9 9 9"/>
@@ -27,7 +28,7 @@ import { groupDropdownSelect, groupInputText, groupInputDate, groupInputMask, gr
       <groupTextarea title="dsgsdg"/>
       <pdfUploader/>
       <imageUploader/>
-    </div> -->
+    </div>
   </div>
 </template>
 
