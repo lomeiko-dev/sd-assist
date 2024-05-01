@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { checkBox, inputPassword, inputText } from "shared/ui/input";
+import { checkBox, inputPassword, floatInputText } from "shared/ui/input";
 import { authFormStore } from "../../model/store/auth-form-store";
 import { auth as authApi } from "../../model/api/auth";
 import { authStore } from "entities/auth/model";
@@ -34,7 +34,7 @@ const auth = async () => {
 <template>
   <div class="flex flex-col">
     <div class="flex flex-col gap-4">
-      <inputText
+      <floatInputText
         placeholder="E-mail или телефон"
         :error-placeholder="storeForm.errorLogin"
         id="login"

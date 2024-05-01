@@ -1,9 +1,11 @@
 .p-inputtext {
     width: 100%;
     padding: 0 20px !important;
+    display: flex;
+    align-items: center;
 }
 
-.p-password-input{
+.p-password-input {
     border-radius: 10px;
 }
 
@@ -49,17 +51,69 @@
     }
 }
 
-.p-dialog .p-dialog-content{
+.p-dialog .p-dialog-content {
     padding: 0 70px;
     padding-bottom: 71px;
 }
+
 .p-dialog-header {
     justify-content: end;
 }
 
 @media (max-width: 768px) {
-    .p-dialog .p-dialog-content{
+    .p-dialog .p-dialog-content {
         padding: 0 30px;
         padding-bottom: 30px;
-    } 
+    }
+}
+
+.p-inputgroup .p-inputtext::placeholder,
+.p-inputgroup .p-dropdown-label {
+    opacity: 1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #8C9091;
+}
+
+.p-inputgroup-addon {
+    justify-content: start;
+}
+
+@media (max-width: 640px) {
+    .p-inputgroup {
+        background-color: white;
+        flex-direction: column;
+        padding: 0 24px;
+
+    }
+
+    .p-inputgroup .p-dropdown,
+    .p-inputtext {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .p-inputgroup-addon {
+        width: 100%;
+        max-width: 100%;
+        padding: 17px 0 10px 0;
+        border-bottom: 1px solid #163C661A;
+        border-right: none;
+        border-radius: none;
+    }
+
+    .p-inputgroup .p-inputtext {
+        padding: 10px 0 17px 0 !important;
+    }
+
+    .p-inputgroup .p-inputtext::placeholder,
+    .p-inputgroup .p-dropdown-label,
+    .p-inputgroup .p-inputtext {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .p-inputgroup .p-dropdown .p-dropdown-trigger{
+        justify-content: end;
+    }
 }

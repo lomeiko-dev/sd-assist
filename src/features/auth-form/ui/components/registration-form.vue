@@ -4,7 +4,7 @@ import { switcher } from "shared/ui/switcher";
 import { registrationStore } from "../../model/store/registration-store"
 
 import { registration } from "../../model/api/registration"
-import { inputMask, inputText, checkBox, inputPassword } from "shared/ui/input";
+import { floatInputMask, floatInputText, checkBox, inputPassword } from "shared/ui/input";
 
 const emit = defineEmits(['onRegister'])
 
@@ -39,7 +39,7 @@ const registrationHandle = async () => {
     />
 
     <div class="mt-[34px] flex flex-col gap-4">
-      <inputText
+      <floatInputText
         v-model="store.valueName"
         v-if="store.typeAccount === 1"
         id="username"
@@ -48,7 +48,7 @@ const registrationHandle = async () => {
       />
 
       <div v-else>
-        <inputMask
+        <floatInputMask
           v-model="store.valueINN"
           id="inn"
           mask="9 9 9 9 9 9 9 9 9 9"
@@ -61,7 +61,7 @@ const registrationHandle = async () => {
         >
       </div>
 
-      <inputMask
+      <floatInputMask
         v-model="store.valuePhone"
         id="phone"
         mask="+7 (999) 999-99-99"
@@ -74,7 +74,7 @@ const registrationHandle = async () => {
         id="password"
         :error-placeholder="store.errors.errorPassword"
       />
-      <inputText
+      <floatInputText
         v-model="store.valueEmail"
         id="email"
         placeholder="Введите ваш E-mail*"
