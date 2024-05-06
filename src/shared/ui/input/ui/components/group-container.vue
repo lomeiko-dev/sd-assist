@@ -10,12 +10,12 @@ const props = defineProps<IProps>();
 
 </script>
 <template>
-  <InputGroup class="rounded-[10px]">
-    <InputGroupAddon class="whitespace-nowrap border-r border-solid border-primary/20 py-[23px] w-full max-w-[156px]">
-      <p class="text-xs font-normal text-gray leading-[14.4px]">
-        {{ props.title }}
-      </p>
-    </InputGroupAddon>
-    <slot></slot>
-  </InputGroup>
+    <InputGroup class="rounded-[10px]">
+      <InputGroupAddon class="whitespace-nowrap border-r border-solid border-primary/20 py-[23px] w-full max-w-[156px]">
+        <p class="text-xs font-normal text-gray leading-[14.4px]">
+          {{ props.title }}
+        </p>
+      </InputGroupAddon>
+      <slot></slot>
+    </InputGroup>
 </template>

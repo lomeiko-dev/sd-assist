@@ -7,6 +7,11 @@ import { container } from "shared/ui/container";
 
 import { stepViewer } from "shared/ui/step-viewer";
 import { groupDropdownSelect, groupInputText, groupInputDate, groupInputMask, groupColorPicker, groupTextarea, imageUploader, pdfUploader } from "shared/ui/input";
+import {canvas as Canvas} from 'shared/ui/image'
+import Paint from "shared/ui/paint/ui/paint.vue";
+import { enumTypeBackground } from "shared/ui/paint/model/types";
+import CropContainer from "shared/ui/paint/ui/components/crop-container.vue";
+import test from 'shared/assets/img/Mercedes-Benz-Sls-2880x1920.jpg'
 </script>
 <template>
   <div>
@@ -19,7 +24,7 @@ import { groupDropdownSelect, groupInputText, groupInputDate, groupInputMask, gr
     </layout-app> -->
 
     <div class="test1 flex flex-col gap-2">
-      <stepViewer :passed-number="2" :selected-index="3" :steps="['шаг 1', 'шаг 2', 'шаг 3', 'шаг 3']"/>
+      <!-- <stepViewer :passed-number="2" :selected-index="3" :steps="['шаг 1', 'шаг 2', 'шаг 3', 'шаг 3']"/>
       <groupDropdownSelect :options="['Текст1', 'Текст2', 'Текст3', 'Текст4', 'Текст5', 'Текст6']"  placeholder="Не выбрано" title="Объект торгов*"/>
       <groupInputText title="Имя какое то*"/>
       <groupInputDate title="Имя какое то*"/>
@@ -27,7 +32,8 @@ import { groupDropdownSelect, groupInputText, groupInputDate, groupInputMask, gr
       <groupColorPicker title="sdgsdg"/>
       <groupTextarea title="dsgsdg"/>
       <pdfUploader/>
-      <imageUploader/>
+      <imageUploader/> -->
+      <Paint width="1500" height="800" :background="test" :type-background="enumTypeBackground.IMAGE"/>
     </div>
   </div>
 </template>
