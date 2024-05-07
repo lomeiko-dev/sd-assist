@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { enumTypeBackground, enumTypeDrow } from "../model/types";
+import { enumTypeBackground, enumTypeDrow, type IPaintMethods } from "../model/types";
 import { watch } from "vue";
 import { drawTools } from "../model/lib/utils/draw-tools";
 import { historyManager } from "../model/lib/utils/history-manager";
@@ -10,7 +10,8 @@ import {
 } from "../model/types";
 import CropContainer from "./components/crop-container.vue";
 import { onMounted } from "vue";
-import textManagment from './components/text-managment.vue'
+import textManagment from './components/text-managment.vue' 
+import {textManager} from '../model/lib/utils/text-manager'
 
 
 interface IProps {
@@ -22,6 +23,7 @@ interface IProps {
   color?: string;
   size?: number;
   rotateIndex?: number;
+  getControlMethods?: () => IPaintMethods
 }
 
 const props = withDefaults(defineProps<IProps>(), {
@@ -36,6 +38,7 @@ const props = withDefaults(defineProps<IProps>(), {
 const canvasRef = ref<HTMLCanvasElement | undefined>(undefined);
 const tools = ref<IDrawToolsMethods>();
 const history = ref<IHistoryManagerMehods>();
+const сукаблять = textManager()
 
 const isDrawing = ref(false);
 const rotate = ref(0);
@@ -43,6 +46,10 @@ const rotate = ref(0);
 onMounted(() => {
   rotate.value = 0 + 90 * props.rotateIndex;
 });
+
+onMounted(() => {
+  
+})
 
 watch(
   () => canvasRef.value,
@@ -78,7 +85,7 @@ const mouseUpHandler = () => {
 };
 
 const mouseMoveHandler = (e: any) => {
-  if (isDrawing.value && canvasRef.value) {
+  if (isDrawing.value) {
     switch(props.typeDrow){
       case enumTypeDrow.PEN:
         tools.value?.draw(e.offsetX, e.offsetY);
@@ -92,8 +99,9 @@ const mouseMoveHandler = (e: any) => {
       case enumTypeDrow.CIRCLE:
         tools.value?.drawCircle(e.offsetX, e.offsetY);
         break;
+      default:
+          tools.value?.draw(e.offsetX, e.offsetY)
     }
-    // tools.value?.crop(canvasRef.value, 300, 300)
   }
 };
 </script>
@@ -111,11 +119,12 @@ const mouseMoveHandler = (e: any) => {
     >
     </canvas>
     <textManagment
+      :managment="сукаблять"
       :is-clicable="!isDrawing"
       class="absolute top-0 left-0 w-[1500px] h-[800px]"
-      :data="[{ x: 100, y: 100, colorHex: 'black', fontSize: 32, fontWeight: 700, title: 'Тест' }, { x: 100, y: 100, colorHex: 'black', fontSize: 32, fontWeight: 700, title: 'Тест' }]"
     />
     <button @click="history?.undo">Тест ундо</button>
+    <button @click="сукаблять.addText">Тест создать текст</button>
   </div>
 </template>
 <style scoped lang="scss"></style>

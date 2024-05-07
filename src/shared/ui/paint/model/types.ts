@@ -1,3 +1,5 @@
+import { Ref } from "vue";
+
 export enum enumTypeBackground {
   IMAGE = "IMAGE",
   COLOR = "COLOR",
@@ -8,6 +10,14 @@ export enum enumTypeDrow {
   LINE = "LINE",
   RECTANGLE = "RECTANGLE",
   CIRCLE = "CIRCLE",
+}
+
+export interface IPaintMethods {
+  createNewText: () => void;
+  undo: () => void;
+  showCropContainer: () => void;
+  crop: () => void;
+  save: () => void;
 }
 
 export interface IDrawToolsMethods {
@@ -31,6 +41,16 @@ export interface IDrawOptions {
   size?: number;
   width: number;
   height: number;
+}
+
+export interface ITextManager {
+  texts: Ref<IText[]>;
+  selectIndex: Ref<Number | null>;
+  addText: () => void;
+  movingText: (x: number, y: number) => void;
+  setStartPosition: (x: number, y: number) => void;
+  removeText: () => void;
+  setSelectedText: (index: number | null) => void;
 }
 
 export interface IHistoryOptions {
