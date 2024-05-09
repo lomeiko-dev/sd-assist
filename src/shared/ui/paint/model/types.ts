@@ -1,4 +1,4 @@
-import { Ref } from "vue";
+import { CSSProperties, Ref } from "vue";
 
 export enum enumTypeBackground {
   IMAGE = "IMAGE",
@@ -46,11 +46,15 @@ export interface IDrawOptions {
 export interface ITextManager {
   texts: Ref<IText[]>;
   selectIndex: Ref<Number | null>;
+  changedIndex: Ref<Number | null>;
+  isChanged: Ref<boolean>;
+  setChangedIndex: (index: number | null) => void;
   addText: () => void;
   movingText: (x: number, y: number) => void;
   setStartPosition: (x: number, y: number) => void;
   removeText: () => void;
   setSelectedText: (index: number | null) => void;
+  generateStyleText: (index: number) => CSSProperties 
 }
 
 export interface IHistoryOptions {

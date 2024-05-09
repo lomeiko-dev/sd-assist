@@ -13,19 +13,18 @@ import options from "shared/assets/icons/options.svg";
 
 interface IProps {
   isClicable?: boolean;
-  managment: ITextManager;
+  managment: ITextManager; 
 }
 
 const props = defineProps<IProps>();
 
-const overlayPanelRef = ref();
+const overlayPanelRef = ref<any & { index: number }>();
 const textRef = ref<HTMLDivElement[] | undefined>(undefined);
-
 const isMoving = ref(false);
-const isChanged = ref(false);
 
-const toggleSettings = (e: any) => {
+const toggleSettings = (e: any, index: number) => {
   overlayPanelRef.value[0].toggle(e);
+  overlayPanelRef.value[0].index = index;
 };
 
 const mouseDownHandler = (e: any, index: number) => {
@@ -40,9 +39,7 @@ const mouseDownHandler = (e: any, index: number) => {
 };
 
 const mouseMoveHandler = (e: any) => {
-  if (isMoving.value) {
-    props.managment.movingText(e.clientX, e.clientY);
-  }
+  if (isMoving.value) props.managment.movingText(e.clientX, e.clientY);
 };
 
 const mouseUpHandler = () => {
@@ -67,17 +64,26 @@ const mouseUpHandler = () => {
         ? 'pointer-events-none'
         : ''
     }`"
-    :style="`left: ${item.x}px; top: ${item.y}px; color: ${item.colorHex}; font-size: ${item.fontSize}px; font-weight: ${item.fontWeight}`"
+    :style="props.managment.generateStyleText(index)"
   >
-    <p v-if="!isChanged">{{ item.title }}</p>
+    <p v-if="props.managment.changedIndex.value === null">{{ item.title }}</p>
     <input v-else v-model="item.title" class="bg-transparent select-none border-none" type="text" />
+
+    <OverlayPanel
+      show-close-icon
+      @mouseenter="props.managment.setSelectedText(overlayPanelRef[0].index)"
+      @mouseleave="props.managment.setSelectedText(null)"
+      ref="overlayPanelRef"
+    >
+      <TextForm :text="props.managment.texts.value[overlayPanelRef[0].index]" />
+    </OverlayPanel>
 
     <div v-if="props.managment.selectIndex.value === index">
       <button
-        @click="isChanged = !isChanged"
+        @click="props.managment.setChangedIndex(props.managment.isChanged.value ? null : index)"
         class="w-[24px] h-[24px] bg-blue-600 absolute -top-3 -right-3 flex items-center justify-center duration-300 hover:bg-blue-800"
       >
-        <inline-svg class="text-white w-[16px] h-[16px]" :src="isChanged ? check : pen" />
+        <inline-svg class="text-white w-[16px] h-[16px]" :src="props.managment.isChanged.value ? check : pen" />
       </button>
       <button
         @click="props.managment.removeText"
@@ -86,19 +92,11 @@ const mouseUpHandler = () => {
         <inline-svg class="text-white w-[18px] h-[18px]" :src="deleted" />
       </button>
       <button
-        @click="(e: any) => toggleSettings(e)"
+        @click="(e: any) => toggleSettings(e, index)"
         class="w-[24px] h-[24px] bg-blue-600 absolute -bottom-3 -left-3 flex items-center justify-center duration-300 hover:bg-blue-800"
       >
         <inline-svg class="text-white w-[18px] h-[18px]" :src="options" />
       </button>
     </div>
-
-    <OverlayPanel
-      @mouseenter="props.managment.setSelectedText(index)"
-      @mouseleave="props.managment.setSelectedText(null)"
-      ref="overlayPanelRef"
-    >
-      <TextForm :text="item" />
-    </OverlayPanel>
   </div>
 </template>

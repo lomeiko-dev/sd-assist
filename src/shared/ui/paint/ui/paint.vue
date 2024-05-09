@@ -31,14 +31,14 @@ const props = withDefaults(defineProps<IProps>(), {
   typeBackground: enumTypeBackground.COLOR,
   typeDrow: enumTypeDrow.PEN,
   color: "#000000",
-  size: 15,
+  size: 32,
   rotateIndex: 0,
 });
 
 const canvasRef = ref<HTMLCanvasElement | undefined>(undefined);
 const tools = ref<IDrawToolsMethods>();
 const history = ref<IHistoryManagerMehods>();
-const сукаблять = textManager()
+const textControl = textManager()
 
 const isDrawing = ref(false);
 const rotate = ref(0);
@@ -68,6 +68,7 @@ watch(
       }
 
       history.value = historyManager(context, { width: props.width, height: props.height });
+      console.log('gggg')
     }
   }
 );
@@ -119,12 +120,12 @@ const mouseMoveHandler = (e: any) => {
     >
     </canvas>
     <textManagment
-      :managment="сукаблять"
+      :managment="textControl"
       :is-clicable="!isDrawing"
       class="absolute top-0 left-0 w-[1500px] h-[800px]"
     />
     <button @click="history?.undo">Тест ундо</button>
-    <button @click="сукаблять.addText">Тест создать текст</button>
+    <button @click="textControl?.addText">Тест создать текст</button>
   </div>
 </template>
 <style scoped lang="scss"></style>
