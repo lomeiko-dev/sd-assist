@@ -33,7 +33,7 @@ import test from 'shared/assets/img/Mercedes-Benz-Sls-2880x1920.jpg'
       <groupTextarea title="dsgsdg"/>
       <pdfUploader/>
       <imageUploader/> -->
-      <Paint width="1500" height="800" :background="test" :type-background="enumTypeBackground.IMAGE"/>
+      <Paint :width="1500" :height="800" :background="test" :type-background="enumTypeBackground.IMAGE"/>
     </div>
   </div>
 </template>

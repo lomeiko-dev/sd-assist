@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { type ITextManager } from "../../model/types";
+import { IHistoryManagerMehods, type ITextManager } from "../../model/types";
 
 import OverlayPanel from "primevue/overlaypanel";
 import TextForm from "./other/text-form.vue";
@@ -13,7 +13,8 @@ import options from "shared/assets/icons/options.svg";
 
 interface IProps {
   isClicable?: boolean;
-  managment: ITextManager; 
+  managment: ITextManager;
+  history: IHistoryManagerMehods;
 }
 
 const props = defineProps<IProps>();
@@ -25,6 +26,10 @@ const isMoving = ref(false);
 const toggleSettings = (e: any, index: number) => {
   overlayPanelRef.value[0].toggle(e);
   overlayPanelRef.value[0].index = index;
+};
+
+const toggleFormChanged = (index: number) => {
+  props.managment.setChangedIndex(props.managment.isChanged.value ? null : index);
 };
 
 const mouseDownHandler = (e: any, index: number) => {
@@ -44,6 +49,13 @@ const mouseMoveHandler = (e: any) => {
 
 const mouseUpHandler = () => {
   isMoving.value = false;
+  
+  if (
+    JSON.stringify(props.managment.texts.value) !==
+    JSON.stringify(props.history.history[props.history.history.length - 1].texts)
+  ) {
+    props.history.save();
+  }
 };
 </script>
 <template>
@@ -80,7 +92,7 @@ const mouseUpHandler = () => {
 
     <div v-if="props.managment.selectIndex.value === index">
       <button
-        @click="props.managment.setChangedIndex(props.managment.isChanged.value ? null : index)"
+        @click="toggleFormChanged(index)"
         class="w-[24px] h-[24px] bg-blue-600 absolute -top-3 -right-3 flex items-center justify-center duration-300 hover:bg-blue-800"
       >
         <inline-svg class="text-white w-[16px] h-[16px]" :src="props.managment.isChanged.value ? check : pen" />

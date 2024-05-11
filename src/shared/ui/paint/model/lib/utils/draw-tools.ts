@@ -1,7 +1,10 @@
 import { IDrawOptions } from "../../types";
 import { IDrawToolsMethods } from "../../types";
 
-export const drawTools = (context: CanvasRenderingContext2D | null, options: IDrawOptions): IDrawToolsMethods => {
+export const drawTools = (
+  context: CanvasRenderingContext2D | null,
+  options: IDrawOptions
+): IDrawToolsMethods => {
   const { color = "#000000", size = 10, width, height } = options;
 
   let prev_x = 0;
@@ -18,46 +21,11 @@ export const drawTools = (context: CanvasRenderingContext2D | null, options: IDr
     }
   }
 
-  function snapshoting(x: number, y: number, width: number, height: number, isApply?: boolean) {
-    if (context) {
-      snapshot = context.getImageData(x, y, width, height);
-
-      if (isApply) {
-        context.putImageData(snapshot, 0, 0);
-      }
-    }
-  }
-
-  const setCoord = (x: number, y: number) => {
+  const setCoord = (x: number, y: number, isStartPosition?: boolean) => {
     prev_x = x;
     prev_y = y;
-  };
 
-  const resetCoord = () => {
-    prev_x = 0;
-    prev_y = 0;
-  };
-
-  const loadImage = (src: string, width: number, height: number) => {
-    const image = new Image();
-    image.src = src;
-
-    image.onload = () => {
-      if (context) {
-
-        let scale;
-        if (image.width > image.height) {
-          scale = width / image.width;
-        } else {
-          scale = height / image.height;
-        }
-
-        const dx = (width - image.width * scale) / 2;
-        const dy = (height - image.height * scale) / 2;
-
-        context.drawImage(image, 0, 0, image.width, image.height, dx, dy, image.width * scale, image.height * scale);
-      }
-    };
+    if (context && isStartPosition) snapshot = context.getImageData(0, 0, width, height);
   };
 
   const draw = (x: number, y: number) => {
@@ -107,12 +75,9 @@ export const drawTools = (context: CanvasRenderingContext2D | null, options: IDr
   };
 
   return {
-    loadImage,
     drawLine,
-    snapshoting,
     drawCircle,
     drawRect,
-    resetCoord,
     setCoord,
     draw,
   };

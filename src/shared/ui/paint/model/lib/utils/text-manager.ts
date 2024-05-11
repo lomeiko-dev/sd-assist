@@ -29,7 +29,7 @@ export const textManager = (): ITextManager => {
         colorHex: "#000000",
         fontWeight: 400,
     }
-    console.log('sdgsdg')
+    
     texts.value.push(newText);
   };
 

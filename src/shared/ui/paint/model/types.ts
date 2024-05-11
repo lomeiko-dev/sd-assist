@@ -24,15 +24,13 @@ export interface IDrawToolsMethods {
   drawLine: (x: number, y: number) => void;
   drawRect: (x2: number, y2: number) => void;
   drawCircle: (x2: number, y2: number) => void;
-  setCoord: (x: number, y: number) => void;
-  snapshoting: (x: number, y: number, width: number, height: number, isApply?: boolean) => void;
-  loadImage: (src: string, width: number, height: number) => void;
-  resetCoord: () => void;
+  setCoord: (x: number, y: number, isStartPosition?: boolean) => void;
   draw: (x: number, y: number) => void;
 }
 
 export interface IHistoryManagerMehods {
-  save: () => void;
+  history: IHistoryStage[]
+  save: (imageData?: string) => void;
   undo: () => void;
 }
 
@@ -54,10 +52,36 @@ export interface ITextManager {
   setStartPosition: (x: number, y: number) => void;
   removeText: () => void;
   setSelectedText: (index: number | null) => void;
-  generateStyleText: (index: number) => CSSProperties 
+  generateStyleText: (index: number) => CSSProperties;
 }
 
 export interface IHistoryOptions {
+  width: number;
+  height: number;
+  textManager: ITextManager
+}
+
+export interface ICropManager {
+  getShowContainer: () => boolean;
+  crop: (recover_size: number) => void;
+  setStartPosition: (x: number, y: number) => void;
+  moveContainer: (x: number, y: number) => void;
+  resizingContainer: (
+    rect_width: number,
+    rect_height: number,
+    rect_top: number,
+    rect_left: number,
+    x: number,
+    y: number,
+    type: "sw" | "se" | "nw" | "ne"
+  ) => void;
+  generateStyleContainer: () => CSSProperties;
+  toggleShowContainer: () => void;
+}
+
+export interface ICropContainer {
+  x: number;
+  y: number;
   width: number;
   height: number;
 }
@@ -70,3 +94,10 @@ export interface IText {
   colorHex: string;
   fontWeight: 300 | 400 | 500 | 600 | 700 | 800;
 }
+
+export interface IHistoryStage {
+  imageData: string;
+  texts: IText[]
+}
+
+
