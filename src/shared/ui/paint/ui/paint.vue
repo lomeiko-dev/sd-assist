@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ICropManager, enumTypeBackground, enumTypeDrow, type IPaintMethods } from "../model/types";
 import { watch } from "vue";
 import { drawTools } from "../model/lib/utils/draw-tools";
 import { historyManager } from "../model/lib/utils/history-manager";
-import { type IDrawToolsMethods, type IHistoryManagerMehods } from "../model/types";
-import CropContainer from "./components/crop-container.vue";
-import { onMounted } from "vue";
-import textManagment from "./components/text-managment.vue";
 import { textManager } from "../model/lib/utils/text-manager";
 import { cropManager } from "../model/lib/utils/crop-manager";
-import { drawAdaptiveImage } from "../model/lib/helpers/draw-adaptive-image";
+import CropContainer from "./components/crop-container.vue";
+import textManagment from "./components/text-managment.vue";
+import PaintManagment from "./components/paint-managment.vue";
+import {
+  ICropManager,
+  enumTypeBackground,
+  enumTypeDrow,
+  type IPaintMethods,
+  type IHistoryManagerMehods,
+} from "../model/types";
+import HistoryManagment from "./components/history-managment.vue";
 
 interface IProps {
   background?: string;
@@ -33,112 +38,58 @@ const props = withDefaults(defineProps<IProps>(), {
   rotateIndex: 0,
 });
 
-const canvasRef = ref<HTMLCanvasElement | undefined>(undefined);
-const tools = ref<IDrawToolsMethods>();
-const history = ref<IHistoryManagerMehods>();
-const cropControl = ref<ICropManager | null>(null);
+const tools = drawTools({ color: props.color, size: props.size });
 const textControl = textManager();
-
-const isDrawing = ref(false);
-const rotate = ref(0);
-
-onMounted(() => {
-  rotate.value = 0 + 90 * props.rotateIndex;
-});
-
-onMounted(() => {});
+const cropControl = ref<ICropManager>();
+const history = ref<IHistoryManagerMehods>();
 
 watch(
-  () => canvasRef.value,
+  () => tools.context.value,
   () => {
-    if (canvasRef.value) {
-      const context = canvasRef.value.getContext("2d", { willReadFrequently: true });
-
-      tools.value = drawTools(context, {
-        color: props.color,
-        size: props.size,
+    if (tools.context.value && tools.canvas.value) {
+      cropControl.value = cropManager(tools.context.value, {
+        x: 0,
+        y: 0,
         width: props.width,
         height: props.height,
       });
 
-      cropControl.value = cropManager(context, canvasRef.value, {
-        x: 25,
-        y: 25,
-        width: props.width - 50,
-        height: props.height - 50,
-      });
-
-      history.value = historyManager(context, canvasRef.value, {
-        width: props.width,
-        height: props.height,
-        textManager: textControl,
-      });
-
-      if (props.typeBackground === enumTypeBackground.IMAGE && context) {
-        drawAdaptiveImage(props.background, context, props.width, props.height);
-        history.value.save(props.background);
-      }
+      history.value = historyManager(tools.context.value, textControl);
+      history.value.save(props.background);
     }
   }
 );
-
-const mouseDownHandler = (e: any) => {
-  isDrawing.value = true;
-  tools.value?.setCoord(e.offsetX, e.offsetY, true);
-};
-
-const mouseUpHandler = () => {
-  isDrawing.value = false;
-  history.value?.save();
-};
-
-const mouseMoveHandler = (e: any) => {
-  if (isDrawing.value) {
-    switch (props.typeDrow) {
-      case enumTypeDrow.PEN:
-        tools.value?.draw(e.offsetX, e.offsetY);
-        break;
-      case enumTypeDrow.LINE:
-        tools.value?.drawLine(e.offsetX, e.offsetY);
-        break;
-      case enumTypeDrow.RECTANGLE:
-        tools.value?.drawRect(e.offsetX, e.offsetY);
-        break;
-      case enumTypeDrow.CIRCLE:
-        tools.value?.drawCircle(e.offsetX, e.offsetY);
-        break;
-      default:
-        tools.value?.draw(e.offsetX, e.offsetY);
-    }
-  }
-};
 </script>
 <template>
-  <div>
-    <CropContainer v-if="cropControl?.getShowContainer() && cropControl" :managment="cropControl" />
-    <canvas
-      ref="canvasRef"
-      :width="props.width"
-      :height="props.height"
-      @mousedown="mouseDownHandler"
-      @mouseup="mouseUpHandler"
-      @mousemove="mouseMoveHandler"
-      :style="`transform: rotate(${rotate}deg)`"
+  <div class="relative overflow-hidden" :class="`w-[${props.width}px] h-[${props.height}px]`">
+    <HistoryManagment :text-managment="textControl" :managment="history">
+      <CropContainer v-if="cropControl?.getShowContainer() && cropControl" :managment="cropControl" />
+      <PaintManagment
+        :rotate-index="props.rotateIndex"
+        :type-background="props.typeBackground"
+        :background="props.background"
+        :tools="tools"
+        :width="props.width"
+        :height="props.height"
+        :type-drow="props.typeDrow"
+      />
+      <textManagment :managment="textControl" :is-clicable="!tools.isDrawing.value" />
+    </HistoryManagment>
+
+  </div>
+  <div class="flex flex-row gap-5">
+    <button @click="history?.undo">Тест ундо</button>
+    <button
+      @click="
+        () => {
+          textControl?.addText();
+          history?.save();
+        }
+      "
     >
-    </canvas>
-    <textManagment
-      v-if="history"
-      :history="history"
-      :managment="textControl"
-      :is-clicable="!isDrawing"
-      class="absolute top-0 left-0 w-[1500px] h-[800px]"
-    />
-    <div class="flex flex-row gap-5">
-      <button @click="history?.undo">Тест ундо</button>
-      <button @click="() => {textControl?.addText(); history?.save()}">Тест создать текст</button>
-      <button @click="cropControl?.toggleShowContainer">Тест crop</button>
-      <button @click="cropControl?.crop(props.size)">обрезать</button>
-    </div>
+      Тест создать текст
+    </button>
+    <button @click="cropControl?.toggleShowContainer">Тест crop</button>
+    <button @click="cropControl?.crop(props.size)">обрезать</button>
   </div>
 </template>
-<style scoped lang="scss"></style>

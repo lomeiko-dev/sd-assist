@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { IHistoryManagerMehods, type ITextManager } from "../../model/types";
+import { type ITextManager } from "../../model/types";
 
 import OverlayPanel from "primevue/overlaypanel";
 import TextForm from "./other/text-form.vue";
@@ -14,7 +14,6 @@ import options from "shared/assets/icons/options.svg";
 interface IProps {
   isClicable?: boolean;
   managment: ITextManager;
-  history: IHistoryManagerMehods;
 }
 
 const props = defineProps<IProps>();
@@ -49,13 +48,6 @@ const mouseMoveHandler = (e: any) => {
 
 const mouseUpHandler = () => {
   isMoving.value = false;
-  
-  if (
-    JSON.stringify(props.managment.texts.value) !==
-    JSON.stringify(props.history.history[props.history.history.length - 1].texts)
-  ) {
-    props.history.save();
-  }
 };
 </script>
 <template>

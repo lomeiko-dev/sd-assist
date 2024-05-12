@@ -21,6 +21,11 @@ export interface IPaintMethods {
 }
 
 export interface IDrawToolsMethods {
+  canvas: Ref<HTMLCanvasElement | null>;
+  context: Ref<CanvasRenderingContext2D | null>;
+  isDrawing: Ref<boolean>
+  toggleDrawing: () => void;
+  init: (ref: HTMLCanvasElement) => void;
   drawLine: (x: number, y: number) => void;
   drawRect: (x2: number, y2: number) => void;
   drawCircle: (x2: number, y2: number) => void;
@@ -29,7 +34,7 @@ export interface IDrawToolsMethods {
 }
 
 export interface IHistoryManagerMehods {
-  history: IHistoryStage[]
+  history: IHistoryStage[];
   save: (imageData?: string) => void;
   undo: () => void;
 }
@@ -37,8 +42,6 @@ export interface IHistoryManagerMehods {
 export interface IDrawOptions {
   color?: string;
   size?: number;
-  width: number;
-  height: number;
 }
 
 export interface ITextManager {
@@ -58,7 +61,7 @@ export interface ITextManager {
 export interface IHistoryOptions {
   width: number;
   height: number;
-  textManager: ITextManager
+  textManager: ITextManager;
 }
 
 export interface ICropManager {
@@ -97,7 +100,5 @@ export interface IText {
 
 export interface IHistoryStage {
   imageData: string;
-  texts: IText[]
+  texts: IText[];
 }
-
-

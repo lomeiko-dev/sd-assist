@@ -1,13 +1,10 @@
-import { ref } from "vue";
-import { IHistoryManagerMehods, IHistoryOptions, IHistoryStage, IText } from "../../types";
+import { IHistoryManagerMehods, IHistoryStage, IText, ITextManager } from "../../types";
 import { drawAdaptiveImage } from "../helpers/draw-adaptive-image";
 
 export const historyManager = (
   context: CanvasRenderingContext2D | null,
-  canvas: HTMLCanvasElement,
-  options: IHistoryOptions
+  textManager: ITextManager
 ): IHistoryManagerMehods => {
-  const { width, height, textManager } = options;
   const history :IHistoryStage[] = [];
 
   const undo = () => {
@@ -17,14 +14,14 @@ export const historyManager = (
       }
 
       const stage = history[history.length - 1];
-      drawAdaptiveImage(stage.imageData, context, width, height);
+      drawAdaptiveImage(stage.imageData, context, context.canvas.width, context.canvas.height);
       textManager.texts.value = [...stage.texts];
     }
   };
 
   const save = (imageData?: string) => {
     if (context) {
-      const imageSrc = imageData || canvas.toDataURL();
+      const imageSrc = imageData || context.canvas.toDataURL();
       const newTexts: IText[] = [];
 
       textManager.texts.value.forEach((item) => {
@@ -39,7 +36,6 @@ export const historyManager = (
       });
 
       history.push({ imageData: imageSrc, texts: newTexts });
-      console.log(history);
     }
   };
 

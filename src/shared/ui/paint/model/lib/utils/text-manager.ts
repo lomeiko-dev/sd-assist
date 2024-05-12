@@ -6,7 +6,7 @@ export const textManager = (): ITextManager => {
 
   const selectIndex = ref<number | null>(null);
   const changedIndex = ref<number | null>(null);
-  const isChanged = ref(false)
+  const isChanged = ref(false);
 
   const x_start = ref(0);
   const y_start = ref(0);
@@ -22,14 +22,14 @@ export const textManager = (): ITextManager => {
 
   const addText = () => {
     const newText: IText = {
-        x: 50,
-        y: 50,
-        title: "Новый текст",
-        fontSize: 16,
-        colorHex: "#000000",
-        fontWeight: 400,
-    }
-    
+      x: 50,
+      y: 50,
+      title: "Новый текст",
+      fontSize: 16,
+      colorHex: "#000000",
+      fontWeight: 400,
+    };
+
     texts.value.push(newText);
   };
 
@@ -54,15 +54,15 @@ export const textManager = (): ITextManager => {
   };
 
   const generateStyleText = (index: number): CSSProperties => {
-    const text = texts.value[index]
-    return{
-        left: `${text.x}px`,
-        top: `${text.y}px`,
-        color: `${text.colorHex}`,
-        fontSize: `${text.fontSize}px`,
-        fontWeight: `${text.fontWeight}`
-    }
-  }
+    const text = texts.value[index];
+    return {
+      left: `${text.x}px`,
+      top: `${text.y}px`,
+      color: `${text.colorHex}`,
+      fontSize: `${text.fontSize}px`,
+      fontWeight: `${text.fontWeight}`,
+    };
+  };
 
   return {
     texts,
@@ -75,6 +75,6 @@ export const textManager = (): ITextManager => {
     changedIndex,
     setChangedIndex,
     setSelectedText,
-    generateStyleText
+    generateStyleText,
   };
 };

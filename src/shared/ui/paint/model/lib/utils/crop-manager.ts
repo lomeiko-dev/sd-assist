@@ -4,7 +4,6 @@ import { getDataUrlByImageData } from "../helpers/getDataUrlByImageData";
 
 export const cropManager = (
   context: CanvasRenderingContext2D | null,
-  canvas: HTMLCanvasElement,
   options?: ICropContainer
 ): ICropManager => {
   const cropContainer = ref<ICropContainer>({
@@ -38,13 +37,13 @@ export const cropManager = (
       image.onload = () => {
         let scale;
         if (image.width > image.height) {
-          scale = canvas.width / image.width;
+          scale = context.canvas.width / image.width;
         } else {
-          scale = canvas.height / image.height;
+          scale = context.canvas.height / image.height;
         }
 
-        canvas.width = image.width * scale;
-        canvas.height = image.height * scale;
+        context.canvas.width = image.width * scale;
+        context.canvas.height = image.height * scale;
         context.lineWidth = recover_size * 2;
         context.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width * scale, image.height * scale);
 

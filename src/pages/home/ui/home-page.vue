@@ -42,6 +42,5 @@ import test from 'shared/assets/img/Mercedes-Benz-Sls-2880x1920.jpg'
 .test1{
   background-color: #F2F8FF;
   height: 3000px;
-  padding: 10px;
 }
 </style>
