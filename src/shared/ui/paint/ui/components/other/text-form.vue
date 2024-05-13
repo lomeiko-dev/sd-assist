@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import Dropdown from 'primevue/dropdown';
-import { IText } from 'shared/ui/paint/model/types';
+import { IText } from '../../../model/lib/types';
 
     interface IProps {
         text: IText

@@ -1,5 +1,5 @@
 import { CSSProperties, ref } from "vue";
-import { IText, ITextManager } from "../../types";
+import { IText, ITextManager } from "../types";
 
 export const textManager = (): ITextManager => {
   const texts = ref<IText[]>([]);
@@ -64,9 +64,20 @@ export const textManager = (): ITextManager => {
     };
   };
 
+  const drawAllTexts = (context: CanvasRenderingContext2D, offset_x: number, offset_y: number) => {
+    texts.value.forEach((text) => {
+      context.font = `${text.fontWeight} ${text.fontSize}px arial`;
+      context.fillStyle = text.colorHex;
+      context.fillText(text.title, text.x + offset_x, text.y+offset_y);
+    });
+
+    texts.value = []
+  }
+
   return {
     texts,
     isChanged,
+    drawAllTexts,
     addText,
     removeText,
     setStartPosition,

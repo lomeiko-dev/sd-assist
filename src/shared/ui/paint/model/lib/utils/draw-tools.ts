@@ -1,6 +1,6 @@
 import { ref } from "vue";
-import { IDrawOptions } from "../../types";
-import { IDrawToolsMethods } from "../../types";
+import { getDataUrlByImageData } from "../helpers/getDataUrlByImageData";
+import { IDrawOptions, IDrawToolsMethods } from "../types";
 
 export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
   const { color = "#000000", size = 10 } = options;
@@ -82,10 +82,24 @@ export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
     }
   };
 
+  const getPicture = (): HTMLImageElement | null => {
+    if(context.value && canvas.value){
+      const img = context.value.getImageData(0, 0, canvas.value.width, canvas.value.height)
+      const dataUrl = getDataUrlByImageData(img, canvas.value.width, canvas.value.height)
+
+      return dataUrl
+    }
+
+    return null
+  }
+
+  
+
   return {
     canvas,
     context,
     isDrawing,
+    getPicture,
     toggleDrawing,
     init,
     drawLine,

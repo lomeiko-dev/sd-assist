@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ICropManager } from "../../model/types";
+import { ICropManager } from "../../model/lib/types";
 
 interface IProps {
-  managment: ICropManager;
+  managment?: ICropManager;
 }
 
 const props = defineProps<IProps>()
@@ -16,7 +16,7 @@ const isDragging = ref(false);
 const mouseDownResizingHandler = (e: any) => {
   e.stopPropagation();
   isResizing.value = true;
-  props.managment.setStartPosition(e.clientX, e.clientY);
+  props.managment?.setStartPosition(e.clientX, e.clientY);
 };
 
 const mouseMoveResizingHandler = (e: any, type: "sw" | "se" | "nw" | "ne") => {
@@ -24,7 +24,7 @@ const mouseMoveResizingHandler = (e: any, type: "sw" | "se" | "nw" | "ne") => {
 
   if (isResizing.value && containerRef.value) {
     const rect = containerRef.value.getBoundingClientRect();
-    props.managment.resizingContainer(rect.width, rect.height, rect.top, rect.left, e.clientX, e.clientY, type);
+    props.managment?.resizingContainer(rect.width, rect.height, rect.top, rect.left, e.clientX, e.clientY, type);
   }
 };
 
@@ -35,7 +35,7 @@ const mouseUpResizingHandler = () => {
 const mouseDownDraggingHandler = (e: any) => {
   if (containerRef.value) {
     isDragging.value = true;
-    props.managment.setStartPosition(
+    props.managment?.setStartPosition(
       e.clientX - containerRef.value.offsetLeft,
       e.clientY - containerRef.value.offsetTop
     );
@@ -44,7 +44,7 @@ const mouseDownDraggingHandler = (e: any) => {
 
 const mouseMoveDraggingHandler = (e: any) => {
   if (isDragging.value && containerRef.value) {
-    props.managment.moveContainer(e.clientX, e.clientY);
+    props.managment?.moveContainer(e.clientX, e.clientY);
   }
 };
 
@@ -58,7 +58,7 @@ const mouseUpDraggingHandler = () => {
     @mousedown="mouseDownDraggingHandler"
     @mouseup="mouseUpDraggingHandler"
     class="bg-black/30 absolute z-20"
-    :style="props.managment.generateStyleContainer()"
+    :style="props.managment?.generateStyleContainer()"
     ref="containerRef"
   >
     <div class="relative w-full h-full border-[4px] border-dashed border-blue-600 cursor-move">

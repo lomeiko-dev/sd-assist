@@ -1,6 +1,6 @@
 import { CSSProperties, ref } from "vue";
-import { ICropManager, type ICropContainer } from "../../types";
 import { getDataUrlByImageData } from "../helpers/getDataUrlByImageData";
+import { ICropContainer, ICropManager } from "../types";
 
 export const cropManager = (
   context: CanvasRenderingContext2D | null,

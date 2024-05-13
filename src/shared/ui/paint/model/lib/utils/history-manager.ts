@@ -1,10 +1,10 @@
-import { IHistoryManagerMehods, IHistoryStage, IText, ITextManager } from "../../types";
 import { drawAdaptiveImage } from "../helpers/draw-adaptive-image";
+import { IHistoryManager, IHistoryStage, IText, ITextManager } from "../types";
 
 export const historyManager = (
   context: CanvasRenderingContext2D | null,
   textManager: ITextManager
-): IHistoryManagerMehods => {
+): IHistoryManager => {
   const history :IHistoryStage[] = [];
 
   const undo = () => {

@@ -8,14 +8,9 @@ import { cropManager } from "../model/lib/utils/crop-manager";
 import CropContainer from "./components/crop-container.vue";
 import textManagment from "./components/text-managment.vue";
 import PaintManagment from "./components/paint-managment.vue";
-import {
-  ICropManager,
-  enumTypeBackground,
-  enumTypeDrow,
-  type IPaintMethods,
-  type IHistoryManagerMehods,
-} from "../model/types";
 import HistoryManagment from "./components/history-managment.vue";
+import { enumTypeBackground, enumTypeDrow, type IPaintMethods } from "../model/types";
+import type {ICropManager, IHistoryManager} from '../model/lib/types'
 
 interface IProps {
   background?: string;
@@ -26,8 +21,10 @@ interface IProps {
   color?: string;
   size?: number;
   rotateIndex?: number;
-  getControlMethods?: () => IPaintMethods;
+  getControlMethods?: (data: string) => void;
 }
+
+const emits = defineEmits(["controlMethods"]);
 
 const props = withDefaults(defineProps<IProps>(), {
   background: "#FFFFFF",
@@ -41,7 +38,7 @@ const props = withDefaults(defineProps<IProps>(), {
 const tools = drawTools({ color: props.color, size: props.size });
 const textControl = textManager();
 const cropControl = ref<ICropManager>();
-const history = ref<IHistoryManagerMehods>();
+const history = ref<IHistoryManager>();
 
 watch(
   () => tools.context.value,
@@ -56,14 +53,34 @@ watch(
 
       history.value = historyManager(tools.context.value, textControl);
       history.value.save(props.background);
+
+      const methods: IPaintMethods = {
+        showCropContainer: cropControl.value.toggleShowContainer,
+        crop: () => {
+          cropControl.value?.crop(props.size);
+        },
+        createNewText: () => {
+          textControl?.addText();
+          history.value?.save();
+        },
+        undo: history.value?.undo,
+        save: () => {
+          if (tools.context.value) {
+            textControl.drawAllTexts(tools.context.value, 16, 24);
+            const src = tools.getPicture()?.src;
+            return src;
+          }
+        },
+      };
+
+      emits("controlMethods", methods);
     }
   }
 );
 </script>
 <template>
   <div class="relative overflow-hidden" :class="`w-[${props.width}px] h-[${props.height}px]`">
-    <HistoryManagment :text-managment="textControl" :managment="history">
-      <CropContainer v-if="cropControl?.getShowContainer() && cropControl" :managment="cropControl" />
+    <HistoryManagment :draw-tools="tools" :text-managment="textControl" :managment="history">
       <PaintManagment
         :rotate-index="props.rotateIndex"
         :type-background="props.typeBackground"
@@ -73,23 +90,8 @@ watch(
         :height="props.height"
         :type-drow="props.typeDrow"
       />
+      <CropContainer v-if="cropControl?.getShowContainer()" :managment="cropControl" />
       <textManagment :managment="textControl" :is-clicable="!tools.isDrawing.value" />
     </HistoryManagment>
-
-  </div>
-  <div class="flex flex-row gap-5">
-    <button @click="history?.undo">Тест ундо</button>
-    <button
-      @click="
-        () => {
-          textControl?.addText();
-          history?.save();
-        }
-      "
-    >
-      Тест создать текст
-    </button>
-    <button @click="cropControl?.toggleShowContainer">Тест crop</button>
-    <button @click="cropControl?.crop(props.size)">обрезать</button>
   </div>
 </template>

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { IDrawToolsMethods, enumTypeBackground, enumTypeDrow } from "../../model/types";
-import { onMounted } from "vue";
 import { watch } from "vue";
+import { onMounted } from "vue";
 import { drawAdaptiveImage } from "../../model/lib/helpers/draw-adaptive-image";
+import { enumTypeBackground, enumTypeDrow } from "../../model/types";
+import { IDrawToolsMethods } from "../../model/lib/types";
 
 interface IProps {
   background?: string;
