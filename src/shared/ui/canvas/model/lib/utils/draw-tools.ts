@@ -12,6 +12,7 @@ export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
   const canvas = ref<HTMLCanvasElement | null>(null);
   const context = ref<CanvasRenderingContext2D | null>(null);
   const isDrawing = ref(false);
+  let this_size = size;
 
   const toggleDrawing = () => {
     isDrawing.value = !isDrawing.value;
@@ -25,6 +26,21 @@ export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
       context.value.fillStyle = color;
       context.value.strokeStyle = color;
       context.value.lineWidth = size * 2;
+      this_size = size;
+    }
+  };
+
+  const setColor = (color: string) => {
+    if (context.value) {
+      context.value.fillStyle = color;
+      context.value.strokeStyle = color;
+    }
+  };
+
+  const setSize = (size: number) => {
+    if (context.value) {
+      context.value.lineWidth = size * 2;
+      this_size = size;
     }
   };
 
@@ -39,7 +55,7 @@ export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
   const draw = (x: number, y: number) => {
     if (context.value) {
       context.value.beginPath();
-      context.value.arc(x, y, size, 0, 2 * Math.PI);
+      context.value.arc(x, y, this_size, 0, 2 * Math.PI);
       context.value.fill();
 
       context.value.beginPath();
@@ -83,22 +99,22 @@ export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
   };
 
   const getPicture = (): HTMLImageElement | null => {
-    if(context.value && canvas.value){
-      const img = context.value.getImageData(0, 0, canvas.value.width, canvas.value.height)
-      const dataUrl = getDataUrlByImageData(img, canvas.value.width, canvas.value.height)
+    if (context.value && canvas.value) {
+      const img = context.value.getImageData(0, 0, canvas.value.width, canvas.value.height);
+      const dataUrl = getDataUrlByImageData(img, canvas.value.width, canvas.value.height);
 
-      return dataUrl
+      return dataUrl;
     }
 
-    return null
-  }
-
-  
+    return null;
+  };
 
   return {
     canvas,
     context,
     isDrawing,
+    setColor,
+    setSize,
     getPicture,
     toggleDrawing,
     init,

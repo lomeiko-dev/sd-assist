@@ -10,7 +10,7 @@ import textManagment from "./components/text-managment.vue";
 import PaintManagment from "./components/paint-managment.vue";
 import HistoryManagment from "./components/history-managment.vue";
 import { enumTypeBackground, enumTypeDrow, type IPaintMethods } from "../model/types";
-import type {ICropManager, IHistoryManager} from '../model/lib/types'
+import type { ICropManager, IHistoryManager } from "../model/lib/types";
 
 interface IProps {
   background?: string;
@@ -41,6 +41,14 @@ const cropControl = ref<ICropManager>();
 const history = ref<IHistoryManager>();
 
 watch(
+  () => [props.color, props.size],
+  () => {
+    tools.setColor(props.color);
+    tools.setSize(props.size);
+  }
+);
+
+watch(
   () => tools.context.value,
   () => {
     if (tools.context.value && tools.canvas.value) {
@@ -68,7 +76,7 @@ watch(
           if (tools.context.value) {
             textControl.drawAllTexts(tools.context.value, 16, 24);
             const src = tools.getPicture()?.src;
-            return src;
+            if (src) return { src, rotateIndex: props.rotateIndex };
           }
         },
       };

@@ -4,6 +4,8 @@ export interface IDrawToolsMethods {
   canvas: Ref<HTMLCanvasElement | null>;
   context: Ref<CanvasRenderingContext2D | null>;
   isDrawing: Ref<boolean>;
+  setColor: (color: string) => void;
+  setSize: (size: number) => void;
   toggleDrawing: () => void;
   init: (ref: HTMLCanvasElement) => void;
   drawLine: (x: number, y: number) => void;

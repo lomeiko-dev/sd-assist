@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { type ITextManager } from "../../model/types";
+import { type ITextManager } from "../../model/lib/types";
 
 import OverlayPanel from "primevue/overlaypanel";
 import TextForm from "./other/text-form.vue";

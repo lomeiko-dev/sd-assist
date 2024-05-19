@@ -1,3 +1,5 @@
+import { IImage } from "shared/ui/image/model/types";
+
 export enum enumTypeBackground {
   IMAGE = "IMAGE",
   COLOR = "COLOR",
@@ -15,6 +17,6 @@ export interface IPaintMethods {
   undo: () => void;
   showCropContainer: () => void;
   crop: () => void;
-  save: () => string | undefined;
+  save: () => IImage | undefined;
 }
 

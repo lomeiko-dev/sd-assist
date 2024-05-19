@@ -1,27 +1,24 @@
 <script setup lang="ts">
-import Intro from "./components/intro.vue";
-import CustomerBase from "./components/customer-base.vue";
-import { layoutApp } from "widgets/layouts/layout-app";
-import { lotListPreview } from "widgets/lot-list";
-import { container } from "shared/ui/container";
+// import Intro from "./components/intro.vue";
+// import CustomerBase from "./components/customer-base.vue";
+// import { layoutApp } from "widgets/layouts/layout-app";
+// import { lotListPreview } from "widgets/lot-list";
+// import { container } from "shared/ui/container";
 
-import { stepViewer } from "shared/ui/step-viewer";
-import {
-  groupDropdownSelect,
-  groupInputText,
-  groupInputDate,
-  groupInputMask,
-  groupColorPicker,
-  groupTextarea,
-  imageUploader,
-  pdfUploader,
-} from "shared/ui/input";
-import Paint from "shared/ui/paint/ui/paint.vue";
-import { IPaintMethods, enumTypeBackground } from "shared/ui/paint/model/types";
+// import { stepViewer } from "shared/ui/step-viewer";
+// import {
+//   groupDropdownSelect,
+//   groupInputText,
+//   groupInputDate,
+//   groupInputMask,
+//   groupColorPicker,
+//   groupTextarea,
+//   imageUploader,
+//   pdfUploader,
+// } from "shared/ui/input";
 import test from "shared/assets/img/Mercedes-Benz-Sls-2880x1920.jpg";
-import { ref } from "vue";
-
-const methods = ref<IPaintMethods | undefined>(undefined);
+import {Paint} from "features/paint";
+import {image as Image} from 'shared/ui/image'
 </script>
 <template>
   <div>
@@ -43,20 +40,8 @@ const methods = ref<IPaintMethods | undefined>(undefined);
       <groupTextarea title="dsgsdg"/>
       <pdfUploader/>
       <imageUploader/> -->
-      <Paint
-        @control-methods="(data) => (methods = data)"
-        :width="1500"
-        :height="800"
-        :background="test"
-        :type-background="enumTypeBackground.IMAGE"
-      />
-      <div class="flex flex-row gap-5">
-        <button @click="methods?.undo">Тест ундо</button>
-        <button @click="methods?.createNewText">Тест создать текст</button>
-        <button @click="methods?.showCropContainer">Тест crop</button>
-        <button @click="methods?.crop">обрезать</button>
-        <button @click="() => console.log(methods?.save())">сохранить всё это дерьмо</button>
-      </div>
+      <Paint :image="test"/>
+      <Image :width="800" :height="600" :image="{src: test, rotateIndex: 1}"/>
     </div>
   </div>
 </template>

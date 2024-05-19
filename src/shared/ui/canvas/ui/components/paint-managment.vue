@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { watch } from "vue";
-import { onMounted } from "vue";
 import { drawAdaptiveImage } from "../../model/lib/helpers/draw-adaptive-image";
 import { enumTypeBackground, enumTypeDrow } from "../../model/types";
 import { IDrawToolsMethods } from "../../model/lib/types";
@@ -34,8 +33,8 @@ watch(
   }
 );
 
-onMounted(() => {
-  rotate.value = 0 + 90 * (props.rotateIndex || 0);
+watch(() => props.rotateIndex, () => {
+  rotate.value = 90 * (props.rotateIndex || 0);
 });
 
 const mouseDownHandler = (e: any) => {
