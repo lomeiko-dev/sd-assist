@@ -2,10 +2,7 @@ import { CSSProperties, ref } from "vue";
 import { getDataUrlByImageData } from "../helpers/getDataUrlByImageData";
 import { ICropContainer, ICropManager } from "../types";
 
-export const cropManager = (
-  context: CanvasRenderingContext2D | null,
-  options?: ICropContainer
-): ICropManager => {
+export const cropManager = (context: CanvasRenderingContext2D | null, options?: ICropContainer): ICropManager => {
   const cropContainer = ref<ICropContainer>({
     x: options?.x || 0,
     y: options?.y || 0,
@@ -71,6 +68,7 @@ export const cropManager = (
     y: number,
     type: "sw" | "se" | "nw" | "ne"
   ) => {
+    console.log(type);
     switch (type) {
       case "sw":
         cropContainer.value.width = rect_width + (start_x - x);

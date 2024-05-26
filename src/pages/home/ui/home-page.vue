@@ -6,19 +6,21 @@
 // import { container } from "shared/ui/container";
 
 // import { stepViewer } from "shared/ui/step-viewer";
-// import {
-//   groupDropdownSelect,
-//   groupInputText,
-//   groupInputDate,
-//   groupInputMask,
-//   groupColorPicker,
-//   groupTextarea,
-//   imageUploader,
-//   pdfUploader,
-// } from "shared/ui/input";
-import test from "shared/assets/img/Mercedes-Benz-Sls-2880x1920.jpg";
-import {Paint} from "features/paint";
-import {image as Image} from 'shared/ui/image'
+import {
+  groupDropdownSelect,
+  groupInputText,
+  groupInputDate,
+  groupInputMask,
+  groupColorPicker,
+  groupTextarea,
+  imageUploader,
+  pdfUploader,
+} from "shared/ui/input";
+import { ImagePreview } from "features/paint";
+import { ref } from "vue";
+
+const images = ref<string[]>([]);
+
 </script>
 <template>
   <div>
@@ -38,10 +40,12 @@ import {image as Image} from 'shared/ui/image'
       <groupInputMask placeholder="sdgdsg" title="Код" mask="9 9 9 9 9 9 9 9 9 9"/>
       <groupColorPicker title="sdgsdg"/>
       <groupTextarea title="dsgsdg"/>
-      <pdfUploader/>
-      <imageUploader/> -->
-      <Paint :image="test"/>
-      <Image :width="800" :height="600" :image="{src: test, rotateIndex: 1}"/>
+      <pdfUploader/> -->
+      <imageUploader @get-image="(img) => images.push(img)">
+        <template #default>
+          <ImagePreview v-for="(img, index) in images" @on-change="(image) => images[index] = image.src" @on-delete="images.splice(index, 1);" :width="230" :height="230" :image="{src: img, rotateIndex: 0}"/>
+        </template>
+      </imageUploader>
     </div>
   </div>
 </template>

@@ -8,12 +8,14 @@ import FormCrop from "./components/forms/form-crop.vue";
 
 interface IProps {
   image: string;
+  closeModal: () => void;
 }
 
 const props = defineProps<IProps>();
+const emits = defineEmits(['onChanged']);
 
 const methods = ref<IPaintMethods | undefined>(undefined);
-const tool = ref<enumTypeDrow>(enumTypeDrow.PEN);
+const tool = ref<enumTypeDrow | null>(enumTypeDrow.PEN);
 const color = ref("#000000");
 const size = ref(5);
 const rotate = ref(0);
@@ -30,6 +32,13 @@ const crop = () => {
   methods.value?.crop();
   isShowCrop.value = !isShowCrop.value;
   isHideUI.value = !isHideUI.value;
+}
+
+const save = () => {
+  const result = methods.value?.save();
+  if(result)
+    emits('onChanged', result)
+  props.closeModal();
 }
 
 </script>
@@ -70,7 +79,7 @@ const crop = () => {
       class="absolute bottom-[22px] right-[25px] duration-300"
       :class="isHideUI ? 'opacity-20 bottom-[5px] right-[5px] pointer-events-none' : ''"
     >
-      <FormSave :save="methods?.save" :undo="methods?.undo" />
+      <FormSave :save="save" :undo="methods?.undo" />
     </div>
   </div>
   <div class="flex justify-end w-[980px]" v-if="isShowCrop">

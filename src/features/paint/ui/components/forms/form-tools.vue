@@ -23,6 +23,7 @@ const rotateIndex = ref(0);
 
 const selectTools = (index: number, func: () => any) => {
   activeIndex.value = index;
+  emits("changeTool", null);
   func();
 };
 
@@ -39,8 +40,8 @@ const changeRotate = computed(() => {
 <template>
   <div class="flex flex-col gap-5">
     <ToolButton @click="selectTools(-1, () => $emit('changeRotate', changeRotate))" :src="rotate" />
-    <ToolButton @click="selectTools(-1, () => props.showCrop?.())" :src="clip" />
-    <ToolButton @click="selectTools(-1, () => props.createText?.())" :src="text" />
+    <ToolButton :is-active="activeIndex === 4" @click="selectTools(4, () => props.showCrop?.())" :src="clip" />
+    <ToolButton :is-active="activeIndex === 5" @click="selectTools(5, () => props.createText?.())" :src="text" />
     <ToolButton
       :is-active="activeIndex === 0"
       @click="selectTools(0, () => $emit('changeTool', enumTypeDrow.PEN))"

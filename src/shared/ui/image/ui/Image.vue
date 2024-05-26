@@ -13,12 +13,13 @@ const props = defineProps<IProps>();
 const rotate = computed(() => {
   return 90 * (props.image.rotateIndex || 0);
 });
+
 </script>
 <template>
-  <div
-    class="image"
-    :style="`width: ${props.width}px; height: ${props.height}px; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
-  ></div>
+    <div
+      class="image rounded-[10px]"
+      :style="`width: ${props.width}px; height: ${props.height}px; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
+    ></div>
 </template>
 <style scoped lang="scss">
 .image {

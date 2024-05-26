@@ -9,7 +9,7 @@ interface IProps {
   background?: string;
   typeBackground?: enumTypeBackground;
   tools?: IDrawToolsMethods;
-  typeDrow: enumTypeDrow;
+  typeDrow?: enumTypeDrow | null;
   width: number;
   height: number;
   rotateIndex?: number;
@@ -62,7 +62,7 @@ const mouseMoveHandler = (e: any) => {
         props.tools?.drawCircle(e.offsetX, e.offsetY);
         break;
       default:
-        props.tools?.draw(e.offsetX, e.offsetY);
+        null;
     }
   }
 };

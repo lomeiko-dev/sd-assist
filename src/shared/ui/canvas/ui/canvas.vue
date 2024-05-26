@@ -17,23 +17,23 @@ interface IProps {
   width: number;
   height: number;
   typeBackground?: enumTypeBackground;
-  typeDrow?: enumTypeDrow;
+  typeDrow?: enumTypeDrow | null;
   color?: string;
   size?: number;
   rotateIndex?: number;
   getControlMethods?: (data: string) => void;
 }
 
-const emits = defineEmits(["controlMethods"]);
-
 const props = withDefaults(defineProps<IProps>(), {
   background: "#FFFFFF",
   typeBackground: enumTypeBackground.COLOR,
-  typeDrow: enumTypeDrow.PEN,
+  typeDrow: null,
   color: "#000000",
   size: 14,
   rotateIndex: 0,
 });
+
+const emits = defineEmits(["controlMethods"]);
 
 const tools = drawTools({ color: props.color, size: props.size });
 const textControl = textManager();
@@ -53,10 +53,10 @@ watch(
   () => {
     if (tools.context.value && tools.canvas.value) {
       cropControl.value = cropManager(tools.context.value, {
-        x: 0,
-        y: 0,
-        width: props.width,
-        height: props.height,
+        x: 10,
+        y: 10,
+        width: props.width-20,
+        height: props.height-20,
       });
 
       history.value = historyManager(tools.context.value, textControl);
