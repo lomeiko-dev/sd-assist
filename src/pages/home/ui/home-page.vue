@@ -33,15 +33,15 @@ const images = ref<string[]>([]);
     </layout-app> -->
 
     <div class="test1 flex flex-col gap-2">
-      <!-- <stepViewer :passed-number="2" :selected-index="3" :steps="['шаг 1', 'шаг 2', 'шаг 3', 'шаг 3']"/>
+      <stepViewer :passed-number="2" :selected-index="3" :steps="['шаг 1', 'шаг 2', 'шаг 3', 'шаг 3']"/>
       <groupDropdownSelect :options="['Текст1', 'Текст2', 'Текст3', 'Текст4', 'Текст5', 'Текст6']"  placeholder="Не выбрано" title="Объект торгов*"/>
       <groupInputText title="Имя какое то*"/>
       <groupInputDate title="Имя какое то*"/>
       <groupInputMask placeholder="sdgdsg" title="Код" mask="9 9 9 9 9 9 9 9 9 9"/>
-      <groupColorPicker title="sdgsdg"/>
+      <groupColorPicker error-placeholder="ИДИ НАХУЙ" placeholder="sdgsdg"/>
       <groupTextarea title="dsgsdg"/>
-      <pdfUploader/> -->
-      <imageUploader @get-image="(img) => images.push(img)">
+      <pdfUploader/>
+      <imageUploader error-message="Ошибка такая то такая то" @get-image="(img) => images.push(img)">
         <template #default>
           <ImagePreview v-for="(img, index) in images" @on-change="(image) => images[index] = image.src" @on-delete="images.splice(index, 1);" :width="230" :height="230" :image="{src: img, rotateIndex: 0}"/>
         </template>

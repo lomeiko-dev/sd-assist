@@ -3,6 +3,12 @@ import { ref } from "vue";
 import FileUploader from "../components/file-uploader.vue";
 import { useWindowSize } from "@vueuse/core";
 
+interface IProps {
+  errorMessage?: string;
+}
+
+const props = defineProps<IProps>();
+
 const emits = defineEmits(['get-file'])
 const files = ref<File[]>([]);
 
@@ -36,6 +42,7 @@ const converFiles = (Files: File[]) => {
       :subtitle="width < 640 ? '' : 'или нажмите, чтобы выбрать их на компьютере'"
       accept="application/pdf, application/zip"
       @get-files="converFiles"
+      :error-message="props.errorMessage"
       :data-types="[`application/pdf`, `application/zip`]"
       :is-available-content="files.length !== 0"
     />

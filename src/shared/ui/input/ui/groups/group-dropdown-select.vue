@@ -1,25 +1,24 @@
 <script setup lang="ts">
 import Dropdown from "primevue/dropdown";
 import GroupContainer from "../components/group-container.vue";
+import { IInputProps } from "../../model/types";
 
 interface IProps {
-  title: string;
   options: any;
   optionLabel?: string;
-  placeholder?: string;
 }
 
-const props = defineProps<IProps>();
+const props = defineProps<(IInputProps & IProps)>();
 const model = defineModel<any>();
 </script>
 <template>
-  <GroupContainer :title="props.title">
+  <GroupContainer :errorPlaceholder="props.errorPlaceholder" :placeholder="props.placeholder">
     <Dropdown
       class="select-none outline-none"
       v-model="model"
       :options="props.options"
       :optionLabel="props.optionLabel"
-      :placeholder="props.placeholder"
+      placeholder="Не выбрано"
     />
   </GroupContainer>
 </template>

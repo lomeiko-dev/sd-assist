@@ -3,6 +3,12 @@ import { ref } from "vue";
 import FileUploader from "../components/file-uploader.vue";
 import { useWindowSize } from "@vueuse/core";
 
+interface IProps {
+  errorMessage?: string;
+}
+
+const props = defineProps<IProps>();
+
 const emits = defineEmits(['get-image'])
 
 const {width} = useWindowSize()
@@ -24,6 +30,7 @@ const converFilesToImages = (Files: File[]) => {
     <FileUploader
       :title="width < 640 ? 'Добавить фото' : 'Перетащите изображения, чтобы добавить их к лоту'"
       :subtitle="width < 640 ? '' : 'или нажмите, чтобы выбрать их на компьютере'"
+      :error-message="props.errorMessage"
       accept="image/jpeg, image/png"
       @get-files="converFilesToImages"
       :data-types="[`image/jpeg`, `image/png`, `image/`]"
