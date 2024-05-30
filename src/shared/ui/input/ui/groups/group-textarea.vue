@@ -7,7 +7,11 @@ const props = defineProps<IInputProps>();
 const model = defineModel<string>();
 </script>
 <template>
-  <GroupContainer :error-placeholder="props.errorPlaceholder" :placeholder="props.placeholder">
-    <Textarea class="h-[197px]" v-model="model" />
+  <GroupContainer :is-error="props.isError" :placeholder="props.placeholder">
+    <textarea
+      :placeholder="props.placeholder"
+      class="h-[197px] w-full p-[20px] text-sm select-none border-none outline-none"
+      v-model="model"
+    />
   </GroupContainer>
 </template>

@@ -7,6 +7,7 @@ export { default as floatInputMask } from "./floats/float-input-mask.vue";
 export { default as groupDropdownSelect } from "./groups/group-dropdown-select.vue";
 export { default as groupColorPicker } from "./groups/group-color-picker.vue";
 export { default as groupInputText } from "./groups/group-input-text.vue";
+export { default as groupInputNumber } from "./groups/group-input-number.vue";
 export { default as groupInputDate } from "./groups/group-input-date.vue";
 export { default as groupInputMask } from "./groups/group-input-mask.vue";
 export { default as groupTextarea } from "./groups/group-textarea.vue";

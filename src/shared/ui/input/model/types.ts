@@ -2,7 +2,7 @@ import { CSSProperties } from "vue";
 
 export interface IInputProps {
   id?: string;
-  errorPlaceholder?: string;
+  isError?: boolean;
   placeholder?: string;
 }
 

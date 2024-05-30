@@ -1,0 +1,1 @@
+export {default as lotCreator} from './lot-creator.vue';

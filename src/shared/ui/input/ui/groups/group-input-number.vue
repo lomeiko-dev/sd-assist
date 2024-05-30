@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import InputText from "primevue/inputtext";
 import GroupContainer from "../components/group-container.vue";
 import { IInputProps } from "../../model/types";
+import InputNumber from "primevue/inputnumber";
 
 const props = defineProps<IInputProps>();
-const model = defineModel<string>();
+const model = defineModel<number>();
 
 </script>
 <template>
-  <GroupContainer :is-error="props.isError" :placeholder="props.placeholder">
-    <InputText :placeholder="props.placeholder" v-model="model" />
+  <GroupContainer :isError="props.isError" :placeholder="props.placeholder">
+    <InputNumber v-model="model" inputId="integeronly" />
   </GroupContainer>
 </template>

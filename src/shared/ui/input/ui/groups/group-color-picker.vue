@@ -8,9 +8,9 @@ const props = defineProps<IInputProps>();
 const model = defineModel<IColorItem>();
 </script>
 <template>
-  <GroupContainer :error-placeholder="props.errorPlaceholder" :placeholder="props.placeholder">
+  <GroupContainer :is-error="props.isError" :placeholder="props.placeholder">
     <div
-      class="bg-white flex flex-row flex-wrap w-full gap-[13px] items-center mini-tablet:pl-[32px] mini-tablet:my-0 my-[10px]"
+      class="bg-white flex flex-row flex-wrap w-full gap-[10px] items-center mini-tablet:pl-[16px] mini-tablet:my-0 my-[10px]"
     >
       <ColorItem
         v-for="item in colorList"

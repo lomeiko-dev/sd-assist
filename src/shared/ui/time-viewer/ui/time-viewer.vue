@@ -2,6 +2,7 @@
 import time from "shared/assets/icons/time.svg";
 import inlineSvg from "vue-inline-svg";
 import { onMounted, ref } from "vue";
+import {differenceDate} from 'shared/lib/utils/differenceDate'
 
 interface IProps {
   date_deadline: Date;
@@ -18,14 +19,13 @@ onMounted(() => {
 })
 
 const subtractionDates = () => {
-  const result = Number(props.date_deadline) - Number(new Date())
-  const hour = 1000 * 60 * 60
-  const day = (hour * 24)
-  days.value = Math.floor(result / day + 1)
-  hours.value = Math.floor(result % day / (1000 * 60 * 60) + 1)
-  minutes.value = Math.floor(result % hour / (1000 * 60))
+  const result = differenceDate(props.date_deadline, new Date())
 
-  isTrouble.value = result / hour <= 60;
+  days.value = result.days
+  hours.value = result.hours
+  minutes.value = result.minutes
+
+  isTrouble.value = result.hours <= 60;
 }
 
 </script>

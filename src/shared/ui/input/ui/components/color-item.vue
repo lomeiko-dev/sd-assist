@@ -19,6 +19,7 @@ const isHovered = ref(false);
 <template>
   <div class="relative">
     <div
+      v-if="isHovered"
       class="shadowed absolute -top-8 -left-6 rounded-[40px] px-3 py-[3px] opacity-0 duration-300"
       :class="isHovered ? 'opacity-100' : ''"
       :style="styleSheet"

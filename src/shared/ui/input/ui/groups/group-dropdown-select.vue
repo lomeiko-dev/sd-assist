@@ -12,7 +12,7 @@ const props = defineProps<(IInputProps & IProps)>();
 const model = defineModel<any>();
 </script>
 <template>
-  <GroupContainer :errorPlaceholder="props.errorPlaceholder" :placeholder="props.placeholder">
+  <GroupContainer :is-error="props.isError" :placeholder="props.placeholder">
     <Dropdown
       class="select-none outline-none"
       v-model="model"

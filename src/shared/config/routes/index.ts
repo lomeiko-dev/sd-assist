@@ -2,10 +2,10 @@ import { IRouteApp } from "./types";
 
 enum enumRouting {
   HOME = "HOME",
-  TEST = "TEST",
+  LOT_CREATOR = "LOT_CREATOR",
 }
 
 export const Routes: Record<enumRouting, IRouteApp> = {
   [enumRouting.HOME]: { name: "home", path: "/home/:auth?", isProtected: false },
-  [enumRouting.TEST]: { name: "test", path: "/test", isProtected: true },
+  [enumRouting.LOT_CREATOR]: { name: "lot-creator", path: "/create/lot", isProtected: true },
 };

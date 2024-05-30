@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { IAuth } from "../types";
 
 export const authStore = defineStore("auth", () => {
-  const isAuth = ref(false);
+  const isAuth = ref(true);
   const authData = ref<IAuth | undefined>(undefined);
 
   const login = (auth: IAuth) => {

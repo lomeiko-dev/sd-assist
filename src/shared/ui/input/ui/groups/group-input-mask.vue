@@ -12,7 +12,7 @@ const model = defineModel<string>();
 
 </script>
 <template>
-  <GroupContainer :errorPlaceholder="props.errorPlaceholder" :placeholder="props.placeholder">
-    <InputMask v-model="model" :mask="props.mask" />
+  <GroupContainer :isError="props.isError" :placeholder="props.placeholder">
+    <InputMask :placeholder="props.mask.replace(/\d/g, 'X')" v-model="model" :mask="props.mask" />
   </GroupContainer>
 </template>
