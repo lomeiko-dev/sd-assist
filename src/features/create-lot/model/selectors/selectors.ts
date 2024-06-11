@@ -21,11 +21,11 @@ export const insurances: IOption[] = [
 export const typeAuction: IOption[] = [
   {
     title: "Открытый",
-    value: "openned",
+    value: true,
   },
   {
     title: "Закрытый",
-    value: "closed",
+    value: false,
   },
 ];
 

@@ -9,7 +9,7 @@ interface IProps {
 
 const props = defineProps<IProps>();
 
-const emits = defineEmits(['get-image'])
+const model = defineModel<string[]>()
 
 const {width} = useWindowSize()
 const isAvailable = ref(true);
@@ -17,7 +17,12 @@ const isAvailable = ref(true);
 const converFilesToImages = (Files: File[]) => {
   isAvailable.value = false;
   Files.forEach((file) => {
-    emits("get-image", URL.createObjectURL(file));
+    if(model.value === null){
+      model.value = [(URL.createObjectURL(file))]
+    }
+    else{
+      model.value?.push(URL.createObjectURL(file))
+    }
   });
 };
 </script>

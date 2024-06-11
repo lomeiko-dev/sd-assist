@@ -1,5 +1,7 @@
-export { default as checkBox } from "./others/check-box.vue";
+export { default as generateForm } from "./generate-form.vue";
+export { default as inputContainer } from "./components/input-container.vue";
 
+export { default as checkBox } from "./others/check-box.vue";
 export { default as floatInputPassword } from "./floats/float-input-password.vue";
 export { default as floatInputText } from "./floats/float-input-text.vue";
 export { default as floatInputMask } from "./floats/float-input-mask.vue";

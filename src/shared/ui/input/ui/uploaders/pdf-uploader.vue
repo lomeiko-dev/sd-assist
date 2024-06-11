@@ -9,14 +9,19 @@ interface IProps {
 
 const props = defineProps<IProps>();
 
-const emits = defineEmits(["get-file"]);
+const model = defineModel<string[]>()
 const isAvailable = ref(true);
 const { width } = useWindowSize();
 
 const converFiles = (Files: File[]) => {
   isAvailable.value = false;
   Files.forEach((file) => {
-    emits("get-file", file);
+    if(model.value === null){
+      model.value = [(URL.createObjectURL(file))]
+    }
+    else{
+      model.value?.push(URL.createObjectURL(file))
+    }
   });
 };
 </script>

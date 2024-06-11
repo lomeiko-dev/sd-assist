@@ -5,6 +5,7 @@ import FloatContainer from "../components/float-container.vue";
 
 interface IProps {
     mask: string;
+    errorPlaceholder?: string;
 }
 
 const props = defineProps<IProps & IInputProps>();

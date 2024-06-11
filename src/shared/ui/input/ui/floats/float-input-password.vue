@@ -5,7 +5,11 @@ import { ref } from "vue";
 import { watch } from "vue";
 import FloatContainer from "../components/float-container.vue";
 
-const props = defineProps<IInputProps>();
+interface IProps {
+  errorPlaceholder?: string;
+}
+
+const props = defineProps<IInputProps & IProps>();
 const model = defineModel<string>();
 
 const isFocus = ref(true);

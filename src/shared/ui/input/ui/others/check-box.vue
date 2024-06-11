@@ -20,6 +20,7 @@ watch(model, () => {
       :class="isCheck ? 'border-green' : 'border-primary/20'"
       class="border border-solid rounded bg-transparent w-[20px] h-[20px] duration-300"
       v-model="model"
+      binary
       :inputId="props.id"
       :value="props.placeholder"
     />

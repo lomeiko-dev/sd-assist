@@ -3,7 +3,11 @@ import InputText from "primevue/inputtext";
 import { IInputProps } from "../../model/types";
 import FloatContainer from "../components/float-container.vue";
 
-const props = defineProps<IInputProps>();
+interface IProps {
+  errorPlaceholder?: string;
+}
+
+const props = defineProps<IInputProps & IProps>();
 const model = defineModel<string>();
 </script>
 <template>

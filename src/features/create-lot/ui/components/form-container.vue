@@ -1,5 +1,22 @@
+<script setup lang="ts">
+import { onMounted } from 'vue';
+
+    interface IProps {
+        padding?: string;
+    }
+
+    const props = withDefaults(defineProps<IProps>(), {
+        padding: '40px'
+    });
+
+    onMounted(() => {
+        console.log(props.padding);
+    })
+
+</script>
+
 <template>
-    <div class="bg-smoky-white p-10 rounded-[10px]">
+    <div :class="`p-[${props.padding}]`" class="bg-smoky-white rounded-[10px]">
         <slot></slot>
     </div>
 </template>

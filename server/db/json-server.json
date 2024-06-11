@@ -831,6 +831,582 @@
           "date": "2021-01-01T12:00:00.000Z"
         }
       ]
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-08T21:18:36.000Z",
+      "date_deadline": "2024-06-17T21:18:38.000Z",
+      "offer_period": "44",
+      "case_number": "132-321-34",
+      "region": {
+        "id": 3,
+        "name": "Донецкая Область"
+      },
+      "city": {
+        "id": 11,
+        "name": "Донецк",
+        "regionid": 3
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "car_brand": "123",
+      "car_model": "123",
+      "car_generation": "123",
+      "release_year": 123,
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Голубой",
+        "style": {
+          "backgroundColor": "#00B9FB",
+          "color": "white"
+        }
+      },
+      "mileage": 123,
+      "car_damage": "strong-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 123,
+      "power_engine": 123,
+      "engine_damage": "moderate-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "small-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": null,
+      "comment": "ыфафыа",
+      "images": [
+        "blob:http://localhost:5173/a25e9337-1c5a-4b25-9f79-4058d7647998"
+      ],
+      "default_rate": 123123,
+      "currency": "₽",
+      "id": "4p1_iem"
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-01T21:26:36.000Z",
+      "date_deadline": "2024-06-03T21:26:38.000Z",
+      "offer_period": "45",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "12312312321312312",
+      "frame_number": "12312312312312312",
+      "car_type": "cargo",
+      "car_brand": "123",
+      "car_model": "123",
+      "car_generation": "123",
+      "release_year": 123,
+      "car_body": "sedan",
+      "car_color": null,
+      "mileage": null,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "images": [
+        "blob:http://localhost:5173/3de7787a-d604-4b0c-a2b1-1c435a0c335b"
+      ],
+      "default_rate": 123123,
+      "currency": "₽",
+      "id": "KxCZRZ-"
+    },
+    {
+      "title": "123 123",
+      "id_lot": "49257/5",
+      "bids": [],
+      "image_preview": "blob:http://localhost:5173/4ba652a7-a34e-4a04-bb91-d1df1f56dcfc",
+      "seller": "",
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-01T21:46:19.000Z",
+      "date_deadline": "2024-06-16T21:46:22.000Z",
+      "offer_period": "46",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 3,
+        "name": "Донецкая Область"
+      },
+      "city": {
+        "id": 12,
+        "name": "Славянск",
+        "regionid": 3
+      },
+      "VIN_number": "12321321312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "com",
+      "car_brand": "123",
+      "car_model": "123",
+      "car_generation": "123",
+      "release_year": 123123,
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Коричневый",
+        "style": {
+          "backgroundColor": "#9C5B11",
+          "color": "white"
+        }
+      },
+      "mileage": null,
+      "car_damage": "strong-damage",
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": 123,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "images": [
+        "blob:http://localhost:5173/4ba652a7-a34e-4a04-bb91-d1df1f56dcfc"
+      ],
+      "default_rate": 123123,
+      "currency": "₽",
+      "id": "ixCkzGj"
+    },
+    {
+      "title": "BMW M5",
+      "id_lot": "42843/3",
+      "bids": [],
+      "image_preview": "blob:http://localhost:5173/d57eb843-ef6c-4c3a-b349-c27bdb5872f1",
+      "seller": "",
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-02T21:53:25.000Z",
+      "date_deadline": "2024-06-19T21:53:27.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 3,
+        "name": "Донецкая Область"
+      },
+      "city": {
+        "id": 11,
+        "name": "Донецк",
+        "regionid": 3
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "truck",
+      "car_brand": "BMW",
+      "car_model": "M5",
+      "car_generation": "F90",
+      "release_year": 2018,
+      "car_body": "coupe",
+      "car_color": {
+        "title": "Синий",
+        "style": {
+          "backgroundColor": "#0049E5",
+          "color": "white"
+        }
+      },
+      "mileage": 2000000,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "electric",
+      "volume_engine": 2000000,
+      "power_engine": 200000000,
+      "engine_damage": "small-damage",
+      "type_drive": "full",
+      "type_transmission": "robotic",
+      "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "ебейшая машина!!! продаю нахуй",
+      "images": [
+        "blob:http://localhost:5173/d57eb843-ef6c-4c3a-b349-c27bdb5872f1"
+      ],
+      "default_rate": 20000000,
+      "currency": "¥",
+      "id": "opc7o4c"
+    },
+    {
+      "title": "[object Object] [object Object] [object Object]",
+      "id_lot": "77198/5",
+      "bids": [],
+      "image_preview": "blob:http://localhost:5173/7817120b-a43b-414d-be33-4bfb05274d3f",
+      "seller": "",
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-09T21:11:51.000Z",
+      "date_deadline": "2024-06-17T21:11:51.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-21",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 3,
+        "name": "Аксай",
+        "regionid": 1
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312321231231",
+      "car_type": "com",
+      "release_year": 2009,
+      "car_brand": {
+        "id": 4,
+        "brand": "Toyota"
+      },
+      "car_model": {
+        "id": 12,
+        "brandid": 4,
+        "model": "RAV4"
+      },
+      "car_generation": {
+        "id": 30,
+        "modelid": 12,
+        "generation": "XA10"
+      },
+      "car_body": "hatchback",
+      "car_color": {
+        "title": "Зеленый",
+        "style": {
+          "backgroundColor": "#00AB3B",
+          "color": "white"
+        }
+      },
+      "mileage": 212,
+      "car_damage": "moderate-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": null,
+      "type_engine": "hybrid",
+      "volume_engine": 123,
+      "power_engine": 123,
+      "engine_damage": "small-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "small-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": true,
+      "comment": "уцуцк",
+      "images": [
+        "blob:http://localhost:5173/7817120b-a43b-414d-be33-4bfb05274d3f"
+      ],
+      "default_rate": 1233333,
+      "currency": "₽",
+      "id": "lGcpSwD"
+    },
+    {
+      "title": "Mercedes-Benz C-Class W202",
+      "id_lot": "29995/8",
+      "bids": [],
+      "image_preview": "blob:http://localhost:5173/1581d2f3-09c0-4aa5-8407-23e4e7f2d777",
+      "seller": "",
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-13T21:13:43.000Z",
+      "date_deadline": "2024-06-14T21:13:43.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 3,
+        "name": "Донецкая Область"
+      },
+      "city": {
+        "id": 11,
+        "name": "Донецк",
+        "regionid": 3
+      },
+      "VIN_number": "99999999999999999",
+      "frame_number": "99999999999999999",
+      "car_type": "lungs",
+      "release_year": 2006,
+      "car_brand": {
+        "id": 3,
+        "brand": "Mercedes-Benz"
+      },
+      "car_model": {
+        "id": 7,
+        "brandid": 3,
+        "model": "C-Class"
+      },
+      "car_generation": {
+        "id": 16,
+        "modelid": 7,
+        "generation": "W202"
+      },
+      "car_body": "coupe",
+      "car_color": {
+        "title": "Серебристый",
+        "style": {
+          "background": "linear-gradient(90deg, #C6C6C6 4.6%, #EFEEEE 43.91%, #EFEEEE 56.78%, #C6C6C6 98.21%)",
+          "color": "#333"
+        }
+      },
+      "mileage": 156050,
+      "car_damage": "small-damage",
+      "passport_pts": "electronic",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 25,
+      "power_engine": 250,
+      "engine_damage": "small-damage",
+      "type_drive": "back",
+      "type_transmission": "automatic",
+      "KPP_damage": "small-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "Машина в хорошем состоянии, есть небольшие царапины, очень маломальны и не видны невооруженным глазом.",
+      "images": [
+        "blob:http://localhost:5173/1581d2f3-09c0-4aa5-8407-23e4e7f2d777",
+        "blob:http://localhost:5173/eea5e98f-9558-4c04-a29f-b2cf2b2320a9"
+      ],
+      "files": [
+        {},
+        {}
+      ],
+      "default_rate": 25000,
+      "currency": "$",
+      "id": "l3b-cQu"
+    },
+    {
+      "images": [
+        "blob:http://localhost:5173/50c6f1e7-df31-44ac-8676-ca6742e02198"
+      ],
+      "files": [
+        {}
+      ],
+      "default_rate": 23123,
+      "currency": "¥",
+      "id": "hhaPvCh"
+    },
+    {
+      "images": [
+        "blob:http://localhost:5173/39bb51fc-09dd-4346-9301-a1dc6263cfca"
+      ],
+      "files": [
+        {}
+      ],
+      "default_rate": 123,
+      "currency": "₽",
+      "id": "U4O4dLn"
+    },
+    {
+      "images": [
+        "blob:http://localhost:5173/9c98b1c8-87c4-43d0-a1cc-69a9ed474d34"
+      ],
+      "files": [
+        {}
+      ],
+      "default_rate": 123,
+      "currency": "₽",
+      "id": "dMUBfqj"
+    },
+    {
+      "images": [
+        "blob:http://localhost:5173/8ce84f9a-660d-4ab1-aec7-3318be3e9bcc"
+      ],
+      "files": [
+        {}
+      ],
+      "default_rate": 123,
+      "currency": "₽",
+      "id": "aknfLl-"
+    },
+    {
+      "images": [
+        "blob:http://localhost:5173/a9615786-0499-4091-aeb0-684266cf295b"
+      ],
+      "files": [
+        {}
+      ],
+      "default_rate": 123,
+      "currency": "$",
+      "id": "ZWcXDy1"
+    },
+    {
+      "images": null,
+      "files": [
+        {}
+      ],
+      "default_rate": 123123123,
+      "currency": "₽",
+      "id": "fEQ_cTT"
+    },
+    {
+      "images": null,
+      "files": [
+        {}
+      ],
+      "default_rate": 999999999999,
+      "currency": "₽",
+      "id": "QRrK9uk"
+    },
+    {
+      "images": null,
+      "files": [
+        {}
+      ],
+      "default_rate": 123123123,
+      "currency": "₽",
+      "id": "3K8kX3b"
+    },
+    {
+      "images": null,
+      "files": [
+        {}
+      ],
+      "default_rate": 132,
+      "currency": "₽",
+      "id": "7GpwBWe"
+    },
+    {
+      "images": null,
+      "files": [
+        {}
+      ],
+      "default_rate": 21111111,
+      "currency": "₽",
+      "id": "N6TXUsP"
+    },
+    {
+      "images": null,
+      "files": [
+        {}
+      ],
+      "default_rate": 12,
+      "currency": "₽",
+      "id": "gfvccow"
+    },
+    {
+      "images": null,
+      "files": [
+        "blob:http://localhost:5173/b7447a6c-1044-48e0-bad7-2e5477083450"
+      ],
+      "default_rate": 123456789,
+      "currency": "₽",
+      "id": "rGKdBgm"
+    },
+    {
+      "title": "Toyota Corolla E120",
+      "id_lot": "84757/7",
+      "bids": [],
+      "image_preview": "blob:http://localhost:5173/30838c2d-bd88-41a4-b604-4a2fbf4f5b99",
+      "seller": "",
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-09T21:24:36.000Z",
+      "date_deadline": "2024-06-09T21:24:36.000Z",
+      "offer_period": "44",
+      "case_number": "111-111-11",
+      "region": {
+        "id": 3,
+        "name": "Донецкая Область"
+      },
+      "city": {
+        "id": 13,
+        "name": "Кромоторск",
+        "regionid": 3
+      },
+      "VIN_number": "78165990586129900",
+      "frame_number": "12006700980065000",
+      "car_type": "cargo",
+      "release_year": 1990,
+      "car_brand": {
+        "id": 4,
+        "brand": "Toyota"
+      },
+      "car_model": {
+        "id": 10,
+        "brandid": 4,
+        "model": "Corolla"
+      },
+      "car_generation": {
+        "id": 24,
+        "modelid": 10,
+        "generation": "E120"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Зеленый",
+        "style": {
+          "backgroundColor": "#00AB3B",
+          "color": "white"
+        }
+      },
+      "mileage": 2011,
+      "car_damage": "strong-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 123,
+      "power_engine": 12,
+      "engine_damage": "no-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "middle-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "900",
+      "images": [
+        "blob:http://localhost:5173/30838c2d-bd88-41a4-b604-4a2fbf4f5b99"
+      ],
+      "files": [
+        "blob:http://localhost:5173/72ba278c-84f5-41ed-806f-c571ac8ea8b0"
+      ],
+      "default_rate": 900,
+      "currency": "₽",
+      "id": "jOHSBhU"
     }
   ],
   "lots-total-count": {
@@ -977,7 +1553,6 @@
       "regionid": 4
     }
   ],
-
   "regions": [
     {
       "id": 1,
@@ -994,6 +1569,248 @@
     {
       "id": 4,
       "name": "Краснодарский Край"
+    }
+  ],
+  "car_brand": [
+    {
+      "id": 1,
+      "brand": "BMW"
+    },
+    {
+      "id": 2,
+      "brand": "Audi"
+    },
+    {
+      "id": 3,
+      "brand": "Mercedes-Benz"
+    },
+    {
+      "id": 4,
+      "brand": "Toyota"
+    }
+  ],
+  "car_model": [
+    {
+      "id": 1,
+      "brandid": 1,
+      "model": "3 Series"
+    },
+    {
+      "id": 2,
+      "brandid": 1,
+      "model": "X5"
+    },
+    {
+      "id": 3,
+      "brandid": 1,
+      "model": "i3"
+    },
+    {
+      "id": 4,
+      "brandid": 2,
+      "model": "A4"
+    },
+    {
+      "id": 5,
+      "brandid": 2,
+      "model": "Q5"
+    },
+    {
+      "id": 6,
+      "brandid": 2,
+      "model": "A8"
+    },
+    {
+      "id": 7,
+      "brandid": 3,
+      "model": "C-Class"
+    },
+    {
+      "id": 8,
+      "brandid": 3,
+      "model": "E-Class"
+    },
+    {
+      "id": 9,
+      "brandid": 3,
+      "model": "GLA"
+    },
+    {
+      "id": 10,
+      "brandid": 4,
+      "model": "Corolla"
+    },
+    {
+      "id": 11,
+      "brandid": 4,
+      "model": "Camry"
+    },
+    {
+      "id": 12,
+      "brandid": 4,
+      "model": "RAV4"
+    }
+  ],
+  "car_generation": [
+    {
+      "id": 1,
+      "modelid": 1,
+      "generation": "E90"
+    },
+    {
+      "id": 2,
+      "modelid": 1,
+      "generation": "F30"
+    },
+    {
+      "id": 3,
+      "modelid": 1,
+      "generation": "G20"
+    },
+    {
+      "id": 4,
+      "modelid": 2,
+      "generation": "E53"
+    },
+    {
+      "id": 5,
+      "modelid": 2,
+      "generation": "F15"
+    },
+    {
+      "id": 6,
+      "modelid": 2,
+      "generation": "G05"
+    },
+    {
+      "id": 7,
+      "modelid": 3,
+      "generation": "First Generation"
+    },
+    {
+      "id": 8,
+      "modelid": 4,
+      "generation": "B5"
+    },
+    {
+      "id": 9,
+      "modelid": 4,
+      "generation": "B6"
+    },
+    {
+      "id": 10,
+      "modelid": 4,
+      "generation": "B9"
+    },
+    {
+      "id": 11,
+      "modelid": 5,
+      "generation": "First Generation"
+    },
+    {
+      "id": 12,
+      "modelid": 5,
+      "generation": "Second Generation"
+    },
+    {
+      "id": 13,
+      "modelid": 6,
+      "generation": "D2"
+    },
+    {
+      "id": 14,
+      "modelid": 6,
+      "generation": "D4"
+    },
+    {
+      "id": 15,
+      "modelid": 6,
+      "generation": "D5"
+    },
+    {
+      "id": 16,
+      "modelid": 7,
+      "generation": "W202"
+    },
+    {
+      "id": 17,
+      "modelid": 7,
+      "generation": "W204"
+    },
+    {
+      "id": 18,
+      "modelid": 7,
+      "generation": "W205"
+    },
+    {
+      "id": 19,
+      "modelid": 8,
+      "generation": "W211"
+    },
+    {
+      "id": 20,
+      "modelid": 8,
+      "generation": "W212"
+    },
+    {
+      "id": 21,
+      "modelid": 8,
+      "generation": "W213"
+    },
+    {
+      "id": 22,
+      "modelid": 9,
+      "generation": "First Generation"
+    },
+    {
+      "id": 23,
+      "modelid": 9,
+      "generation": "Second Generation"
+    },
+    {
+      "id": 24,
+      "modelid": 10,
+      "generation": "E120"
+    },
+    {
+      "id": 25,
+      "modelid": 10,
+      "generation": "E140"
+    },
+    {
+      "id": 26,
+      "modelid": 10,
+      "generation": "E170"
+    },
+    {
+      "id": 27,
+      "modelid": 11,
+      "generation": "XV30"
+    },
+    {
+      "id": 28,
+      "modelid": 11,
+      "generation": "XV40"
+    },
+    {
+      "id": 29,
+      "modelid": 11,
+      "generation": "XV50"
+    },
+    {
+      "id": 30,
+      "modelid": 12,
+      "generation": "XA10"
+    },
+    {
+      "id": 31,
+      "modelid": 12,
+      "generation": "XA30"
+    },
+    {
+      "id": 32,
+      "modelid": 12,
+      "generation": "XA40"
     }
   ]
 }

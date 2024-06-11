@@ -6,6 +6,7 @@ import { IInputProps } from "../../model/types";
 interface IProps {
   options: any;
   optionLabel?: string;
+  optionValue?: string
 }
 
 const props = defineProps<(IInputProps & IProps)>();
@@ -17,6 +18,7 @@ const model = defineModel<any>();
       class="select-none outline-none"
       v-model="model"
       :options="props.options"
+      :optionValue="props.optionValue"
       :optionLabel="props.optionLabel"
       placeholder="Не выбрано"
     />

@@ -1,63 +1,63 @@
 <script setup lang="ts">
-import { createLotStore } from "features/create-lot/model/store/create-lot-store";
-import { typeCar } from "../../model/selectors/selectors";
-import { groupInputMask, groupDropdownSelect, groupInputText, groupInputNumber } from "shared/ui/input";
-import InputContainer from "../components/input-container.vue";
+import { generateForm, IConfigField, IFieldsManager } from "shared/ui/input";
+import { ref, onMounted, watch } from "vue";
+import { carFormConfig_primary, carFormConfig_secondary } from "../../model/config/car-form-config";
+import { getAllCarBrand, getAllCarModel, getCarBrandById, getCarGenerationByModelid, getCarModelByBrandid } from "shared/services/car-service";
 
-const store = createLotStore();
+interface IProps {
+  managment: IFieldsManager;
+}
 
+const props = defineProps<IProps>();
+
+const config_1 = ref<IConfigField[]>(carFormConfig_primary);
+const config_2 = ref<IConfigField[]>(carFormConfig_secondary);
+
+onMounted(async () => {
+  const brandConfig = config_2.value.find((item) => item.key === "car_brand");
+  if (brandConfig) {
+    brandConfig.options = (await getAllCarBrand()).data;
+  }
+
+  const modelConfig = config_2.value.find((item) => item.key === "car_model");
+  if (modelConfig) {
+    modelConfig.options = (await getAllCarModel()).data;
+  }
+});
+
+watch(
+  () => props.managment.object["car_brand"],
+  async () => {
+    const modelConfig = config_2.value.find((item) => item.key === "car_model");
+    if (modelConfig) {
+      const id = props.managment.object["car_brand"]?.data?.id;
+      if (id) modelConfig.options = (await getCarModelByBrandid(id)).data;
+    }
+  },
+  { deep: true }
+);
+
+watch(
+  () => props.managment.object["car_model"],
+  async () => {
+    if (props.managment.object["car_brand"]) {
+      const data = (await getCarBrandById(props.managment.object["car_model"]?.data?.brandid)).data[0];
+      props.managment.object["car_brand"].data = data;
+
+      const generationField = config_2.value.find((item) => item.key === "car_generation");
+      if (generationField) {
+        generationField.options = (await getCarGenerationByModelid(props.managment.object["car_model"]?.data?.id)).data;
+      }
+    }
+  },
+  { deep: true }
+);
 </script>
 
 <template>
-  <div class="flex flex-col gap-[13px]">
-    <InputContainer key-name="VINNumber" is-validated>
-      <groupInputMask
-        :is-error="store.checkError('VINNumber')"
-        v-model="store.fields['VINNumber'].data"
-        placeholder="VIN номер*"
-        mask="99999999999999999"
-      />
-    </InputContainer>
-    <InputContainer key-name="FrameNumber">
-      <groupInputMask v-model="store.fields['FrameNumber'].data" placeholder="Frame номер" mask="99999999999999999" />
-    </InputContainer>
-    <InputContainer key-name="typeCar" is-validated>
-      <groupDropdownSelect
-        :is-error="store.checkError('typeCar')"
-        v-model="store.fields['typeCar'].data"
-        placeholder="Тип авто*"
-        :options="typeCar"
-        option-label="title"
-      />
-    </InputContainer>
-
-    <div class="flex flex-col gap-[13px]" v-if="store.getProps('typeCar') !== null">
-      <InputContainer key-name="brand" is-validated>
-        <groupInputText
-          :is-error="store.checkError('brand')"
-          v-model="store.fields['brand'].data"
-          placeholder="Марка*"
-        />
-      </InputContainer>
-      <InputContainer key-name="model" is-validated>
-        <groupInputText
-          :is-error="store.checkError('model')"
-          v-model="store.fields['model'].data"
-          placeholder="Модель*"
-        />
-      </InputContainer>
-      <InputContainer key-name="generationCar">
-        <groupInputText v-model="store.fields['generationCar'].data" placeholder="Поколение" />
-      </InputContainer>
-    </div>
-
-    <InputContainer key-name="yearRelease" is-validated>
-      <groupInputNumber
-        :is-error="store.checkError('yearRelease')"
-        v-model="store.
-        fields['yearRelease'].data"
-        placeholder="Год выпуска*"
-      />
-    </InputContainer>
-  </div>
+  <generateForm :config="config_1" :manager="props.managment">
+    <template #internal>
+      <generateForm v-if="managment.object['car_type'].data" :config="config_2" :manager="props.managment" />
+    </template>
+  </generateForm>
 </template>

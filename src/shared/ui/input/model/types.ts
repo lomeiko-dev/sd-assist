@@ -1,5 +1,36 @@
 import { CSSProperties } from "vue";
 
+export type typeField =
+  | "dropdwn"
+  | "text"
+  | "textarea"
+  | "number"
+  | "date"
+  | "color"
+  | "checkbox"
+  | "mask"
+  | "other"
+  | "image-loader"
+  | "file-loader";
+
+export interface IConfigField {
+  type: typeField;
+  title?: string;
+  subTitle?: string;
+  nameSlot?: string;
+  isValid?: boolean;
+  key?: string;
+  placeholder?: string;
+  errorMessage?: string;
+  options?: any;
+  optionLabel?: string;
+  optionValue?: string;
+  min?: Date;
+  max?: Date;
+  mask?: string;
+  indexForm?: number;
+}
+
 export interface IInputProps {
   id?: string;
   isError?: boolean;
