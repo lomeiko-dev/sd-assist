@@ -48,7 +48,7 @@ const createNewLotHandle = async () => {
         <lotForm :managment="store.fieldsManagmant" v-if="store.step === 1" />
         <carForm :managment="store.fieldsManagmant" v-else-if="store.step === 2" />
         <characteristicForm :managment="store.fieldsManagmant" v-else-if="store.step === 3" />
-        <mediaForm :managment="store.fieldsManagmant" v-else-if="store.step === 4" />
+        <mediaForm :managment="store.fieldsManagmant" v-else-if="store.step === 4 || store.step === 5" />
       </FormContainer>
       <FormContainer padding="20px" class="w-full tablet:max-w-[296px] foggy-container">
         <stepViewer class="w-[100%] tablet:h-[100%] h-[25px]" :is-mobile="width < 768" :steps="stepsName" :passed-number="store.step - 1" :selected-index="store.step" />

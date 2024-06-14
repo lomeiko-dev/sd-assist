@@ -15,7 +15,7 @@ export const createLotStore = defineStore("create-lot", () => {
   });
 
   const nextStep = (validator: (indexForm: number) => boolean) => {
-    const isValid = true;
+    const isValid = validator(step.value);
 
     if (isValid) {
       step.value++;

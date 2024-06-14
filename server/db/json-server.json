@@ -1407,6 +1407,83 @@
       "default_rate": 900,
       "currency": "₽",
       "id": "jOHSBhU"
+    },
+    {
+      "title": "BMW X5 E53",
+      "id_lot": "40091/5",
+      "bids": [],
+      "image_preview": "blob:http://localhost:5173/dd8b509c-8f57-42fd-9638-34a5f0e8df92",
+      "seller": "",
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-14T20:59:13.079Z",
+      "date_deadline": "2024-06-15T21:03:21.000Z",
+      "offer_period": "44",
+      "case_number": "132-123-12",
+      "region": {
+        "id": 2,
+        "name": "Московская Область"
+      },
+      "city": {
+        "id": 7,
+        "name": "Москва",
+        "regionid": 2
+      },
+      "VIN_number": "11111111111111111",
+      "frame_number": "11111111111111111",
+      "car_type": "lungs",
+      "release_year": 2009,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 2,
+        "brandid": 1,
+        "model": "X5"
+      },
+      "car_generation": {
+        "id": 4,
+        "modelid": 2,
+        "generation": "E53"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Синий",
+        "style": {
+          "backgroundColor": "#0049E5",
+          "color": "white"
+        }
+      },
+      "mileage": 120,
+      "car_damage": "small-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 30,
+      "power_engine": 180,
+      "engine_damage": "no-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "small-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "абабаба",
+      "images": [
+        "blob:http://localhost:5173/dd8b509c-8f57-42fd-9638-34a5f0e8df92",
+        "blob:http://localhost:5173/a7e9bd65-9aa4-419a-827f-a23f07b7079f"
+      ],
+      "files": [
+        "blob:http://localhost:5173/195f3d09-dc8a-484f-98fb-ea1fce70a48c"
+      ],
+      "default_rate": 50000,
+      "currency": "₽",
+      "id": "6yfin44"
     }
   ],
   "lots-total-count": {

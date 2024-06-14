@@ -12,7 +12,9 @@ interface IProps {
 }
 
 const props = defineProps<IProps>();
+
 </script>
+
 <template>
   <div class="flex flex-col">
     <div v-if="!props.isMobile && !props.isStartNode">
@@ -26,12 +28,12 @@ const props = defineProps<IProps>();
     <div class="flex flex-row gap-[9px] h-[22px] w-max">
       <div
         :class="`${props.isActive ? 'border-primary text-primary' : 'border-primary/20 text-primary/20'} ${
-          props.isPassed ? 'bg-green border-green' : ''
+          props.isPassed ? 'bg-green border border-solid border-green' : ''
         }`"
-        class="flex items-center p-2 w-[22px] h-[22px] justify-center border border-solid rounded-full"
+        class="flex items-center p-[6px] w-[22px] h-[22px] justify-center border border-solid rounded-full"
       >
         <p v-if="!props.isPassed">{{ props.index + 1 }}</p>
-        <inlineSvg v-else :src="check" />
+        <inlineSvg class="w-[14px] h-[14px]" v-else :src="check" />
       </div>
       <div :class="props.isMobile ? 'max-w-[100%] w-full' : 'max-w-[133px]'" class="text-sm font-normal w-full">
         <p v-if="props.isPassed" class="text-green-600">{{ props.title }}</p>
@@ -41,4 +43,3 @@ const props = defineProps<IProps>();
     </div>
   </div>
 </template>
-<style lang="scss"></style>

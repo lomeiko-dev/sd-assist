@@ -16,7 +16,7 @@ import { onMounted } from 'vue';
 </script>
 
 <template>
-    <div :class="`p-[${props.padding}]`" class="bg-smoky-white rounded-[10px]">
+    <div :style="`padding: ${props.padding}`" class="bg-smoky-white rounded-[10px]">
         <slot></slot>
     </div>
 </template>
