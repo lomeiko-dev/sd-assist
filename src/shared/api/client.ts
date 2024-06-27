@@ -1,18 +1,7 @@
-import axios, { type AxiosRequestConfig } from "axios";
-import { BASE_URL, REQUEST_TIMEOUT } from "./model/consts";
+import { AxiosInstance, type AxiosRequestConfig } from "axios";
 import { IClient } from "./model/types";
 
-const API = axios.create({
-  baseURL: BASE_URL,
-  timeout: REQUEST_TIMEOUT,
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-    "ngrok-skip-browser-warning": false,
-  },
-});
-
-export const ApiClient = async ({ data, method = "GET", url, params, headers }: IClient) => {
+export const ApiClient = async ({ data, method = "GET", url, params, headers }: IClient, scheme: AxiosInstance) => {
   const requestParams: AxiosRequestConfig = {
     method,
     url,
@@ -20,9 +9,9 @@ export const ApiClient = async ({ data, method = "GET", url, params, headers }: 
     data,
   };
 
-  API.defaults.headers = { ...API.defaults.headers, ...headers };
+  scheme.defaults.headers = { ...scheme.defaults.headers, ...headers };
 
-  return API(requestParams)
+  return scheme(requestParams)
     .then((res) => ({ data: res.data, status: res.status, total: res.headers["X-Total-Count"] }))
     .catch((err) => {
       console.error("\nERROR MESSAGE:", err.response.data.message, `\nSTATUS: ${err.response.data.status}`);

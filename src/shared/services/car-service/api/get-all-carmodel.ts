@@ -1,10 +1,9 @@
-import { ApiClient } from "shared/api";
-import { Endpoints } from "shared/api/model/endpoints";
+import { ApiClient, Endpoints, BASE_API } from "shared/api";
 
 export const getAllCarModel = async () => {
   const result = await ApiClient({
     url: `${Endpoints.CAR_MODEL}`,
-  });
+  }, BASE_API);
 
   return result;
 };

@@ -1,14 +1,14 @@
-import { ILot } from "entities/lot";
-import { ApiClient } from "shared/api";
-import { Endpoints } from "shared/api/model/endpoints";
+import { ApiClient, Endpoints, BASE_API } from "shared/api";
 
-export const createNewLot = async (data: ILot) => {
-  console.log(data.files[0]);
-  const result = await ApiClient({
-    url: `${Endpoints.LOTS}`,
-    method: "POST",
-    data: data,
-  });
+export const createNewLot = async (data: FormData) => {
+  const result = await ApiClient(
+    {
+      url: `${Endpoints.LOTS}`,
+      method: "POST",
+      data: data,
+    },
+    BASE_API
+  );
 
   return result;
 };

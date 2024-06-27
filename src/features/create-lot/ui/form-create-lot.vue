@@ -10,8 +10,6 @@ import inlineSvg from "vue-inline-svg";
 import arrowRight from "shared/assets/icons/arrow-right.svg";
 import { createLotStore } from "../model/store/create-lot-store";
 import Dialog from "primevue/dialog";
-import { ILot } from "entities/lot";
-import { generateID } from "shared/lib/utils/generateID";
 import PriceForm from "./forms/price-form.vue";
 import { useWindowSize } from "@vueuse/core/index.cjs";
 
@@ -24,25 +22,16 @@ const stepsName: string[] = [
 
 const store = createLotStore();
 
-const {width} = useWindowSize()
+const { width } = useWindowSize();
 
 const createNewLotHandle = async () => {
-  const lot_primary: Pick<ILot, "title" | "id_lot" | "bids" | "image_preview" | "seller"> = {
-    title: `${store.fieldsManagmant.object["car_brand"].data.brand} ${store.fieldsManagmant.object["car_model"].data.model} ${store.fieldsManagmant
-      .object["car_generation"].data.generation}`,
-    id_lot: generateID(5),
-    bids: [],
-    image_preview: store.fieldsManagmant.object["images"].data[0],
-    seller: "",
-  };
-
-  const lot = Object.assign(lot_primary, store.fieldsManagmant.generateDataFields()) || {};
-  store.createLot(lot);
+  store.createLot();
 };
 </script>
 
 <template>
   <div class="w-full max-w-[1182px]">
+    <button @click="console.log(store.fieldsManagmant.object)">test</button>
     <div class="flex tablet:flex-row flex-col-reverse gap-[13px]">
       <FormContainer class="w-full max-w-[941px]">
         <lotForm :managment="store.fieldsManagmant" v-if="store.step === 1" />
@@ -51,7 +40,13 @@ const createNewLotHandle = async () => {
         <mediaForm :managment="store.fieldsManagmant" v-else-if="store.step === 4 || store.step === 5" />
       </FormContainer>
       <FormContainer padding="20px" class="w-full tablet:max-w-[296px] foggy-container">
-        <stepViewer class="w-[100%] tablet:h-[100%] h-[25px]" :is-mobile="width < 768" :steps="stepsName" :passed-number="store.step - 1" :selected-index="store.step" />
+        <stepViewer
+          class="w-[100%] tablet:h-[100%] h-[25px]"
+          :is-mobile="width < 768"
+          :steps="stepsName"
+          :passed-number="store.step - 1"
+          :selected-index="store.step"
+        />
       </FormContainer>
     </div>
     <div class="flex flex-row gap-[7px] items-end justify-end mt-[34px]">
@@ -94,11 +89,11 @@ const createNewLotHandle = async () => {
 @media (max-width: 768px) {
   .foggy-container {
     position: relative;
-    background: #F2F8FF;
+    background: #f2f8ff;
     background-size: cover;
     overflow: hidden;
   }
-  
+
   .foggy-container::before,
   .foggy-container::after {
     content: "";
@@ -109,15 +104,14 @@ const createNewLotHandle = async () => {
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     pointer-events: none;
   }
-  
+
   .foggy-container::before {
     left: 0;
   }
-  
+
   .foggy-container::after {
     right: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
 }
-
 </style>

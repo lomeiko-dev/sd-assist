@@ -1,4 +1,5 @@
 import { Currency } from "shared/ui/currency-manager";
+import { IColorItem } from "shared/ui/input/model/types";
 
 interface IBid {
   userId: number;
@@ -10,13 +11,12 @@ export interface ILot {
   id_lot: string;
   title: string;
   object_auction: string;
-  image_preview: string;
   files: string[];
   images: string[];
   isOpen: boolean;
-  case_number: number
+  case_number: number;
   default_rate: number;
-  currancy: Currency;
+  currency: Currency;
   bids: IBid[];
   mileage: number;
   type_engine: string;
@@ -32,18 +32,18 @@ export interface ILot {
   type_insurance: string;
   VIN_number: number;
   frame_number: number;
-  car_brand: string;
+  car_brand: any;
   car_type: string;
-  car_model: string;
+  car_model: any;
   car_body: string;
-  car_color: string;
+  car_color: IColorItem;
   car_damage: string;
-  car_generation: string; // поколение
+  car_generation: any; // поколение
   passport_pts: string;
   type_drive: string;
   type_transmission: string;
-  region: string;
-  city: string;
+  region: any;
+  city: any;
   offer_period: number;
   isNotFreeField: boolean;
   isMarkTermitionRegistrationCar: boolean;

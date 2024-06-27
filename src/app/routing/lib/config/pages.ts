@@ -1,6 +1,7 @@
 import { IPage } from "app/routing/types";
 import { homePage } from "pages/home";
 import { lotCreator } from "pages/lot-creator";
+import { lotListPage } from "pages/lot-list";
 import { successPage } from "pages/success";
 import { Routes } from "shared/config/routes";
 
@@ -16,5 +17,9 @@ export const pages: IPage[] = [
   {
     routeOpt: Routes.SUCCESS,
     component: successPage,
+  },
+  {
+    routeOpt: Routes.LOT_LIST,
+    component: lotListPage,
   },
 ];

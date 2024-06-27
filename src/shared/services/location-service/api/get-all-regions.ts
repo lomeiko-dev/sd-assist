@@ -1,10 +1,13 @@
-import { ApiClient } from "shared/api";
-import { Endpoints } from "shared/api/model/endpoints";
+import { ApiClient, Endpoints, BASE_API } from "shared/api";
 
 export const getAllRegions = async () => {
-  const result = await ApiClient({
-    url: `${Endpoints.REGIONS}`,
-  });
+  const result = await ApiClient(
+    {
+      url: `${Endpoints.REGIONS}`,
+    },
+    BASE_API
+  );
 
-  return result
+  console.log(result);
+  return result;
 };

@@ -1,5 +1,5 @@
 import { IConfigField } from "shared/ui/input";
-import { typeCar } from "../selectors/selectors";
+import { typeCar } from "shared/config/selectors";
 
 export const carFormConfig_primary: IConfigField[] = [
   {

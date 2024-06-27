@@ -42,8 +42,8 @@ const isHover = ref(false);
                <ItemData name="Пробег" :data="`${String(props.data.mileage)}км`"/>
             </div>
             <div>
-               <ItemData name="КПП" :data="String(props.data.KPP)"/>
-               <ItemData name="Двигатель:" :data="String(props.data.engine)"/>
+               <ItemData name="КПП" :data="String(props.data.type_transmission)"/>
+               <ItemData name="Двигатель:" :data="String(props.data.type_engine)"/>
 
             </div>
         </div>

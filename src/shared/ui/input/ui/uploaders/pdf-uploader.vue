@@ -9,7 +9,7 @@ interface IProps {
 
 const props = defineProps<IProps>();
 
-const model = defineModel<string[]>()
+const model = defineModel<File[]>()
 const isAvailable = ref(true);
 const { width } = useWindowSize();
 
@@ -17,10 +17,10 @@ const converFiles = (Files: File[]) => {
   isAvailable.value = false;
   Files.forEach((file) => {
     if(model.value === null){
-      model.value = [(URL.createObjectURL(file))]
+      model.value = [file]
     }
     else{
-      model.value?.push(URL.createObjectURL(file))
+      model.value?.push(file)
     }
   });
 };

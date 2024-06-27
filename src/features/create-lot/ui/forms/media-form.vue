@@ -13,9 +13,10 @@ const props = defineProps<IProps>();
 
 const config_1 = ref<IConfigField[]>(mediaFormConfig_primary);
 const config_2 = ref<IConfigField[]>(mediaFormConfig_secondary);
-
 const isShowDocumentUploader = ref(false);
+
 </script>
+
 <template>
   <generateForm :manager="props.managment" :config="config_1">
     <template #images>

@@ -18,6 +18,7 @@ watch(() => store.page, () => {
 })
 
 onMounted(async () => {
+  if(store.lots.length === 0)
   await loadLots();
 });
 

@@ -16,11 +16,19 @@ export const fieldsManager = () => {
     }
   };
 
-  const generateDataFields = () => {
+  const generateDataFields = (ignore_list?: string[]) => {
     const newFileds: any = {};
 
     for (let key in object.value) {
-      newFileds[key] = object.value[key].data;
+      let isValid = true;
+
+      if (ignore_list) {
+        for (let i = 0; i < ignore_list.length; i++) {
+          if (key === ignore_list[i]) isValid = false;
+        }
+      }
+
+      if (isValid) newFileds[key] = object.value[key].data;
     }
 
     return newFileds;

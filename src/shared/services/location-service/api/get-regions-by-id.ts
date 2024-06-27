@@ -1,10 +1,12 @@
-import { ApiClient } from "shared/api";
-import { Endpoints } from "shared/api/model/endpoints";
+import { ApiClient, Endpoints, BASE_API } from "shared/api";
 
 export const getRegionsById = async (id: number) => {
-  const result = await ApiClient({
-    url: `${Endpoints.REGIONS}?id=${id}`,
-  });
+  const result = await ApiClient(
+    {
+      url: `${Endpoints.REGIONS}?id=${id}`,
+    },
+    BASE_API
+  );
 
   return result;
 };

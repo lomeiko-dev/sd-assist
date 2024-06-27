@@ -3,6 +3,8 @@ import { ref } from "vue";
 import { ILot } from "../../model/types";
 import { useWindowSize } from "@vueuse/core";
 import ItemData from "./item-data.vue";
+import { transferOption } from "../../model/lib/utils/transfer-option";
+import { typeEngine, typeTransmission } from "shared/config/selectors";
 
 interface IProps {
   data: ILot;
@@ -13,6 +15,11 @@ const props = defineProps<IProps>();
 const isHover = ref(false);
 const { width } = useWindowSize();
 const emit = defineEmits(["to"]);
+
+const test = (file: File) => {
+  return URL.createObjectURL(file)
+}
+
 </script>
 <template>
   <div
@@ -23,11 +30,11 @@ const emit = defineEmits(["to"]);
     class="relative border border-solid overflow-hidden border-gray/30 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
   >
     <div class="relative">
-      <div :style="`background-image: url(${props.data.image_preview})`" class="preview rounded-[10px]"></div>
+      <div :style="`background-image: url(${test(props.data.image_preview)})`" class="preview rounded-[10px]"></div>
       <div
         class="flex items-center justify-center bg-primary absolute top-[13px] left-0 w-[192px] h-[39px] rounded-r-lg"
       >
-        <h4 class="text-2xl font-bold text-white">{{ props.data.default_rate }} ₽</h4>
+        <h4 class="text-2xl font-bold text-white">{{ props.data.default_rate }} {{ props.data.currency }}</h4>
       </div>
     </div>
     <div class="content mx-[20px] mb-[24px]">
@@ -36,15 +43,15 @@ const emit = defineEmits(["to"]);
       </div>
       <div class="flex flex-col gap-[22px] mt-[19px]">
         <ItemData name="Лот">
-          <div class="text-sm flex" :class="props.data.isOpen ? 'text-green-600' : 'text-red-600'">
+          <div class="text-sm flex" :class="props.data.isOpen ? 'text-green' : 'text-red-600'">
             <p class="font-bold">{{ props.data.id_lot }}</p>
             <p>{{ props.data.isOpen ? "(Открытый)" : "(Закрытый)" }}</p>
           </div>
         </ItemData>
-        <ItemData name="Город" :data="props.data.country" />
-        <ItemData name="Пробег" :data="`${String(props.data.mileage)}км`" />
-        <ItemData name="КПП" :data="props.data.KPP" />
-        <ItemData name="Двигатель" :data="props.data.engine" />
+        <ItemData name="Город" :data="props.data.city.name" />
+        <ItemData name="Пробег" :data="`${String(props.data.mileage)} км`" />
+        <ItemData name="КПП" :data="transferOption(typeTransmission, props.data.type_transmission)" />
+        <ItemData name="Двигатель" :data="transferOption(typeEngine ,props.data.type_engine)" />
       </div>
       <button
         @click="$emit('to')"

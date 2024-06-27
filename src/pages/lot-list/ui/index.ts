@@ -1,0 +1,1 @@
+export {default as lotListPage} from './lot-list-page.vue'

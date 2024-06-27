@@ -6,7 +6,7 @@ import {
   typeEngine,
   typePassportPTS,
   typeTransmission,
-} from "../selectors/selectors";
+} from "shared/config/selectors";
 
 export const characteristicFormConfig: IConfigField[] = [
   {

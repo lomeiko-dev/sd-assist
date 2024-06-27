@@ -26,9 +26,7 @@ export const lotStore = defineStore("lot", () => {
     total_count.value = total;
   };
 
-  const setLots = (data: ILot[], isClear?: boolean, isUpdatePage?: boolean) => {
-    if (isClear) lots.value = [];
-
+  const setLots = (data: ILot[], isUpdatePage?: boolean) => {
     lots.value = [...lots.value, ...data];
     isNullData.value = lots.value.length === 0;
     isLoading.value = false;

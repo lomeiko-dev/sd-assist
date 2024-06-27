@@ -1,5 +1,5 @@
 import { IConfigField } from "shared/ui/input";
-import { insurances, objectsAuction, offerPeriods, typeAuction } from "../selectors/selectors";
+import { insurances, objectsAuction, offerPeriods, typeAuction } from "shared/config/selectors";
 
 export const lotFormConfig: IConfigField[] = [
   {

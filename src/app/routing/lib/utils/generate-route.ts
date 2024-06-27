@@ -15,7 +15,6 @@ export const generateRoute = (pages: IPage[]) => {
       beforeEnter: (to, from, next) => {
         if (page.routeOpt.isProtected) {
           const store = authStore();
-          console.log(store.isAuth);
           if (!store.isAuth) router.push({ path: `${Routes.HOME.name}/true` });
         }
         next();
