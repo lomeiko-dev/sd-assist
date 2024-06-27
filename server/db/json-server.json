@@ -286,6 +286,221 @@
         "[image]sKyimtwPxU.98679/2"
       ],
       "id": 4
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-27T20:32:13.235Z",
+      "date_deadline": "2024-06-29T21:32:24.000Z",
+      "offer_period": "44",
+      "case_number": "124-124-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 5,
+        "name": "Батайск",
+        "regionid": 1
+      },
+      "VIN_number": "35234342343141241",
+      "frame_number": "13523412412541241",
+      "car_type": "lungs",
+      "release_year": 2000,
+      "car_brand": {
+        "id": 3,
+        "brand": "Mercedes-Benz"
+      },
+      "car_model": {
+        "id": 7,
+        "brandid": 3,
+        "model": "C-Class"
+      },
+      "car_generation": {
+        "id": 16,
+        "modelid": 7,
+        "generation": "W202"
+      },
+      "car_body": "universal",
+      "car_color": {
+        "title": "Фиолетовый",
+        "style": {
+          "backgroundColor": "#8703F9",
+          "color": "white"
+        }
+      },
+      "mileage": 20150,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": null,
+      "type_engine": "petrol",
+      "volume_engine": 2009,
+      "power_engine": 120,
+      "engine_damage": "small-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "strong-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": null,
+      "comment": "134124124",
+      "default_rate": 500000,
+      "currency": "₽",
+      "id_lot": "25958/2",
+      "title": "Mercedes-Benz C-Class W202",
+      "files": [],
+      "images": [
+        "[image]ZDUJqCYNjh.58882/6"
+      ],
+      "id": 5
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-27T20:50:24.831Z",
+      "date_deadline": "2024-06-28T21:50:30.000Z",
+      "offer_period": "44",
+      "case_number": "124-346-56",
+      "region": {
+        "id": 4,
+        "name": "Краснодарский Край"
+      },
+      "city": {
+        "id": 15,
+        "name": "Краснодар",
+        "regionid": 4
+      },
+      "VIN_number": "12412432534632532",
+      "frame_number": "34634985356732654",
+      "car_type": "cargo",
+      "release_year": 2014,
+      "car_brand": {
+        "id": 4,
+        "brand": "Toyota"
+      },
+      "car_model": {
+        "id": 12,
+        "brandid": 4,
+        "model": "RAV4"
+      },
+      "car_generation": {
+        "id": 31,
+        "modelid": 12,
+        "generation": "XA30"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Золотистый",
+        "style": {
+          "background": "linear-gradient(90deg, #F2D55C 0%, #FFF5B9 33.47%, #FFF5B9 66.25%, #E7CC47 96.43%)"
+        }
+      },
+      "mileage": 324124,
+      "car_damage": "small-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": "petrol",
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": "О машине расскажу по телефону: +7(908)-399-99-91",
+      "default_rate": 5990000,
+      "currency": "₽",
+      "id_lot": "20584/4",
+      "title": "Toyota RAV4 XA30",
+      "files": [],
+      "images": [
+        "[image]mnUrNxnZhh.66935/6",
+        "[image]ZyWcShycsY.47480/2",
+        "[image]AbZhsQdFFt.66217/3"
+      ],
+      "id": 6
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "kasko",
+      "isOpen": true,
+      "date_start": "2024-06-29T21:54:18.000Z",
+      "date_deadline": "2024-07-23T21:54:18.000Z",
+      "offer_period": "44",
+      "case_number": "124-124-23",
+      "region": {
+        "id": 4,
+        "name": "Краснодарский Край"
+      },
+      "city": {
+        "id": 16,
+        "name": "Черкаск",
+        "regionid": 4
+      },
+      "VIN_number": "32532532523523523",
+      "frame_number": "35235325235235235",
+      "car_type": "lungs",
+      "release_year": 2011,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 3,
+        "modelid": 1,
+        "generation": "G20"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Голубой",
+        "style": {
+          "backgroundColor": "#00B9FB",
+          "color": "white"
+        }
+      },
+      "mileage": 123123123455,
+      "car_damage": "strong-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "diesel",
+      "volume_engine": 2009,
+      "power_engine": 2009,
+      "engine_damage": "no-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 455235,
+      "currency": "₽",
+      "id_lot": "46380/5",
+      "title": "BMW 3 Series G20",
+      "files": [],
+      "images": [
+        "[image]gxopFNzsFN.03286/1",
+        "[image]UFlNjtLZUx.24292/4"
+      ],
+      "id": 7
     }
   ],
   "lots-total-count": {

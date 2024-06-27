@@ -5,6 +5,8 @@ import { useWindowSize } from "@vueuse/core";
 import ItemData from "./item-data.vue";
 import { transferOption } from "../../model/lib/utils/transfer-option";
 import { typeEngine, typeTransmission } from "shared/config/selectors";
+import { getFileByName } from "shared/services/file-service";
+import { onMounted } from "vue";
 
 interface IProps {
   data: ILot;
@@ -16,9 +18,13 @@ const isHover = ref(false);
 const { width } = useWindowSize();
 const emit = defineEmits(["to"]);
 
-const test = (file: File) => {
-  return URL.createObjectURL(file)
-}
+const imageData = ref<string>('')
+
+onMounted(async () => {
+  const result = await getFileByName(props.data.images[0]);
+  imageData.value = result.data[0].data;
+})
+
 
 </script>
 <template>
@@ -30,7 +36,7 @@ const test = (file: File) => {
     class="relative border border-solid overflow-hidden border-gray/30 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
   >
     <div class="relative">
-      <div :style="`background-image: url(${test(props.data.image_preview)})`" class="preview rounded-[10px]"></div>
+      <div :style="`background-image: url(${imageData})`" class="preview rounded-[10px]"></div>
       <div
         class="flex items-center justify-center bg-primary absolute top-[13px] left-0 w-[192px] h-[39px] rounded-r-lg"
       >
@@ -74,8 +80,7 @@ const test = (file: File) => {
 
   .content {
     transition: 0.3s;
-    margin-top: -30px;
-    transform: scaleY(0.9);
+    transform: translate(0, -25px) scaleY(.9);
   }
 }
 

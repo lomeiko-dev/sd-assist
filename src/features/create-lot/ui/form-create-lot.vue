@@ -31,7 +31,6 @@ const createNewLotHandle = async () => {
 
 <template>
   <div class="w-full max-w-[1182px]">
-    <button @click="console.log(store.fieldsManagmant.object)">test</button>
     <div class="flex tablet:flex-row flex-col-reverse gap-[13px]">
       <FormContainer class="w-full max-w-[941px]">
         <lotForm :managment="store.fieldsManagmant" v-if="store.step === 1" />

@@ -13,12 +13,14 @@ const LIMIT = 6;
 
 const props = defineProps<IProps>();
 const { width } = useWindowSize();
-const store = lotStore()
+const store = lotStore();
 
 onMounted(async () => {
-  store.setLoading()
-  const {data} = await getLotPages(1, LIMIT) || {}
-  store.setLots(data || [], true)
+  store.setLoading();
+
+  const { data } = (await getLotPages(1, LIMIT)) || {};
+
+  store.setLots(data || [], true);
 });
 </script>
 
@@ -30,7 +32,7 @@ onMounted(async () => {
     </div>
 
     <div class="grid-container gap-[20px] w-full max-w-[1183px] tablet:mt-[43px] mt-[25px]">
-      <skeletonCard v-if="store.isLoading" v-for="(_) in Array(LIMIT).fill('')" class="max-w-[380px]" />
+      <skeletonCard v-if="store.isLoading" v-for="_ in Array(LIMIT).fill('')" class="max-w-[380px]" />
       <lotCard v-else v-for="lot in store.lots" :data="lot" />
     </div>
 
