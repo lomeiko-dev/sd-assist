@@ -4,36 +4,108 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
-      "date_start": "2024-06-27T09:36:03.230Z",
-      "date_deadline": "2024-06-27T21:36:11.000Z",
+      "date_start": "2024-06-27T17:24:23.935Z",
+      "date_deadline": "2024-06-27T21:24:31.000Z",
       "offer_period": "44",
-      "case_number": "131-231-23",
+      "case_number": "123-235-12",
       "region": {
         "id": 1,
         "name": "Ростовская Область"
       },
       "city": {
-        "id": 5,
-        "name": "Батайск",
+        "id": 1,
+        "name": "Ростов-на-Дону",
         "regionid": 1
       },
-      "VIN_number": "12312312312312312",
-      "frame_number": "12312312312312323",
-      "car_type": "cargo",
-      "release_year": 123123,
+      "VIN_number": "35234134212543342",
+      "frame_number": "24154254335346534",
+      "car_type": "lungs",
+      "release_year": 2000,
       "car_brand": {
-        "id": 4,
-        "brand": "Toyota"
+        "id": 1,
+        "brand": "BMW"
       },
       "car_model": {
-        "id": 11,
-        "brandid": 4,
-        "model": "Camry"
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
       },
       "car_generation": {
-        "id": 27,
-        "modelid": 11,
-        "generation": "XV30"
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Белый",
+        "style": {
+          "backgroundColor": "#FFFFFF",
+          "border": "1px solid #8C8C8C"
+        }
+      },
+      "mileage": 123124,
+      "car_damage": "strong-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": null,
+      "type_engine": "petrol",
+      "volume_engine": 223,
+      "power_engine": 2009,
+      "engine_damage": "strong-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123,
+      "currency": "₽",
+      "id_lot": "51731/2",
+      "title": "BMW 3 Series E90",
+      "files": [],
+      "images": [
+        "[image]IHXtCNAsNk.97066/1",
+        "[image]QsUMFzLBwx.74536/6"
+      ],
+      "id": 1
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "kasko",
+      "isOpen": true,
+      "date_start": "2024-06-27T17:56:51.648Z",
+      "date_deadline": "2024-06-27T21:57:03.000Z",
+      "offer_period": "44",
+      "case_number": "412-432-44",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "12312312312312321",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "release_year": 2001,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
       },
       "car_body": "sedan",
       "car_color": {
@@ -43,33 +115,177 @@
           "color": "white"
         }
       },
-      "mileage": 123123,
+      "mileage": 2222,
       "car_damage": "no-damage",
       "passport_pts": "paper",
       "isNotFreeField": true,
-      "isMarkTermitionRegistrationCar": null,
-      "isMarkMVD": null,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
       "type_engine": "petrol",
-      "volume_engine": 2009,
-      "power_engine": 2009,
-      "engine_damage": "strong-damage",
+      "volume_engine": 123123,
+      "power_engine": 123123,
+      "engine_damage": "small-damage",
       "type_drive": "front",
       "type_transmission": "mechanic",
       "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "213123",
+      "default_rate": 123123123,
+      "currency": "₽",
+      "id_lot": "69891/1",
+      "title": "BMW 3 Series E90",
+      "files": [
+        "[file]RGPBZipRma.89003/7"
+      ],
+      "images": [
+        "[image]EYFBZELBwu.20565/3"
+      ],
+      "id": 2
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "kasko",
+      "isOpen": true,
+      "date_start": "2024-06-28T21:54:05.000Z",
+      "date_deadline": "2024-06-29T21:54:05.000Z",
+      "offer_period": "44",
+      "case_number": "124-124-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 2,
+        "name": "Шатхы",
+        "regionid": 1
+      },
+      "VIN_number": "32524123351242342",
+      "frame_number": "12512432413512532",
+      "car_type": "lungs",
+      "release_year": 2000,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Серебристый",
+        "style": {
+          "background": "linear-gradient(90deg, #C6C6C6 4.6%, #EFEEEE 43.91%, #EFEEEE 56.78%, #C6C6C6 98.21%)",
+          "color": "#333"
+        }
+      },
+      "mileage": 123123,
+      "car_damage": "strong-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": 124124,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
       "isWithdrawalAccountingGBDD": null,
       "isHidingMechanicDamage": null,
       "isFullEquipment": null,
       "isGOTSParkingLotSK": null,
-      "comment": "213123",
-      "default_rate": 123123,
+      "comment": null,
+      "default_rate": 444444,
       "currency": "₽",
-      "id_lot": "53863/7",
-      "title": "Toyota Camry XV30",
+      "id_lot": "12703/0",
+      "title": "BMW 3 Series E90",
       "files": [],
       "images": [
-        "[image]eQRRDGgUME.15605/6"
+        "[image]PYqfOmxxsW.62124/2"
       ],
-      "id": 1
+      "id": 3
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-27T20:08:19.452Z",
+      "date_deadline": "2024-06-28T21:08:26.000Z",
+      "offer_period": "44",
+      "case_number": "124-235-24",
+      "region": {
+        "id": 4,
+        "name": "Краснодарский Край"
+      },
+      "city": {
+        "id": 17,
+        "name": "Армавир",
+        "regionid": 4
+      },
+      "VIN_number": "35325325325235352",
+      "frame_number": "23523523523523532",
+      "car_type": "truck",
+      "release_year": 123123,
+      "car_brand": {
+        "id": 4,
+        "brand": "Toyota"
+      },
+      "car_model": {
+        "id": 12,
+        "brandid": 4,
+        "model": "RAV4"
+      },
+      "car_generation": {
+        "id": 32,
+        "modelid": 12,
+        "generation": "XA40"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Серебристый",
+        "style": {
+          "background": "linear-gradient(90deg, #C6C6C6 4.6%, #EFEEEE 43.91%, #EFEEEE 56.78%, #C6C6C6 98.21%)",
+          "color": "#333"
+        }
+      },
+      "mileage": 123123,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": "front",
+      "type_transmission": null,
+      "KPP_damage": "strong-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": true,
+      "comment": "123123",
+      "default_rate": 123123,
+      "currency": "₽",
+      "id_lot": "64204/6",
+      "title": "Toyota RAV4 XA40",
+      "files": [],
+      "images": [
+        "[image]sKyimtwPxU.98679/2"
+      ],
+      "id": 4
     }
   ],
   "lots-total-count": {
