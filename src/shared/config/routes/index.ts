@@ -5,6 +5,7 @@ enum enumRouting {
   LOT_CREATOR = "LOT_CREATOR",
   SUCCESS = "SUCCESS",
   LOT_LIST = "LOT_LIST",
+  LOT_DETAILS = "LOT_DETAILS",
 }
 
 export const Routes: Record<enumRouting, IRouteApp> = {
@@ -12,4 +13,5 @@ export const Routes: Record<enumRouting, IRouteApp> = {
   [enumRouting.LOT_CREATOR]: { name: "lot-creator", path: "/create/lot", isProtected: true },
   [enumRouting.SUCCESS]: { name: "success", path: "/success", isProtected: false },
   [enumRouting.LOT_LIST]: { name: "lot-list", path: "/lot/list", isProtected: true },
+  [enumRouting.LOT_DETAILS]: { name: "lot-details", path: "/lot/:id", isProtected: true },
 };

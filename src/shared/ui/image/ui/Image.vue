@@ -6,9 +6,12 @@ interface IProps {
   image: IImage;
   width?: number;
   height?: number;
+  sizeSign?: string;
 }
 
-const props = defineProps<IProps>();
+const props = withDefaults(defineProps<IProps>(), {
+  sizeSign: "px"
+});
 
 const rotate = computed(() => {
   return 90 * (props.image.rotateIndex || 0);
@@ -18,7 +21,7 @@ const rotate = computed(() => {
 <template>
     <div
       class="image rounded-[10px]"
-      :style="`width: ${props.width}px; height: ${props.height}px; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
+      :style="`width: ${props.width}${props.sizeSign}; height: ${props.height}${props.sizeSign}; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
     ></div>
 </template>
 <style scoped lang="scss">

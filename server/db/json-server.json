@@ -4,6 +4,7 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-27T17:24:23.935Z",
       "date_deadline": "2024-06-27T21:24:31.000Z",
       "offer_period": "44",
@@ -76,6 +77,7 @@
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-27T17:56:51.648Z",
       "date_deadline": "2024-06-27T21:57:03.000Z",
       "offer_period": "44",
@@ -149,6 +151,7 @@
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-28T21:54:05.000Z",
       "date_deadline": "2024-06-29T21:54:05.000Z",
       "offer_period": "44",
@@ -220,6 +223,7 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-27T20:08:19.452Z",
       "date_deadline": "2024-06-28T21:08:26.000Z",
       "offer_period": "44",
@@ -291,6 +295,7 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-27T20:32:13.235Z",
       "date_deadline": "2024-06-29T21:32:24.000Z",
       "offer_period": "44",
@@ -362,6 +367,7 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-27T20:50:24.831Z",
       "date_deadline": "2024-06-28T21:50:30.000Z",
       "offer_period": "44",
@@ -434,6 +440,7 @@
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
+      "bids": [],
       "date_start": "2024-06-29T21:54:18.000Z",
       "date_deadline": "2024-07-23T21:54:18.000Z",
       "offer_period": "44",
@@ -501,6 +508,78 @@
         "[image]UFlNjtLZUx.24292/4"
       ],
       "id": 7
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-06-30T21:10:54.000Z",
+      "date_deadline": "2024-07-30T21:10:54.000Z",
+      "offer_period": "44",
+      "case_number": "325-123-42",
+      "region": {
+        "id": 3,
+        "name": "Донецкая Область"
+      },
+      "city": {
+        "id": 11,
+        "name": "Донецк",
+        "regionid": 3
+      },
+      "VIN_number": "25325325412412412",
+      "frame_number": "43643353253212424",
+      "car_type": "lungs",
+      "release_year": 2001,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Красный",
+        "style": {
+          "backgroundColor": "#F9211B",
+          "color": "white"
+        }
+      },
+      "mileage": 36500,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": "petrol",
+      "volume_engine": 30,
+      "power_engine": 210,
+      "engine_damage": "small-damage",
+      "type_drive": "back",
+      "type_transmission": "automatic",
+      "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": null,
+      "default_rate": 5000000,
+      "currency": "₽",
+      "id_lot": "20112/3",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "files": [],
+      "images": [
+        "[image]Vgmkjlkxle.39697/0"
+      ],
+      "id": 8
     }
   ],
   "lots-total-count": {

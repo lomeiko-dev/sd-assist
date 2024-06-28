@@ -1,0 +1,1 @@
+export {default as lotDetailsPage} from './lot-details-page.vue'

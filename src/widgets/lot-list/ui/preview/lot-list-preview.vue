@@ -20,7 +20,7 @@ onMounted(async () => {
 
   const { data } = (await getLotPages(1, LIMIT)) || {};
 
-  store.setLots(data || [], true);
+  store.setLots(data || []);
 });
 </script>
 

@@ -4,6 +4,8 @@ import { ILot } from "../../model/types";
 import { timeViewer } from "shared/ui/time-viewer";
 import { useWindowSize } from "@vueuse/core";
 import ItemData from "./item-data.vue";
+import { getFileByName } from "shared/services/file-service";
+import { watchEffect } from "vue";
 
 interface IProps {
   data: ILot;
@@ -15,6 +17,13 @@ const {width} = useWindowSize()
 const thisWidth = ref(width.value)
 const thisElement = ref<HTMLDivElement | undefined>(undefined)
 
+const imageData = ref<string>('')
+
+watchEffect(async () => {
+  const result = await getFileByName(props.data.images[0]);
+  imageData.value = result.data[0].data;
+})
+
 watch(width, () => {
    thisWidth.value = thisElement.value?.clientWidth || 0
 })
@@ -25,7 +34,7 @@ const isHover = ref(false);
 <template>
   <div ref="thisElement" @mouseenter="isHover = true" @mouseleave="isHover = false" :class="thisWidth < 768 ? 'flex-col' : ''" class="flex flex-row gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] hovered">
    <div 
-      :style="`background-image: url(${props.data.image_preview})`"
+      :style="`background-image: url(${imageData})`"
       :class="thisWidth < 768 ? 'w-full h-[300px]' : 'w-[294px] min-w-[294px] max-h-[400px]'"
       class="preview rounded-[10px]"></div>
     <div class="mt-[8px] w-full">
