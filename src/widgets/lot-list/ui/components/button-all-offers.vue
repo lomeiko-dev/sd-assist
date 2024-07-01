@@ -15,4 +15,3 @@ const props = defineProps<IProps>()
     <inlineSvg :src="arrow_right" />
   </RouterLink>
 </template>
-<style lang="scss"></style>

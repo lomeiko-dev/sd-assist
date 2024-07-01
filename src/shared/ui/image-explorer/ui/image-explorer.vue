@@ -50,7 +50,10 @@ const resetLimit = () => {
       <Image :width="538" :height="321" :image="{ src: activeImage, rotateIndex: 0 }" />
     </div>
     <div class="flex flex-wrap gap-1 w-full max-w-[548px] mt-1">
-      <div class="relative" v-for="(img, index) in props.images.filter((_, index) => index < internalLimit)">
+      <div class="w-full h-full flex justify-center" v-if="props.images.length === 1">
+        Фотографий больше нет :(
+      </div>
+      <div v-else class="relative" v-for="(img, index) in props.images.filter((_, index) => index < internalLimit)">
         <Image
           class="cursor-pointer"
           @mouseenter="activeImage = img"

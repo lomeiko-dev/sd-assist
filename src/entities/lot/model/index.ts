@@ -1,3 +1,3 @@
 export * from "./api";
 export * from "./store";
-export { type ILot } from "./types";
+export { type ILot, type IBid } from "./types";

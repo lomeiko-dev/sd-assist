@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { ILot } from "../../model/types";
 import { timeViewer } from "shared/ui/time-viewer";
 import { useWindowSize } from "@vueuse/core";
 import ItemData from "./item-data.vue";
 import { getFileByName } from "shared/services/file-service";
-import { watchEffect } from "vue";
+import { imageExplorer } from "shared/ui/image-explorer";
 import { transferOption } from "../../model/lib/utils/transfer-option";
 import { typeEngine, typeTransmission } from "shared/config/selectors";
 
@@ -19,11 +19,13 @@ const { width } = useWindowSize();
 const thisWidth = ref(width.value);
 const thisElement = ref<HTMLDivElement | undefined>(undefined);
 
-const imageData = ref<string>();
+const images = ref<string[]>([]);
 
-watchEffect(async () => {
-  const result = await getFileByName(props.data.images[0]);
-  imageData.value = result.data[0].data;
+onMounted(async () => {
+  for (const image of props.data.images) {
+    const result = await getFileByName(image);
+    images.value.push(result.data[0].data);
+  }
 });
 
 watch(width, () => {
@@ -38,17 +40,15 @@ const isHover = ref(false);
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
     :class="thisWidth < 768 ? 'flex-col' : ''"
-    class="flex flex-row gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] hover:bg-smoky-white"
+    class="flex flex-row gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] bg-smoky-white"
   >
-    <div
-      :style="`background-image: url(${imageData})`"
-      :class="thisWidth < 768 ? 'w-full h-[300px]' : 'w-[294px] min-w-[294px] max-h-[400px]'"
-      class="preview rounded-[10px]"
-    ></div>
+    <imageExplorer :images="images" />
     <div class="mt-[8px] w-full">
       <div>
         <div class="flex flex-wrap flex-row items-center justify-between gap-y-[10px]">
-          <h3 class="text-lg font-bold leading-[19px]">{{ props.data.title }} {{ `- Лот № ${props.data.id_lot}` }}</h3>
+          <h3 class="text-[32px] font-bold leading-[35.2px]">
+            {{ props.data.title }}
+          </h3>
           <timeViewer :date_deadline="new Date(props.data.date_deadline)" />
         </div>
         <ItemData class="mt-1" name="Продавец" :data="props.data.seller" />
@@ -63,28 +63,10 @@ const isHover = ref(false);
           <ItemData name="Двигатель" :data="transferOption(typeEngine, props.data.type_engine)" />
         </div>
       </div>
-      <div class="flex flex-row items-center gap-4 mt-4">
-        <p class="text-sm font-normal flex items-center gap-[6px] text-primary">Текущая цена:</p>
-        <h4 class="text-base font-bold text-primary">
-          {{ props.data.bids.length > 1 ? props.data.bids[props.data.bids.length - 1].rate : props.data.default_rate }}₽
-        </h4>
-        <h5 class="text-sm font-bold text-primary/50 line-through" v-if="props.data.bids.length > 2 && thisWidth > 768">
-          {{ props.data.bids[props.data.bids.length - 2].rate }}₽
-        </h5>
-      </div>
-      <div
-        class="duration-200"
-        :class="`${isHover || thisWidth < 768 ? 'opacity-100' : 'opacity-0'}`"
-      >
+
+      <div>
         <slot name="features"></slot>
       </div>
     </div>
   </div>
 </template>
-<style scoped lang="scss">
-.preview {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>

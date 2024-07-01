@@ -4,6 +4,8 @@ import { useWindowSize } from "@vueuse/core";
 import { getLotPages, lotCard, lotStore, skeletonCard } from "entities/lot";
 import ButtonAllOffers from "../components/button-all-offers.vue";
 import { notData } from "shared/ui/not-data";
+import { useRouter } from "vue-router";
+import { Routes } from "shared/config/routes";
 
 interface IProps {
   title?: string;
@@ -14,6 +16,8 @@ const LIMIT = 6;
 const props = defineProps<IProps>();
 const { width } = useWindowSize();
 const store = lotStore();
+
+const route = useRouter()
 
 onMounted(async () => {
   store.setLoading();
@@ -33,7 +37,7 @@ onMounted(async () => {
 
     <div class="grid-container gap-[20px] w-full max-w-[1183px] tablet:mt-[43px] mt-[25px]">
       <skeletonCard v-if="store.isLoading" v-for="_ in Array(LIMIT).fill('')" class="max-w-[380px]" />
-      <lotCard v-else v-for="lot in store.lots" :data="lot" />
+      <lotCard v-else v-for="lot in store.lots" @to="() => route.push({path: `${Routes.LOT_DETAILS.name}/${lot.id}`})" :data="lot" />
     </div>
 
     <ButtonAllOffers class="flex justify-center mt-10" v-if="width < 768" :to="props.toAllOffers" />

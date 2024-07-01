@@ -1,13 +1,14 @@
 import { Currency } from "shared/ui/currency-manager";
 import { IColorItem } from "shared/ui/input/model/types";
 
-interface IBid {
+export interface IBid {
   userId: number;
   rate: number;
   date: string;
 }
 
 export interface ILot {
+  id?: number;
   id_lot: string;
   title: string;
   object_auction: string;
@@ -53,4 +54,12 @@ export interface ILot {
   isFullEquipment: boolean;
   isGOTSParkingLotSK: boolean;
   comment: string;
+}
+
+export enum enumSwitcherDetails {
+  DESCRIPTION = "DESCRIPTION",
+  TECHNICAL_CONDITION = "TECHNICAL_CONDITION",
+  COMMENT = "COMMENT",
+  DOCUMENTS = "DOCUMENTS",
+  OTHER = "OTHER",
 }
