@@ -9,21 +9,30 @@ import { watch } from "vue";
 
 interface IProps {
   id: number;
-  currentPrice: number;
   currency: Currency;
   bids: IBid[];
+  defaultRate: number
+  closedForm?: () => void
 }
 
 const props = defineProps<IProps>();
 const emits = defineEmits(['changeBids'])
 
+const CurrentBid = computed(() => {
+  if (props.bids.length > 0) {
+    return props.bids[props.bids.length - 1].rate;
+  }
+
+  return props.defaultRate;
+});
+
 const minBid = computed(() => {
-  return props.currentPrice + 1000;
+  return CurrentBid.value + 1000;
 });
 
 const value = ref<number>(minBid.value);
 
-watch(() => props.currentPrice, () => {
+watch(() => props.bids, () => {
     value.value = minBid.value;
 })
 
@@ -51,6 +60,7 @@ const makeBid = async () => {
 
     if(result.status === 200){
         emits('changeBids', newBids)
+        props.closedForm?.()
     }
 }
 
@@ -59,7 +69,7 @@ const makeBid = async () => {
   <div class="flex flex-col gap-[7px]">
     <div class="bg-white rounded-[10px] w-full h-[100px] p-[26px]">
       <p class="text-xs font-normal">Текущая ставка:</p>
-      <p class="text-primary/30 text-[26px] font-bold mt-2">{{ props.currentPrice }} {{ props.currency }}</p>
+      <p class="text-primary/30 text-[26px] font-bold mt-2">{{ CurrentBid }} {{ props.currency }}</p>
     </div>
 
     <div class="bg-white rounded-[10px] w-full h-[200px] p-[26px]">

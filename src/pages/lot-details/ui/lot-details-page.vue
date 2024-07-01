@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, computed, onMounted } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { IBid, ILot, lotDetails, lotItemDetails } from "entities/lot";
 import { layoutApp } from "widgets/layouts/layout-app";
 import { getLotById } from "entities/lot";
@@ -20,14 +20,6 @@ const request = async () => {
 
   bids.value = lot.value?.bids || [];
 };
-
-const CurrentBid = computed(() => {
-  if (bids.value.length > 0) {
-    return bids.value[bids.value.length - 1].rate;
-  }
-
-  return lot.value?.default_rate;
-});
 
 onMounted(async () => {
   await request();
@@ -54,7 +46,7 @@ watch(
                 @change-bids="(value) => (bids = value)"
                 :bids="bids"
                 :currency="lot.currency"
-                :current-price="CurrentBid || 0"
+                :default-rate="lot.default_rate"
               />
             </template>
           </lotItemDetails>

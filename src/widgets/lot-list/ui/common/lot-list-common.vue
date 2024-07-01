@@ -2,21 +2,16 @@
 import { pagination } from "shared/ui/pagination";
 import { onMounted, watch } from "vue";
 import { getLotPages } from "entities/lot/model/api/get-lot-pages";
-import { ILot, lotItem, lotStore, skeletonItem } from "entities/lot";
+import { lotItem, lotStore, skeletonItem } from "entities/lot";
 import { useWindowSize } from "@vueuse/core";
 import { useRouter } from "vue-router";
 import { Routes } from "shared/config/routes";
-import { ref } from "vue";
-import Dialog from "primevue/dialog";
-import { bidsForm } from "features/bids-form";
 
 const store = lotStore();
 const LIMIT = 5;
 
 const { width } = useWindowSize();
 const route = useRouter();
-const isShowModal = ref<boolean>(false);
-const selectedLot = ref<ILot>()
 
 const loadLots = async () => {
   store.setLoading();
@@ -35,12 +30,6 @@ watch(
 onMounted(async () => {
   if (store.lots.length === 0) await loadLots();
 });
-
-const setAutomaticBid = (lot: ILot) => {
-  isShowModal.value = true;
-  selectedLot.value = lot;
-}
-
 </script>
 <template>
   <div>
@@ -57,7 +46,6 @@ const setAutomaticBid = (lot: ILot) => {
                 Сделать ставку
               </button>
               <button
-                @click="setAutomaticBid(item)"
                 class="bg-primary rounded-[6px] w-full h-[41px] text-sm font-normal text-white whitespace-nowrap duration-200 hover:bg-primary/70"
               >
                 Автоматическая ставка
@@ -73,13 +61,5 @@ const setAutomaticBid = (lot: ILot) => {
         :total-count="Math.ceil(store.total_count / LIMIT)"
       />
     </div>
-    <Dialog v-model:visible="isShowModal" modal>
-      <bidsForm
-        :id="selectedLot?.id || 0"
-        :bids="selectedLot?.bids || []"
-        :currency="selectedLot?.currency || '₽'"
-        :current-price="0"
-      />
-    </Dialog>
   </div>
 </template>
