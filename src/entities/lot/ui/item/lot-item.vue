@@ -53,7 +53,7 @@ const isHover = ref(false);
         </div>
         <ItemData class="mt-1" name="Продавец" :data="props.data.seller" />
       </div>
-      <div class="flex flex-row flex-wrap w-full max-w-[498px] justify-between mt-[24px]">
+      <div class="flex flex-row flex-wrap gap-3 w-full max-w-[498px] justify-between mt-[24px]">
         <div class="flex flex-col gap-3">
           <ItemData name="Год выпуска" :data="`${String(props.data.release_year)}г.`" />
           <ItemData name="Пробег" :data="`${String(props.data.mileage)}км`" />

@@ -12,7 +12,7 @@ const props = defineProps<IProps>();
 </script>
 <template>
   <div class="w-full">
-    <div class="flex flex-row gap-[67px]">
+    <div class="flex mobile:flex-row flex-col mobile:gap-[67px] gap-10">
       <div class="flex flex-col w-full">
         <ItemData name="Классификация повреждений:" :data="transferOption(damageClassification, props.data.car_damage)" />
         <ItemData name="Повреждения двигателя:" :data="transferOption(damageClassification, props.data.engine_damage)" />
@@ -24,7 +24,7 @@ const props = defineProps<IProps>();
         <ItemData name="Мощность двигателя:" :data="`${props.data.power_engine} кДЖ`" />
       </div>
     </div>
-    <div class="flex flex-row gap-[67px] mt-[60px]">
+    <div class="flex mobile:flex-row flex-col mobile:gap-[67px] gap-10 mobile:mt-[60px]">
       <div class="flex flex-col w-full">
         <ItemData name="Привод:" :data="transferOption(typeDrive, props.data.type_drive)" />
         <ItemData name="Коробка передач:" :data="transferOption(typeTransmission, props.data.type_transmission)" />

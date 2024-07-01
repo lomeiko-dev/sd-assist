@@ -13,7 +13,7 @@ const props = defineProps<IProps>();
 </script>
 <template>
   <div class="w-full">
-    <div class="flex flex-row gap-[67px]">
+    <div class="flex mobile:flex-row flex-col mobile:gap-[67px] gap-10">
       <div class="flex flex-col w-full">
         <ItemData name="Вид страхования:" :data="transferOption(insurances, props.data.type_insurance)" />
         <ItemData name="Тип аукциона:" :data="props.data.isOpen ? 'Открытый' : 'Закрытый'" />
@@ -27,7 +27,7 @@ const props = defineProps<IProps>();
         <ItemData name="Город:" :data="props.data.city.name" />
       </div>
     </div>
-    <div class="flex flex-row gap-[67px] mt-[60px]">
+    <div class="flex mobile:flex-row flex-col mobile:gap-[67px] gap-10 mobile:mt-[60px]">
       <div class="flex flex-col w-full">
         <ItemData name="VIN номер:" :data="String(props.data.VIN_number)" />
         <ItemData name="Тип авто:" :data="transferOption(typeCar, props.data.car_type)" />

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { IBid, ILot, lotDetails, lotItemDetails } from "entities/lot";
 import { layoutApp } from "widgets/layouts/layout-app";
 import { getLotById } from "entities/lot";
@@ -24,20 +24,16 @@ const request = async () => {
 onMounted(async () => {
   await request();
 });
-
-watch(
-  () => bids.value,
-  async () => {
-    await request();
-  }
-);
 </script>
+
 <template>
   <div>
     <layoutApp>
-      <container class="mt-10">
-        <div v-if="lot">
+      <div v-if="lot">
+        <container is-mobile-padding class="mt-10">
           <Header :id-lot="lot.id_lot" />
+        </container>
+        <container>
           <lotItemDetails class="mt-8" :data="lot">
             <template #features>
               <bidsForm
@@ -50,9 +46,11 @@ watch(
               />
             </template>
           </lotItemDetails>
+        </container>
+        <container is-mobile-padding>
           <lotDetails class="mt-[60px] mb-[100px]" :data="lot" />
-        </div>
-      </container>
+        </container>
+      </div>
     </layoutApp>
   </div>
 </template>

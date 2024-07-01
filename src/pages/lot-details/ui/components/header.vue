@@ -10,8 +10,8 @@ const props = defineProps<IProps>();
 
 </script>
 <template>
-  <div class="flex flex-row justify-between items-center">
-    <h3 class="text-[32px] font-bold">Лот №{{ props.idLot }}</h3>
+  <div class="flex mini-tablet:flex-row flex-col justify-between mini-tablet:items-center items-start gap-2">
+    <h3 class="tablet:text-[32px] text-[24px] font-bold">Лот №{{ props.idLot }}</h3>
     <div class="flex flex-row items-center gap-2">
       <button class="border border-solid border-primary/20 rounded-full p-[10px] duration-300 hover:bg-primary/20">
         <vueInlineSvg :src="downloadIcon" />

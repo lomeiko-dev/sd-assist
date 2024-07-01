@@ -38,8 +38,8 @@ const resetLimit = () => {
 
 </script>
 <template>
-  <div>
-    <div @mouseenter="isHovered = true" @mouseleave="isHovered = false" class="relative w-[538px]">
+  <div class="w-full max-w-[538px]">
+    <div @mouseenter="isHovered = true" @mouseleave="isHovered = false" class="relative">
       <button
         @click="isShowModal = true"
         :class="isHovered ? 'opacity-100' : 'opacity-0'"
@@ -53,7 +53,7 @@ const resetLimit = () => {
       <div class="w-full h-full flex justify-center" v-if="props.images.length === 1">
         Фотографий больше нет :(
       </div>
-      <div v-else class="relative" v-for="(img, index) in props.images.filter((_, index) => index < internalLimit)">
+      <div v-else class="relative w-[132px]" v-for="(img, index) in props.images.filter((_, index) => index < internalLimit)">
         <Image
           class="cursor-pointer"
           @mouseenter="activeImage = img"

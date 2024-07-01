@@ -738,6 +738,103 @@
         "[image]Vgmkjlkxle.39697/0"
       ],
       "id": 8
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "kasko",
+      "isOpen": true,
+      "date_start": "2024-07-01T21:57:01.000Z",
+      "date_deadline": "2024-07-30T21:57:03.000Z",
+      "offer_period": "46",
+      "case_number": "921-127-57",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "36326546359859823",
+      "frame_number": "57653246834935654",
+      "car_type": "lungs",
+      "release_year": 2015,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 2,
+        "brandid": 1,
+        "model": "X5"
+      },
+      "car_generation": {
+        "id": 5,
+        "modelid": 2,
+        "generation": "F15"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Черный",
+        "style": {
+          "backgroundColor": "#000000",
+          "color": "white"
+        }
+      },
+      "mileage": 134000,
+      "car_damage": "no-damage",
+      "passport_pts": "electronic",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 50,
+      "power_engine": 230,
+      "engine_damage": "no-damage",
+      "type_drive": "back",
+      "type_transmission": "automatic",
+      "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "Машина в хорошем состоянии, был всего один хозяин, прокатал около 2х лет. Причина выставки на аукцион: Срочно понадобились деньги.\nОстальная информация по номеру: +79038881313",
+      "default_rate": 2300000,
+      "currency": "₽",
+      "id_lot": "59183/0",
+      "title": "BMW X5 F15",
+      "bids": [
+        {
+          "date": "2024-07-01T22:33:23.650Z",
+          "userId": 1,
+          "rate": 2301000
+        },
+        {
+          "date": "2024-07-01T22:33:24.380Z",
+          "userId": 1,
+          "rate": 2302000
+        },
+        {
+          "date": "2024-07-01T22:33:24.731Z",
+          "userId": 1,
+          "rate": 2303000
+        },
+        {
+          "date": "2024-07-01T22:33:26.915Z",
+          "userId": 1,
+          "rate": 2304000
+        }
+      ],
+      "files": [
+        "[file]ipEunsaEsn.02985/5"
+      ],
+      "images": [
+        "[image]jcYPfkkhDA.68778/8",
+        "[image]PwfzuGgdpz.94302/8",
+        "[image]cVHjBjbusw.90216/8"
+      ],
+      "id": 9
     }
   ],
   "lots-total-count": {

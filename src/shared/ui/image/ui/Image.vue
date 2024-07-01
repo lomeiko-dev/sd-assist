@@ -21,7 +21,7 @@ const rotate = computed(() => {
 <template>
     <div
       class="image rounded-[10px]"
-      :style="`width: ${props.width}${props.sizeSign}; height: ${props.height}${props.sizeSign}; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
+      :style="`width: 100%; max-width: ${props.width}${props.sizeSign}; height: ${props.height}${props.sizeSign}; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
     ></div>
 </template>
 <style scoped lang="scss">

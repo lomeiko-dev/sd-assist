@@ -11,7 +11,7 @@ interface IProps {
 const props = defineProps<IProps>();
 </script>
 <template>
-  <div class="w-1/2 mx-auto">
+  <div>
     <div class="flex flex-row gap-4 items-center mt-3">
       <p class="text-sm font-normal text-black/40">Цвет:</p>
       <div :style="props.data.car_color.style" class="w-[32px] h-[32px] rounded-full"></div>

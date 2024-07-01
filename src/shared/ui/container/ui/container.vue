@@ -6,7 +6,7 @@ interface IProps {
 const props = defineProps<IProps>()
 </script>
 <template>
-  <div class="w-full mx-auto" :class="props.isMobilePadding ? 'px-[30px] max-w-[1260px]':'max-w-[1200px]'">
+  <div class="w-full mx-auto" :class="props.isMobilePadding ? 'px-[10px] max-w-[1260px]':'max-w-[1200px]'">
     <slot></slot>
   </div>
 </template>

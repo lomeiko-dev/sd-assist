@@ -46,14 +46,14 @@ const isHover = ref(false);
     <div class="mt-[8px] w-full">
       <div>
         <div class="flex flex-wrap flex-row items-center justify-between gap-y-[10px]">
-          <h3 class="text-[32px] font-bold leading-[35.2px]">
+          <h3 class="mini-laptop:text-[32px] tablet:text-[24px] mobile:text-[18px] font-bold leading-[35.2px]">
             {{ props.data.title }}
           </h3>
           <timeViewer :date_deadline="new Date(props.data.date_deadline)" />
         </div>
         <ItemData class="mt-1" name="Продавец" :data="props.data.seller" />
       </div>
-      <div class="flex flex-row flex-wrap w-full max-w-[498px] justify-between mt-[24px]">
+      <div class="flex flex-row flex-wrap gap-3 w-full max-w-[498px] justify-between mt-[24px]">
         <div class="flex flex-col gap-3">
           <ItemData name="Год выпуска" :data="`${String(props.data.release_year)}г.`" />
           <ItemData name="Пробег" :data="`${String(props.data.mileage)}км`" />

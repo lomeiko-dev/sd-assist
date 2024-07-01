@@ -8,6 +8,7 @@ import { IFile } from "shared/services/file-service";
 import { generateID } from "shared/lib/utils/generateID";
 import { generateName } from "shared/lib/utils/generateName";
 import { convertToBase64 } from "shared/lib/utils/convertToBase64";
+import { Routes } from "shared/config/routes";
 
 const IGNORE_LIST: string[] = ["images", "files"];
 
@@ -78,7 +79,7 @@ export const createLotStore = defineStore("create-lot", () => {
     await uploadFiles(media_files);
     await createNewLot(data);
 
-    router.push({ name: "success" });
+    router.push({ name: Routes.SUCCESS.name });
   };
 
   return {
