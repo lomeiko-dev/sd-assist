@@ -2,9 +2,9 @@
 import { ILot } from "entities/lot/model";
 import Description from "./components/description.vue";
 import technicalCondition from "./components/technical-condition.vue";
-import Other from "./components/other.vue";
 import Documents from "./components/documents.vue";
 import Comment from "./components/comment.vue";
+import additionalBidding from "./components/additional-bidding.vue";
 import { ref } from "vue";
 import { enumSwitcherDetails } from "../../model/types";
 import Header from "./components/other/header.vue";
@@ -33,7 +33,11 @@ const { width } = useWindowSize();
         v-if="selectSection === enumSwitcherDetails.TECHNICAL_CONDITION || width < MINI_TABLET"
         :data="props.data"
       />
-      <Other v-if="selectSection === enumSwitcherDetails.OTHER || width < MINI_TABLET" :data="props.data" />
+      <additionalBidding
+      :class="width < MINI_TABLET ? 'mt-10' : ''"
+        v-if="selectSection === enumSwitcherDetails.ADDITIONAl_BIDDINGS || width < MINI_TABLET"
+        :data="props.data"
+      />
       <Documents
         :class="width < MINI_TABLET ? 'mt-10' : ''"
         v-if="selectSection === enumSwitcherDetails.DOCUMENTS || width < MINI_TABLET"

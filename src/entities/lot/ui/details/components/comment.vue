@@ -12,9 +12,9 @@ const {width} = useWindowSize()
 
 </script>
 <template>
-  <div class="border-l-2 border-solid border-l-primary/70 pl-3">
+  <div class="bg-smoky-white rounded-[10px] p-10">
     <p v-if="width < MINI_TABLET">Комментарий автора:</p>
-    <p class="text-sm font-bold leading-9 text-primary/70">
+    <p class="text-sm font-normal leading-[21px] text-black">
       {{ props.comment === null ? "Комментарий отсуствует" : props.comment }}
     </p>
   </div>

@@ -47,8 +47,8 @@ const getStyleSelection = () => {
       Документы
     </button>
     <button
-      @click="$emit('setSelectSection', enumSwitcherDetails.OTHER)"
-      :class="props.selectSection === enumSwitcherDetails.OTHER ? getStyleSelection() : ''"
+      @click="$emit('setSelectSection', enumSwitcherDetails.ADDITIONAl_BIDDINGS)"
+      :class="props.selectSection === enumSwitcherDetails.ADDITIONAl_BIDDINGS ? getStyleSelection() : ''"
       class="tablet:py-[28px] py-[20px] px-[20px] duration-300 relative"
     >
       Прочее
