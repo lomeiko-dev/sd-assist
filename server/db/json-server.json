@@ -1,6 +1,28 @@
 {
+  "rejected_lots": [
+    {
+      "id": 1,
+      "userId": 1,
+      "lotId": 2,
+      "message": "Транспортное средство находится в угоне."
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "lotId": 2,
+      "message": "Указанные данные в лоте не соответствую реальностью."
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "lotId": 3,
+      "message": "Автомобиль не на ходу."
+    }
+  ],
   "lots": [
     {
+      "isCompleted": true,
+      "userId": 1,
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
@@ -145,6 +167,8 @@
       "id": 1
     },
     {
+      "isCompleted": true,
+      "userId": 1,
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
@@ -225,6 +249,8 @@
       "id": 2
     },
     {
+      "isCompleted": true,
+      "userId": 1,
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
@@ -297,6 +323,8 @@
       "id": 3
     },
     {
+      "isCompleted": true,
+      "userId": 1,
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
@@ -369,6 +397,8 @@
       "id": 4
     },
     {
+      "isCompleted": true,
+      "userId": 1,
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
@@ -441,6 +471,8 @@
       "id": 5
     },
     {
+      "isCompleted": true,
+      "userId": 1,
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
@@ -514,6 +546,8 @@
       "id": 6
     },
     {
+      "userId": 1,
+      "isCompleted": true,
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
@@ -587,6 +621,8 @@
       "id": 7
     },
     {
+      "userId": 1,
+      "isCompleted": false,
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
@@ -736,6 +772,11 @@
           "date": "2024-07-02T14:27:36.639Z",
           "userId": 1,
           "rate": 5021000
+        },
+        {
+          "date": "2024-07-02T18:38:18.357Z",
+          "userId": 1,
+          "rate": 5022000
         }
       ],
       "files": [],
@@ -745,6 +786,8 @@
       "id": 8
     },
     {
+      "userId": 1,
+      "isCompleted": false,
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
@@ -842,9 +885,6 @@
       "id": 9
     }
   ],
-  "lots-total-count": {
-    "total_count": 26
-  },
   "users": [
     {
       "username": "Никита#f1bdeae60963d",

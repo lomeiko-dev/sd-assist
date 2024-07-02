@@ -7,6 +7,7 @@ import { bidsForm } from "features/bids-form";
 import { container } from "shared/ui/container";
 import Header from "./components/header.vue";
 import { useRoute } from "vue-router";
+import { accountNavigator, enumAccountNavigator } from "widgets/account-navigator";
 
 const lot = ref<ILot>();
 const bids = ref<IBid[]>([]);
@@ -29,9 +30,10 @@ onMounted(async () => {
 <template>
   <div>
     <layoutApp>
+      <accountNavigator :selected-link="enumAccountNavigator.MY_ACTIVITY"/>
       <div v-if="lot">
         <container is-mobile-padding class="mt-10">
-          <Header :id-lot="lot.id_lot" />
+          <Header :lot-id="lot.id || 0" :id-lot="lot.id_lot" />
         </container>
         <container>
           <lotItemDetails class="mt-8" :data="lot">

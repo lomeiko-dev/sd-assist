@@ -10,6 +10,7 @@ export interface IBid {
 export interface ILot {
   id?: number;
   id_lot: string;
+  userId: number;
   title: string;
   object_auction: string;
   files: string[];
@@ -54,6 +55,7 @@ export interface ILot {
   isFullEquipment: boolean;
   isGOTSParkingLotSK: boolean;
   comment: string;
+  isCompleted?: boolean;
 }
 
 export enum enumSwitcherDetails {

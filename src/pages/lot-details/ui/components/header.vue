@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import {formAddArchive} from "features/archived-lot";
 import downloadIcon from "shared/assets/icons/download.svg";
 import vueInlineSvg from "vue-inline-svg";
 
 interface IProps {
   idLot: string;
+  lotId: number;
 }
 
 const props = defineProps<IProps>();
@@ -21,11 +23,7 @@ const props = defineProps<IProps>();
       >
         Условия продажи
       </button>
-      <button
-        class="border border-solid border-primary/20 rounded-md px-[13px] py-[6px] font-normal text-base text-primary duration-300 hover:bg-primary/20"
-      >
-        Проверить в ГИБДД
-      </button>
+      <formAddArchive :lot-id="props.lotId"/>
     </div>
   </div>
 </template>

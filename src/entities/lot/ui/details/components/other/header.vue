@@ -51,7 +51,7 @@ const getStyleSelection = () => {
       :class="props.selectSection === enumSwitcherDetails.ADDITIONAl_BIDDINGS ? getStyleSelection() : ''"
       class="tablet:py-[28px] py-[20px] px-[20px] duration-300 relative"
     >
-      Прочее
+      Дополнительные торги
     </button>
   </div>
 </template>
