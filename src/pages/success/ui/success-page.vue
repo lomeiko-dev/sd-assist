@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import peopleAndData from "shared/assets/img/illustrations/people-and-data.png";
 import { useRouter } from "vue-router";
+import {Routes} from 'shared/config/routes'
 
 const route = useRouter();
 
 const clickHandle = () => {
-  route.push({ name: "home" });
+  route.push({ name: Routes.HOME.name });
 };
 </script>
 

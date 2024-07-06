@@ -9,6 +9,7 @@ import { generateID } from "shared/lib/utils/generateID";
 import { generateName } from "shared/lib/utils/generateName";
 import { convertToBase64 } from "shared/lib/utils/convertToBase64";
 import { Routes } from "shared/config/routes";
+import { authStore } from "entities/auth";
 
 const IGNORE_LIST: string[] = ["images", "files"];
 
@@ -17,6 +18,8 @@ export const createLotStore = defineStore("create-lot", () => {
   const router = useRouter();
   const isShowModal = ref(false);
   const fieldsManagmant = ref<IFieldsManager>(fieldsManager());
+
+  const auth = authStore();
 
   watch(
     () => isShowModal.value,
@@ -54,7 +57,9 @@ export const createLotStore = defineStore("create-lot", () => {
     const media_images: IFile[] = [];
     const media_files: IFile[] = [];
 
+    data["userId"] = auth.authData?.id || 0;
     data["id_lot"] = generateID(5);
+    data["date_create"] = new Date();
     data[
       "title"
     ] = `${fieldsManagmant.value.object["car_brand"].data.brand} ${fieldsManagmant.value.object["car_model"].data.model} ${fieldsManagmant.value.object["car_generation"].data.generation}`;

@@ -10,6 +10,3 @@ import Header from './components/header.vue';
         <Footer/>
     </div>
 </template>
-<style lang='scss'>
-        
-</style>

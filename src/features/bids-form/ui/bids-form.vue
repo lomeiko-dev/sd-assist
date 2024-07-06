@@ -6,6 +6,7 @@ import { computed } from "vue";
 import { ref } from "vue";
 import {patchBids} from '../model/api/patch-bids'
 import { watch } from "vue";
+import {authStore} from 'entities/auth'
 
 interface IProps {
   id: number;
@@ -17,6 +18,8 @@ interface IProps {
 
 const props = defineProps<IProps>();
 const emits = defineEmits(['changeBids'])
+
+const auth = authStore();
 
 const CurrentBid = computed(() => {
   if (props.bids.length > 0) {
@@ -51,7 +54,7 @@ const incrementValue = () => {
 const makeBid = async () => {
     const newBid: IBid = {
         date: new Date().toISOString(),
-        userId: 1,
+        userId: auth.authData?.id || 0,
         rate: value.value
     }
 

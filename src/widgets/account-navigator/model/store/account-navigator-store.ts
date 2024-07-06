@@ -3,7 +3,7 @@ import { ref } from "vue";
 import { enumAccountNavigator } from "../types";
 
 export const accountNavigatorStore = defineStore("account-navigator", () => {
-  const selectedLink = ref<enumAccountNavigator>();
+  const selectedLink = ref<enumAccountNavigator | undefined>(undefined);
 
   const counting = ref<Record<enumAccountNavigator, number>>({
     ARCHIVE: 0,
@@ -12,7 +12,7 @@ export const accountNavigatorStore = defineStore("account-navigator", () => {
     REJECTED: 0,
   });
 
-  const handleLinkClick = (link: enumAccountNavigator) => {
+  const handleLinkClick = (link?: enumAccountNavigator) => {
     selectedLink.value = link;
   };
 

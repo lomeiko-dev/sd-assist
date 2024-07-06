@@ -34,6 +34,7 @@ const { width } = useWindowSize();
         :data="props.data"
       />
       <additionalBidding
+      :is-pagination="false"
       :class="width < MINI_TABLET ? 'mt-10' : ''"
         v-if="selectSection === enumSwitcherDetails.ADDITIONAl_BIDDINGS || width < MINI_TABLET"
         :data="props.data"

@@ -22,7 +22,7 @@
   "lots": [
     {
       "isCompleted": true,
-      "userId": 1,
+      "userId": 2,
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
@@ -883,6 +883,84 @@
         "[image]cVHjBjbusw.90216/8"
       ],
       "id": 9
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-04T21:00:42.000Z",
+      "date_deadline": "2024-07-22T21:00:42.000Z",
+      "offer_period": "44",
+      "case_number": "124-235-43",
+      "region": {
+        "id": 4,
+        "name": "Краснодарский Край"
+      },
+      "city": {
+        "id": 15,
+        "name": "Краснодар",
+        "regionid": 4
+      },
+      "VIN_number": "12312352452141241",
+      "frame_number": "32523532412412412",
+      "car_type": "lungs",
+      "release_year": 2009,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 3,
+        "brandid": 1,
+        "model": "i3"
+      },
+      "car_generation": {
+        "id": 7,
+        "modelid": 3,
+        "generation": "First Generation"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Синий",
+        "style": {
+          "backgroundColor": "#0049E5",
+          "color": "white"
+        }
+      },
+      "mileage": 204124,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 25,
+      "power_engine": 320,
+      "engine_damage": "small-damage",
+      "type_drive": "back",
+      "type_transmission": "mechanic",
+      "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": true,
+      "comment": "ааывпвып",
+      "default_rate": 150000,
+      "currency": "$",
+      "userId": 1,
+      "id_lot": "01086/8",
+      "date_create": "2024-07-04T17:02:41.765Z",
+      "title": "BMW i3 First Generation",
+      "bids": [],
+      "files": [
+        "[file]NnkFQIPUJT.13476/3"
+      ],
+      "images": [
+        "[image]PygFvvnFSn.36295/6",
+        "[image]lbUiukGzzh.19005/6",
+        "[image]eHqOiBEYTp.05354/3"
+      ],
+      "id": 10
     }
   ],
   "users": [
@@ -937,6 +1015,19 @@
       "dateCreated": "2024-04-28T09:34:05.419Z",
       "dateUpdated": "2024-04-28T09:34:05.419Z",
       "id": 4
+    },
+    {
+      "username": "Никита Ломейко Вадимович#ea2b44be30ead",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "Никита Ломейко Вадимович",
+      "phone": "73333235123",
+      "email": "lomieiko78123123@mail.ru",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-07-04T11:04:23.388Z",
+      "dateUpdated": "2024-07-04T11:04:23.388Z",
+      "id": 5
     }
   ],
   "cities": [
