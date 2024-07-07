@@ -6,11 +6,14 @@ import { onMounted, watch } from "vue";
 import { accountNavigatorStore, enumAccountNavigator } from "widgets/layouts/layout-app";
 import { lotArchivedStore } from "features/archived-lot";
 import { getActiveLotsByUserId, getCompletedLotsByUserId, getRejectedLotsByUserId } from "entities/lot";
+import INTRO from '../../AUTHOR_INTRO/ui/INTRO.vue'
+import { ref } from "vue";
 
 const store = authStore();
 
 const navigatorStore = accountNavigatorStore();
 const archivedStore = lotArchivedStore();
+const showIntro = ref(true);
 
 const loadCounting = async () => {
   const userId = store.authData?.id || 0;
@@ -46,6 +49,7 @@ watch(
 </script>
 <template>
   <div>
+    <INTRO v-if="showIntro" @closed="showIntro = false"/>
     <RouterView />
   </div>
 </template>

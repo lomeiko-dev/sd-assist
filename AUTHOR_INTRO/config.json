@@ -1,0 +1,20 @@
+{
+    "nameProject": "SD-Assist",
+    "links": [
+        {
+            "title": "GitHub",
+            "link": "https://github.com/lomeiko-dev",
+            "placeholder": "git"
+        },
+        {
+            "title": "VK",
+            "link": "https://vk.com/id390878963",
+            "placeholder": "ВКонтакте"
+        },
+        {
+            "title": "Telegram",
+            "link": "https://t.me/barsik_new",
+            "placeholder": "t.me"
+        }
+    ]
+}
