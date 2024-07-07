@@ -1,4 +1,7 @@
 {
+  "count_trades": {
+    "value": 56123
+  },
   "rejected_lots": [
     {
       "id": 1,

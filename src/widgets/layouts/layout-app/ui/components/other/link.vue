@@ -1,28 +1,31 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import { enumAccountNavigator } from "../../model/types";
-import {accountNavigatorStore} from '../../model/store/account-navigator-store'
+import { enumAccountNavigator } from "../../../model/types";
+import {accountNavigatorStore} from '../../../model/store/account-navigator-store'
 
 interface IProps {
   title: string;
   link: string;
   color: string;
   isActive?: boolean;
-  enumName: enumAccountNavigator 
+  enumName: enumAccountNavigator
+  isMobile?: boolean;
 }
 
-const props = defineProps<IProps>();
+const props = withDefaults(defineProps<IProps>(), {
+  isMobile: false
+});
 
 const store = accountNavigatorStore()
 
 
 </script>
 <template>
-  <RouterLink :class="props.isActive ? 'relative selected' : ''" class="flex flex-row items-center gap-[5px] px-10" :to="props.link">
+  <RouterLink :class="props.isActive && !props.isMobile ? 'relative selected' : ''" class="flex flex-row items-center gap-[5px] px-10" :to="props.link">
     <p
       @click="store.handleLinkClick(props.enumName)"
       :class="props.isActive ? 'text-primary' : 'text-primary/30'"
-      class="relative text-base font-bold duration-300 hover:text-primary/60"
+      class="relative text-base font-bold duration-300 break-words hover:text-primary/60 w-full"
     >
       {{ props.title }}
     </p>

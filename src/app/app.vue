@@ -3,7 +3,7 @@ import { authStore } from "entities/auth";
 import "./style/style.css";
 import "./style/vueprime.scss";
 import { onMounted, watch } from "vue";
-import { accountNavigatorStore, enumAccountNavigator } from "widgets/account-navigator";
+import { accountNavigatorStore, enumAccountNavigator } from "widgets/layouts/layout-app";
 import { lotArchivedStore } from "features/archived-lot";
 import { getActiveLotsByUserId, getCompletedLotsByUserId, getRejectedLotsByUserId } from "entities/lot";
 

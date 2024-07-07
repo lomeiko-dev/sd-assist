@@ -1,69 +1,57 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
 import { authStore } from "entities/auth";
 import { useWindowSize } from "@vueuse/core";
 import { container } from "shared/ui/container";
 import BurgerMenu from "./other/burger-menu.vue";
 import ButtonLogin from "./other/button-login.vue";
-import search from "shared/assets/icons/search.svg";
 import ButtonAccount from "./other/button-account.vue";
-import inlineSvg from "vue-inline-svg";
-import plusIcon from "shared/assets/icons/plus.svg";
-import logo from "shared/assets/img/logo/logo.webp";
-import logo_partner from "shared/assets/img/logo/logo_partner.webp";
-import { Routes } from "shared/config/routes";
+import { search } from "features/filter-lot";
+import DrawerContent from "./drawer-content.vue";
+import { ref } from "vue";
+import Sidebar from "primevue/sidebar";
+import { buttonCreateLot } from "features/create-lot";
+import { logo } from "shared/ui/logo";
+import { onMounted } from "vue";
+import { getCountTrades } from "../../model/api/get-count-trades";
 
 const { width } = useWindowSize();
 const store = authStore();
-const router = useRouter();
+const countTrades = ref(0);
 
-const goCreateLotHandler = () => {
-  router.push({ name: Routes.LOT_CREATOR.name });
-};
+const visibleDrawer = ref(false);
+
+onMounted(async () => {
+  const result = await getCountTrades();
+  
+  if(result.status === 200){
+    countTrades.value = result.data.value
+  }
+})
+
 </script>
 <template>
   <div class="border-b border-solid border-primary/20 tablet:h-[108px] h-[68px]">
     <container class="relative flex flex-row items-center justify-between h-full w-full">
-      <div class="relative w-fit flex flex-row h-full items-center">
+      <div class="w-fit flex flex-row h-full items-center">
         <div class="tablet:mr-[128px] mr-[10px]">
           <div
             class="absolute top-0 left-0 h-full border-x border-solid border-primary/20 tablet:px-[22px] px-[31px] flex items-center"
           >
-            <BurgerMenu />
+            <BurgerMenu @click="visibleDrawer = true" />
           </div>
         </div>
 
-        <h1 class="tablet:mr-[49px]">
-          <img class="tablet:min-w-[221px] w-[132px]" :src="logo" alt="logo" />
-          <div class="flex flex-row items-center mt-[10px] tablet:gap-3 justify-end">
-            <p class="tablet:text-xs text-[8px] font-normal text-gray-400 mt-[2px] whitespace-nowrap">
-              В партнерстве с
-            </p>
-            <img class="w-[62px]" :src="logo_partner" alt="logo partner" />
-          </div>
-        </h1>
+        <logo class="tablet:mr-[49px] tablet:static tablet:translate-x-0 absolute left-[50%] -translate-x-[50%]" />
 
         <div v-if="!store.isAuth" class="sxga:flex flex-row gap-[5px] laptop:mr-[123px] mr-10 hidden">
           <p class="text-sm text-gray-400 font-normal whitespace-nowrap">Проведено торгов:</p>
-          <p class="text-sm font-bold text-primary">{{ 12345 }}</p>
+          <p class="text-sm font-bold text-primary">{{ countTrades }}</p>
         </div>
       </div>
 
       <div class="flex flex-row w-fit h-full items-center">
-        <div
-          class="tablet:flex items-center hidden h-[47px] w-full sxga:max-w-[280px] duration-700 rounded-md border border-solid border-primary/20 hover:border-primary"
-        >
-          <inlineSvg class="w-[15px] h-[15px] ml-[22px] mr-[15px]" :src="search" />
-          <input placeholder="Поиск по лотам" class="text-base font-normal outline-none" type="text" />
-        </div>
-        <button
-          v-if="store.isAuth"
-          @click="goCreateLotHandler"
-          class="flex flex-row gap-[9px] items-center justify-center bg-primary w-[180px] py-[12px] rounded-md mx-[20px] duration-300 hover:bg-primary/70"
-        >
-          <inlineSvg :src="plusIcon" />
-          <p class="text-white text-base font-normal">Добавить лот</p>
-        </button>
+        <search />
+        <buttonCreateLot class="mx-[20px] sxga:min-w-[180px] sxga:w-[180px] w-[50px] min-w-[50px]" v-if="store.isAuth && width > 768" />
         <div
           :class="
             width < 768
@@ -76,5 +64,8 @@ const goCreateLotHandler = () => {
         </div>
       </div>
     </container>
+    <Sidebar v-model:visible="visibleDrawer">
+      <DrawerContent />
+    </Sidebar>
   </div>
 </template>

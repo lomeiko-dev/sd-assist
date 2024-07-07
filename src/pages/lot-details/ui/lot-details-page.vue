@@ -7,7 +7,6 @@ import { bidsForm } from "features/bids-form";
 import { container } from "shared/ui/container";
 import Header from "./components/header.vue";
 import { useRoute } from "vue-router";
-import { accountNavigator, enumAccountNavigator } from "widgets/account-navigator";
 import { authStore } from "entities/auth";
 
 const auth = authStore();
@@ -27,12 +26,12 @@ const request = async () => {
 onMounted(async () => {
   await request();
 });
+
 </script>
 
 <template>
   <div>
-    <layoutApp>
-      <accountNavigator :selected-link="enumAccountNavigator.MY_ACTIVITY" />
+    <layoutApp is-show-navigator>
       <div v-if="lot">
         <container is-mobile-padding class="mt-10">
           <Header :lot-id="lot.id || 0" :id-lot="lot.id_lot" />
@@ -40,7 +39,12 @@ onMounted(async () => {
         <container is-mobile-padding>
           <lotItemDetails class="mt-8" :data="lot">
             <template #features>
-              <additionalBidding class="bg-white mt-5" v-if="auth.authData?.id === lot.userId" is-pagination :data="lot" />
+              <additionalBidding
+                class="bg-white mt-5"
+                v-if="auth.authData?.id === lot.userId"
+                is-pagination
+                :data="lot"
+              />
               <bidsForm
                 v-else
                 class="mt-[33px]"

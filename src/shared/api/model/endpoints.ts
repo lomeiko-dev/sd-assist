@@ -8,6 +8,7 @@ enum enumEndpoints {
   CAR_GENERATION = "CAR_GENERATION",
   FILE = "FILE",
   REJECTED_LOTS = "REJECTED_LOTS",
+  COUNT_TRADES = "COUNT_TRADES",
 }
 
 export const Endpoints: Record<enumEndpoints, string> = {
@@ -20,4 +21,5 @@ export const Endpoints: Record<enumEndpoints, string> = {
   [enumEndpoints.CAR_GENERATION]: "/car_generation",
   [enumEndpoints.FILE]: "/files",
   [enumEndpoints.REJECTED_LOTS]: "/rejected_lots",
+  [enumEndpoints.COUNT_TRADES]: "/count_trades",
 };

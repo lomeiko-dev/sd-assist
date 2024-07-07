@@ -4,3 +4,4 @@ export { default as characteristicForm } from "./forms/characteristic-form.vue";
 export { default as mediaForm } from "./forms/media-form.vue";
 
 export { default as formCreateLot } from "./form-create-lot.vue";
+export { default as buttonCreateLot } from "./button-create-lot.vue";

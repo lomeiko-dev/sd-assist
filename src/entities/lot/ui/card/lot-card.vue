@@ -31,7 +31,7 @@ onMounted(async () => {
   <div
     @mouseenter="width > 640 ? (isHover = true) : null"
     @mouseleave="width > 640 ? (isHover = false) : null"
-    @click="width > 640 ? $emit('to') : null"
+    @click="$emit('to')"
     :class="!isHover ? 'hovered-mobile' : 'hovered'"
     class="relative border border-solid overflow-hidden border-gray/30 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
   >
