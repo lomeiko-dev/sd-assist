@@ -25,7 +25,7 @@ watch(
 );
 
 onMounted(async () => {
-  if (store.lots.length === 0) await loadLots();
+  await loadLots();
 });
 </script>
 <template>

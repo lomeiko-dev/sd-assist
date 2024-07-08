@@ -49,7 +49,7 @@ watch(
 </script>
 <template>
   <div>
-    <INTRO v-if="showIntro" @closed="showIntro = false"/>
+    <!-- <INTRO v-if="showIntro" @closed="showIntro = false"/> -->
     <RouterView />
   </div>
 </template>

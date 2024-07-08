@@ -1031,6 +1031,19 @@
       "dateCreated": "2024-07-04T11:04:23.388Z",
       "dateUpdated": "2024-07-04T11:04:23.388Z",
       "id": 5
+    },
+    {
+      "username": "Никита Тест#7176501b0ca8e",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "Никита Тест",
+      "phone": "74682931241",
+      "email": "test@mail.com",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-07-08T19:12:05.179Z",
+      "dateUpdated": "2024-07-08T19:12:05.179Z",
+      "id": 6
     }
   ],
   "cities": [
