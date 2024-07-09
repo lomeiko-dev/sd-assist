@@ -163,10 +163,7 @@
       "id_lot": "51731/2",
       "title": "BMW 3 Series E90",
       "files": [],
-      "images": [
-        "[image]IHXtCNAsNk.97066/1",
-        "[image]QsUMFzLBwx.74536/6"
-      ],
+      "images": ["[image]IHXtCNAsNk.97066/1", "[image]QsUMFzLBwx.74536/6"],
       "id": 1
     },
     {
@@ -253,12 +250,8 @@
       "currency": "₽",
       "id_lot": "69891/1",
       "title": "BMW 3 Series E90",
-      "files": [
-        "[file]RGPBZipRma.89003/7"
-      ],
-      "images": [
-        "[image]EYFBZELBwu.20565/3"
-      ],
+      "files": ["[file]RGPBZipRma.89003/7"],
+      "images": ["[image]EYFBZELBwu.20565/3"],
       "id": 2
     },
     {
@@ -346,9 +339,7 @@
       "id_lot": "12703/0",
       "title": "BMW 3 Series E90",
       "files": [],
-      "images": [
-        "[image]PYqfOmxxsW.62124/2"
-      ],
+      "images": ["[image]PYqfOmxxsW.62124/2"],
       "id": 3
     },
     {
@@ -426,9 +417,7 @@
       "id_lot": "64204/6",
       "title": "Toyota RAV4 XA40",
       "files": [],
-      "images": [
-        "[image]sKyimtwPxU.98679/2"
-      ],
+      "images": ["[image]sKyimtwPxU.98679/2"],
       "id": 4
     },
     {
@@ -506,9 +495,7 @@
       "id_lot": "25958/2",
       "title": "Mercedes-Benz C-Class W202",
       "files": [],
-      "images": [
-        "[image]ZDUJqCYNjh.58882/6"
-      ],
+      "images": ["[image]ZDUJqCYNjh.58882/6"],
       "id": 5
     },
     {
@@ -579,11 +566,7 @@
       "id_lot": "20584/4",
       "title": "Toyota RAV4 XA30",
       "files": [],
-      "images": [
-        "[image]mnUrNxnZhh.66935/6",
-        "[image]ZyWcShycsY.47480/2",
-        "[image]AbZhsQdFFt.66217/3"
-      ],
+      "images": ["[image]mnUrNxnZhh.66935/6", "[image]ZyWcShycsY.47480/2", "[image]AbZhsQdFFt.66217/3"],
       "id": 6
     },
     {
@@ -691,10 +674,7 @@
       "id_lot": "46380/5",
       "title": "BMW 3 Series G20",
       "files": [],
-      "images": [
-        "[image]gxopFNzsFN.03286/1",
-        "[image]UFlNjtLZUx.24292/4"
-      ],
+      "images": ["[image]gxopFNzsFN.03286/1", "[image]UFlNjtLZUx.24292/4"],
       "id": 7
     },
     {
@@ -857,9 +837,7 @@
         }
       ],
       "files": [],
-      "images": [
-        "[image]Vgmkjlkxle.39697/0"
-      ],
+      "images": ["[image]Vgmkjlkxle.39697/0"],
       "id": 8
     },
     {
@@ -868,6 +846,7 @@
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
+      "date_create": "2024-07-08T20:37:16.208Z",
       "date_start": "2024-07-01T21:57:01.000Z",
       "date_deadline": "2024-07-30T21:57:03.000Z",
       "offer_period": "46",
@@ -951,14 +930,8 @@
           "rate": 2304000
         }
       ],
-      "files": [
-        "[file]ipEunsaEsn.02985/5"
-      ],
-      "images": [
-        "[image]jcYPfkkhDA.68778/8",
-        "[image]PwfzuGgdpz.94302/8",
-        "[image]cVHjBjbusw.90216/8"
-      ],
+      "files": ["[file]ipEunsaEsn.02985/5"],
+      "images": ["[image]jcYPfkkhDA.68778/8", "[image]PwfzuGgdpz.94302/8", "[image]cVHjBjbusw.90216/8"],
       "id": 9
     },
     {
@@ -1026,17 +999,11 @@
       "currency": "$",
       "userId": 1,
       "id_lot": "01086/8",
-      "date_create": "2024-07-04T17:02:41.765Z",
+      "date_create": "2024-07-08T20:37:16.208Z",
       "title": "BMW i3 First Generation",
       "bids": [],
-      "files": [
-        "[file]NnkFQIPUJT.13476/3"
-      ],
-      "images": [
-        "[image]PygFvvnFSn.36295/6",
-        "[image]lbUiukGzzh.19005/6",
-        "[image]eHqOiBEYTp.05354/3"
-      ],
+      "files": ["[file]NnkFQIPUJT.13476/3"],
+      "images": ["[image]PygFvvnFSn.36295/6", "[image]lbUiukGzzh.19005/6", "[image]eHqOiBEYTp.05354/3"],
       "id": 10
     },
     {
@@ -1108,9 +1075,7 @@
       "title": "BMW 3 Series E90",
       "bids": [],
       "seller": "Никита Тест#7176501b0ca8e",
-      "files": [
-        "[file]NHRdaoLnDG.79078/6"
-      ],
+      "files": ["[file]NHRdaoLnDG.79078/6"],
       "images": [
         "[image]AmTVxSgPur.22038/8",
         "[image]dGikgvDdzk.84166/8",

@@ -53,7 +53,7 @@ const dicrementSelectedNumber = () => {
       />
       <p v-if="selectedNumber < props.totalCount - 2" class="text-sm font-normal text-gray-400 select-none">| ... |</p>
       <Numbered
-        v-if="selectedNumber < props.totalCount - 1"
+        v-if="selectedNumber < props.totalCount - 2"
         @click="changeSelectedNumber(props.totalCount)"
         :is-selected="selectedNumber === props.totalCount"
         :num="props.totalCount"

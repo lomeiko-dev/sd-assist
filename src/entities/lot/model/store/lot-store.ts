@@ -3,8 +3,9 @@ import { ILot } from "../types";
 import { ref } from "vue";
 
 export const lotStore = defineStore("lot", () => {
+  const LIMIT = ref(5);
   const lots = ref<ILot[]>([]);
-  const page = ref(0);
+  const page = ref(1);
   const total_count = ref(0);
 
   const isLoading = ref(false);
@@ -59,5 +60,6 @@ export const lotStore = defineStore("lot", () => {
     setTotalCount,
     setLots,
     setPage,
+    LIMIT,
   };
 });
