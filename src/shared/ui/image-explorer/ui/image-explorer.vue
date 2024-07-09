@@ -49,7 +49,7 @@ const resetLimit = () => {
       </button>
       <Image :width="538" :height="321" :image="{ src: activeImage, rotateIndex: 0 }" />
     </div>
-    <div class="flex flex-wrap gap-1 w-full max-w-[548px] mt-1">
+    <div class="flex flex-wrap gap-[3px] w-full max-w-[548px] mt-1">
       <div class="w-full h-full flex justify-center" v-if="props.images.length === 1">
         Фотографий больше нет :(
       </div>

@@ -64,6 +64,7 @@ export const createLotStore = defineStore("create-lot", () => {
       "title"
     ] = `${fieldsManagmant.value.object["car_brand"].data.brand} ${fieldsManagmant.value.object["car_model"].data.model} ${fieldsManagmant.value.object["car_generation"].data.generation}`;
     data["bids"] = [];
+    data["seller"] = auth.authData?.username;
 
     for (let i = 0; i < images.length; i++) {
       const generatingName = `[image]${generateName(10)}.${generateID(5)}`;

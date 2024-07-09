@@ -66,9 +66,9 @@ const isHover = ref(false);
       <div class="flex flex-row items-center gap-4 mt-4">
         <p class="text-sm font-normal flex items-center gap-[6px] text-primary">Текущая цена:</p>
         <h4 class="text-base font-bold text-primary">
-          {{ props.data.bids.length > 1 ? props.data.bids[props.data.bids.length - 1].rate : props.data.default_rate }}₽
+          {{ props.data.bids.length > 0 ? props.data.bids[props.data.bids.length - 1].rate : props.data.default_rate }}₽
         </h4>
-        <h5 class="text-sm font-bold text-primary/50 line-through" v-if="props.data.bids.length > 2 && thisWidth > 768">
+        <h5 class="text-sm font-bold text-primary/50 line-through" v-if="props.data.bids.length > 1 && thisWidth > 768">
           {{ props.data.bids[props.data.bids.length - 2].rate }}₽
         </h5>
       </div>

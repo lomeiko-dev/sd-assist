@@ -180,6 +180,16 @@
           "date": "2024-07-01T18:58:05.810Z",
           "userId": 1,
           "rate": 123124123
+        },
+        {
+          "date": "2024-07-08T20:17:39.868Z",
+          "userId": 6,
+          "rate": 123125123
+        },
+        {
+          "date": "2024-07-08T20:18:01.637Z",
+          "userId": 6,
+          "rate": 123126123
         }
       ],
       "date_start": "2024-06-27T17:56:51.648Z",
@@ -257,7 +267,23 @@
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
-      "bids": [],
+      "bids": [
+        {
+          "date": "2024-07-08T20:18:19.149Z",
+          "userId": 6,
+          "rate": 445444
+        },
+        {
+          "date": "2024-07-08T20:18:36.335Z",
+          "userId": 6,
+          "rate": 446444
+        },
+        {
+          "date": "2024-07-08T20:18:51.078Z",
+          "userId": 6,
+          "rate": 447444
+        }
+      ],
       "date_start": "2024-06-28T21:54:05.000Z",
       "date_deadline": "2024-06-29T21:54:05.000Z",
       "offer_period": "44",
@@ -331,7 +357,13 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
-      "bids": [],
+      "bids": [
+        {
+          "date": "2024-07-08T20:23:09.291Z",
+          "userId": 6,
+          "rate": 150000
+        }
+      ],
       "date_start": "2024-06-27T20:08:19.452Z",
       "date_deadline": "2024-06-28T21:08:26.000Z",
       "offer_period": "44",
@@ -405,7 +437,13 @@
       "object_auction": "ts",
       "type_insurance": "osago",
       "isOpen": true,
-      "bids": [],
+      "bids": [
+        {
+          "date": "2024-07-08T20:25:01.471Z",
+          "userId": 6,
+          "rate": 1000000
+        }
+      ],
       "date_start": "2024-06-27T20:32:13.235Z",
       "date_deadline": "2024-06-29T21:32:24.000Z",
       "offer_period": "44",
@@ -554,7 +592,43 @@
       "object_auction": "ts",
       "type_insurance": "kasko",
       "isOpen": true,
-      "bids": [],
+      "bids": [
+        {
+          "date": "2024-07-08T20:26:31.633Z",
+          "userId": 6,
+          "rate": 500000
+        },
+        {
+          "date": "2024-07-08T20:26:40.927Z",
+          "userId": 6,
+          "rate": 1000000
+        },
+        {
+          "date": "2024-07-08T20:26:51.607Z",
+          "userId": 6,
+          "rate": 1001000
+        },
+        {
+          "date": "2024-07-08T20:28:16.616Z",
+          "userId": 6,
+          "rate": 1002000
+        },
+        {
+          "date": "2024-07-08T20:28:16.963Z",
+          "userId": 6,
+          "rate": 1003000
+        },
+        {
+          "date": "2024-07-08T20:28:17.137Z",
+          "userId": 6,
+          "rate": 1004000
+        },
+        {
+          "date": "2024-07-08T20:28:17.445Z",
+          "userId": 6,
+          "rate": 1005000
+        }
+      ],
       "date_start": "2024-06-29T21:54:18.000Z",
       "date_deadline": "2024-07-23T21:54:18.000Z",
       "offer_period": "44",
@@ -964,6 +1038,91 @@
         "[image]eHqOiBEYTp.05354/3"
       ],
       "id": 10
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-08T21:35:01.000Z",
+      "date_deadline": "2024-07-29T21:35:01.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 5,
+        "name": "Батайск",
+        "regionid": 1
+      },
+      "VIN_number": "23512423432523532",
+      "frame_number": "42632532412412423",
+      "car_type": "lungs",
+      "release_year": 2009,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Синий",
+        "style": {
+          "backgroundColor": "#0049E5",
+          "color": "white"
+        }
+      },
+      "mileage": 34235,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 3,
+      "power_engine": 320,
+      "engine_damage": "no-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "moderate-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": null,
+      "comment": "авапьщшв апоыужо шпащзват пжолывпт жовфкьфлпдоютж вщпл ваджотшжиыв лопщывьизлывп жощш вызптшваирваптар пдваэотщ тавжпир вазитвап вап олыолп т вап лыатпвыо афолыаолыува оывпт ывп ывп ыввввыыаыва",
+      "default_rate": 50000,
+      "currency": "$",
+      "userId": 6,
+      "id_lot": "28678/5",
+      "date_create": "2024-07-08T20:37:16.208Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [
+        "[file]NHRdaoLnDG.79078/6"
+      ],
+      "images": [
+        "[image]AmTVxSgPur.22038/8",
+        "[image]dGikgvDdzk.84166/8",
+        "[image]tmAMiibOOj.90994/7",
+        "[image]IxEdGkkQRY.12253/4",
+        "[image]EUDVdRYZbZ.45873/5",
+        "[image]dzUjhKEaoe.45184/1",
+        "[image]THARtzLEUF.83743/9",
+        "[image]DxJgmiHIvc.15789/1",
+        "[image]uJESsLIaaf.34073/1"
+      ],
+      "id": 11
     }
   ],
   "users": [

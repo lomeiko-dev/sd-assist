@@ -66,6 +66,9 @@ const updateBids = async () => {
           :currency="props.data.currency"
           :index="index + 1"
         />
+        <div v-else class="text-center">
+          <p>Ставок нет.</p>
+        </div>
       </div>
     </div>
     <button

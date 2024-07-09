@@ -40,7 +40,7 @@ const isHover = ref(false);
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
     :class="thisWidth < 768 ? 'flex-col' : ''"
-    class="flex flex-row gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] bg-smoky-white"
+    class="flex flex-row gap-[21px] w-full duration-300 p-[12px] rounded-[10px] bg-smoky-white"
   >
     <imageExplorer :images="images" />
     <div class="mt-[8px] w-full">
