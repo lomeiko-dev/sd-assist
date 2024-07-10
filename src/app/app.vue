@@ -6,14 +6,15 @@ import { onMounted, watch } from "vue";
 import { accountNavigatorStore, enumAccountNavigator } from "widgets/layouts/layout-app";
 import { lotArchivedStore } from "features/archived-lot";
 import { getActiveLotsByUserId, getCompletedLotsByUserId, getRejectedLotsByUserId } from "entities/lot";
-import INTRO from '../../AUTHOR_INTRO/ui/INTRO.vue'
-import { ref } from "vue";
+// import INTRO from '../../AUTHOR_INTRO/ui/INTRO.vue'
+// import { ref } from "vue";
+import { baseInputDate, baseInputNumber, baseInputText } from "shared/ui/input";
 
 const store = authStore();
 
 const navigatorStore = accountNavigatorStore();
 const archivedStore = lotArchivedStore();
-const showIntro = ref(true);
+// const showIntro = ref(true);
 
 const loadCounting = async () => {
   const userId = store.authData?.id || 0;
@@ -50,6 +51,12 @@ watch(
 <template>
   <div>
     <!-- <INTRO v-if="showIntro" @closed="showIntro = false"/> -->
-    <RouterView />
+    <!-- <RouterView /> -->
+     <div class="bg-smoky-white p-10 gap-5 flex flex-col">
+      <!-- <groupInputDate/> -->
+      <baseInputDate/>
+      <baseInputNumber/>
+      <baseInputText/>
+     </div>
   </div>
 </template>
