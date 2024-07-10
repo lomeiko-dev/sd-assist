@@ -1,4 +1,4 @@
-import { IConfigField } from "shared/ui/input";
+import { enumTypeUI, IConfigField } from "shared/ui/input";
 import { insurances, objectsAuction, offerPeriods, typeAuction } from "shared/config/selectors";
 
 export const lotFormConfig: IConfigField[] = [
@@ -11,6 +11,7 @@ export const lotFormConfig: IConfigField[] = [
     optionValue: "value",
     options: objectsAuction,
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -21,6 +22,7 @@ export const lotFormConfig: IConfigField[] = [
     optionValue: "value",
     options: insurances,
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -31,6 +33,7 @@ export const lotFormConfig: IConfigField[] = [
     optionValue: "value",
     options: typeAuction,
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "date",
@@ -39,6 +42,7 @@ export const lotFormConfig: IConfigField[] = [
     placeholder: "Начало торгов*",
     min: new Date(),
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "date",
@@ -47,6 +51,7 @@ export const lotFormConfig: IConfigField[] = [
     placeholder: "Окончание торгов*",
     min: new Date(),
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "other",
@@ -61,6 +66,7 @@ export const lotFormConfig: IConfigField[] = [
     optionValue: "value",
     options: offerPeriods,
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "mask",
@@ -78,6 +84,7 @@ export const lotFormConfig: IConfigField[] = [
     optionLabel: "name",
     options: [],
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -87,5 +94,6 @@ export const lotFormConfig: IConfigField[] = [
     optionLabel: "name",
     options: [],
     indexForm: 1,
+    typeUI: enumTypeUI.GROUP,
   },
 ];

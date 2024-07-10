@@ -21,4 +21,3 @@ const model = defineModel<string>();
     />
   </FloatContainer>
 </template>
-<style lang="scss"></style>

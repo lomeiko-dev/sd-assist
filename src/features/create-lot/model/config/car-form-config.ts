@@ -1,4 +1,4 @@
-import { IConfigField } from "shared/ui/input";
+import { enumTypeUI, IConfigField } from "shared/ui/input";
 import { typeCar } from "shared/config/selectors";
 
 export const carFormConfig_primary: IConfigField[] = [
@@ -27,6 +27,7 @@ export const carFormConfig_primary: IConfigField[] = [
     optionValue: "value",
     options: typeCar,
     indexForm: 2,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "other",
@@ -38,6 +39,7 @@ export const carFormConfig_primary: IConfigField[] = [
     key: "release_year",
     placeholder: "Год выпуска*",
     indexForm: 2,
+    typeUI: enumTypeUI.GROUP,
   },
 ];
 
@@ -50,6 +52,7 @@ export const carFormConfig_secondary: IConfigField[] = [
     optionLabel: "brand",
     options: [],
     indexForm: 2,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -59,6 +62,7 @@ export const carFormConfig_secondary: IConfigField[] = [
     optionLabel: "model",
     options: [],
     indexForm: 2,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -68,5 +72,6 @@ export const carFormConfig_secondary: IConfigField[] = [
     optionLabel: "generation",
     options: [],
     indexForm: 2,
+    typeUI: enumTypeUI.GROUP,
   },
 ];

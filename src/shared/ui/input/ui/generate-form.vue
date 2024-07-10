@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { IConfigField } from "../model/types";
+import { enumTypeUI, IConfigField } from "../model/types";
 import InputContainer from "./components/input-container.vue";
 import {
   checkBox,
   groupColorPicker,
-  groupDropdownSelect,
-  groupInputDate,
-  groupInputMask,
-  groupInputNumber,
-  groupInputText,
   groupTextarea,
   imageUploader,
   pdfUploader,
 } from ".";
 import { IFieldsManager } from "../model/lib/types";
+import CompactDropdown from "./compacts/compact-dropdown.vue";
+import CompactInputDate from "./compacts/compact-input-date.vue";
+import CompactInputMask from "./compacts/compact-input-mask.vue";
+import CompactInputText from "./compacts/compact-input-text.vue";
+import CompactInputNumber from "./compacts/compact-input-number.vue";
 
 interface IProps {
   config: IConfigField[];
@@ -32,8 +32,9 @@ const props = defineProps<IProps>();
 
       <InputContainer :init="() => props.manager?.addLazyProps(conf.key, conf.isValid, conf.indexForm)">
         <template #default>
-          <groupDropdownSelect
+          <CompactDropdown
             v-if="conf.type === 'dropdwn'"
+            :type-u-i="conf.typeUI || enumTypeUI.GROUP"
             :option-value="conf.optionValue"
             :is-error="props.manager?.checkError(conf.key || '')"
             v-model="props.manager.object[conf.key || ''].data"
@@ -41,23 +42,28 @@ const props = defineProps<IProps>();
             :options="conf.options"
             :option-label="conf.optionLabel"
           />
-          <groupInputDate
+          <CompactInputDate
             v-else-if="conf.type === 'date'"
+            :type-u-i="conf.typeUI || enumTypeUI.GROUP"
             :min-date="conf.min"
             :max-date="conf.max"
             :is-error="props.manager?.checkError(conf.key || '')"
             v-model="props.manager.object[conf.key || ''].data"
             :placeholder="conf.placeholder"
           />
-          <groupInputMask
+          <CompactInputMask
             v-else-if="conf.type === 'mask'"
+            :error-placeholder="conf.errorPlaceholder"
+            :type-u-i="conf.typeUI || enumTypeUI.GROUP"
             :is-error="props.manager?.checkError(conf.key || '')"
             v-model="props.manager.object[conf.key || ''].data"
             :placeholder="conf.placeholder"
             :mask="conf.mask ?? ''"
           />
-          <groupInputText
+          <CompactInputText
             v-else-if="conf.type === 'text'"
+            :type-u-i="conf.typeUI || enumTypeUI.GROUP"
+            :error-placeholder="conf.errorPlaceholder"
             :is-error="props.manager?.checkError(conf.key || '')"
             v-model="props.manager.object[conf.key || ''].data"
             :placeholder="conf.placeholder"
@@ -68,8 +74,9 @@ const props = defineProps<IProps>();
             v-model="props.manager.object[conf.key || ''].data"
             :placeholder="conf.placeholder"
           />
-          <groupInputNumber
+          <CompactInputNumber
             v-else-if="conf.type === 'number'"
+            :type-u-i="conf.typeUI || enumTypeUI.GROUP"
             :is-error="props.manager?.checkError(conf.key || '')"
             v-model="props.manager.object[conf.key || ''].data"
             :placeholder="conf.placeholder"

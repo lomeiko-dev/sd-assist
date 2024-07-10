@@ -1,4 +1,4 @@
-import { IConfigField } from "shared/ui/input";
+import { enumTypeUI, IConfigField } from "shared/ui/input";
 import {
   carBody,
   damageClassification,
@@ -18,6 +18,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: carBody,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "color",
@@ -32,6 +33,7 @@ export const characteristicFormConfig: IConfigField[] = [
     key: "mileage",
     placeholder: "Пробег, км",
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -42,6 +44,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: damageClassification,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -52,6 +55,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: typePassportPTS,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "checkbox",
@@ -83,6 +87,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: typeEngine,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "number",
@@ -90,6 +95,7 @@ export const characteristicFormConfig: IConfigField[] = [
     key: "volume_engine",
     placeholder: "Объем двигателя",
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "number",
@@ -97,6 +103,7 @@ export const characteristicFormConfig: IConfigField[] = [
     key: "power_engine",
     placeholder: "Мощность двигателя",
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -107,6 +114,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: damageClassification,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -117,6 +125,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: typeDrive,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -127,6 +136,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: typeTransmission,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "dropdwn",
@@ -137,6 +147,7 @@ export const characteristicFormConfig: IConfigField[] = [
     optionValue: "value",
     options: damageClassification,
     indexForm: 3,
+    typeUI: enumTypeUI.GROUP,
   },
   {
     type: "checkbox",

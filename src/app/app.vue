@@ -8,7 +8,6 @@ import { lotArchivedStore } from "features/archived-lot";
 import { getActiveLotsByUserId, getCompletedLotsByUserId, getRejectedLotsByUserId } from "entities/lot";
 // import INTRO from '../../AUTHOR_INTRO/ui/INTRO.vue'
 // import { ref } from "vue";
-import { baseInputDate, baseInputNumber, baseInputText } from "shared/ui/input";
 
 const store = authStore();
 
@@ -51,12 +50,6 @@ watch(
 <template>
   <div>
     <!-- <INTRO v-if="showIntro" @closed="showIntro = false"/> -->
-    <!-- <RouterView /> -->
-     <div class="bg-smoky-white p-10 gap-5 flex flex-col">
-      <!-- <groupInputDate/> -->
-      <baseInputDate/>
-      <baseInputNumber/>
-      <baseInputText/>
-     </div>
+    <RouterView />
   </div>
 </template>

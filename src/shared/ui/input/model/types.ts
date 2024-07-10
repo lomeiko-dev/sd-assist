@@ -29,6 +29,8 @@ export interface IConfigField {
   max?: Date;
   mask?: string;
   indexForm?: number;
+  typeUI?: enumTypeUI;
+  errorPlaceholder?: string;
 }
 
 export interface IInputProps {
@@ -40,4 +42,10 @@ export interface IInputProps {
 export interface IColorItem {
   title: string;
   style: CSSProperties;
+}
+
+export enum enumTypeUI {
+  FLOAT = "FLOAT",
+  GROUP = "GROUP",
+  BASE = "BASE",
 }
