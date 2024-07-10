@@ -17,6 +17,7 @@ const model = defineModel<string>();
         padding: 15px 12px !important;
         font-size: 14px;
         font-weight: 400;
+        border-radius: 10px;
     }
 }
 </style>

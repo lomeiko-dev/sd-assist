@@ -9,17 +9,24 @@ interface IProps {
 
 const props = defineProps<IInputProps & IProps>();
 const model = defineModel<any>();
-
 </script>
 <template>
-  <InputDate
-    :id="props.id"
-    :is-error="props.isError"
-    :placeholder="props.placeholder"
-    v-model="model"
-    :min-date="props.minDate"
-    :max-date="props.maxDate"
-  />
+  <div class="placeholder-active">
+    <InputDate
+      :id="props.id"
+      :is-error="props.isError"
+      :placeholder="props.placeholder"
+      v-model="model"
+      :min-date="props.minDate"
+      :max-date="props.maxDate"
+    />
+  </div>
 </template>
 <style lang="scss">
+.placeholder-active {
+  .p-inputtext::placeholder {
+    opacity: 1;
+    color: #163c66;
+  }
+}
 </style>

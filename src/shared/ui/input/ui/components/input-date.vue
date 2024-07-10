@@ -33,7 +33,7 @@ onMounted(() => {
   <div class="relative w-full input-date">
     <InputText
       placeholder="Не выбрано"
-      class="cursor-pointer h-full w-full"
+      class="cursor-pointer h-full w-full shadow-none rounded-[10px]"
       @click="isShow = true"
       v-model="valueDate"
     />

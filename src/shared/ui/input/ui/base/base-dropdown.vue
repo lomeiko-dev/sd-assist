@@ -13,7 +13,7 @@ const model = defineModel<any>();
 </script>
 <template lang="html">
   <Dropdown
-    class="select-none outline-none base-dropdown w-full"
+    class="select-none outline-none shadow-none base-dropdown w-full rounded-[10px]"
     v-model="model"
     :options="props.options"
     :option-label="props.optionLabel"

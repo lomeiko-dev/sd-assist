@@ -44,7 +44,7 @@ onMounted(async () => {
     </div>
     <div class="flex flex-col">
       <skeletonItem v-if="store.isLoading" v-for="_ in Array(store.LIMIT).fill('')" />
-      <div v-else v-for="item in store.lots" class="w-full border-b border-solid border-primary/20 py-[23px]">
+      <div v-else v-for="item in store.lots" class="w-full border-b border-solid border-primary/20">
         <lotItem :data="item">
           <template #features>
             <managmentLotForm v-if="auth.authData?.id === item.userId" :id="item.id || 0" :is-open="item.isOpen" />
