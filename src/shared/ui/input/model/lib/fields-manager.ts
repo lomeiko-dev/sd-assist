@@ -34,6 +34,26 @@ export const fieldsManager = () => {
     return newFileds;
   };
 
+  const generateQueryString = (ignore_list?: string[]) => {
+    let resultString = "";
+
+    for (let key in object.value) {
+      let isValid = true;
+
+      if (ignore_list) {
+        for (let i = 0; i < ignore_list.length; i++) {
+          if (key === ignore_list[i]) isValid = false;
+        }
+      }
+
+      if (object.value[key].data !== null && object.value[key].data !== undefined && isValid) {
+        resultString += `${key}=${object.value[key].data}&`;
+      }
+    }
+
+    return resultString;
+  };
+
   const checkError = (key: string) => {
     if (object.value[key] !== undefined) return object.value[key].isError;
     return false;
@@ -61,6 +81,7 @@ export const fieldsManager = () => {
 
   return {
     object,
+    generateQueryString,
     generateDataFields,
     addLazyProps,
     checkError,

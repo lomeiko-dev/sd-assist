@@ -22,7 +22,7 @@ const route = useRouter()
 onMounted(async () => {
   store.setLoading();
 
-  const { data } = (await getLotPages(1, LIMIT)) || {};
+  const { data } = (await getLotPages(1, LIMIT, "")) || {};
 
   store.setLots(data || []);
 });

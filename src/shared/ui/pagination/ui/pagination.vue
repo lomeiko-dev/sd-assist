@@ -3,6 +3,7 @@ import { ref } from "vue";
 import Numbered from "./components/numbered.vue";
 import arrow_right from "shared/assets/icons/arrow-right.svg";
 import inlineSvg from "vue-inline-svg";
+import { watch } from "vue";
 
 interface IProps {
   totalCount: number;
@@ -11,8 +12,15 @@ interface IProps {
 const emit = defineEmits(["setPage"]);
 const props = defineProps<IProps>();
 
-const countes = Array.from({ length: props.totalCount }, (_, i) => i + 1);
+const countes = ref(Array.from({ length: props.totalCount }, (_, i) => i + 1));
 const selectedNumber = ref(1);
+
+watch(
+  () => props.totalCount,
+  () => {
+    countes.value = Array.from({ length: props.totalCount }, (_, i) => i + 1);
+  }
+);
 
 const changeSelectedNumber = (index: number) => {
   selectedNumber.value = index;
