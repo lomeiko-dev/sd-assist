@@ -12,6 +12,7 @@ import { createLotStore } from "../model/store/create-lot-store";
 import Dialog from "primevue/dialog";
 import PriceForm from "./forms/price-form.vue";
 import { useWindowSize } from "@vueuse/core/index.cjs";
+import { loader } from "shared/ui/loader";
 
 const stepsName: string[] = [
   "Данные о лоте",
@@ -31,6 +32,7 @@ const createNewLotHandle = async () => {
 
 <template>
   <div class="w-full max-w-[1182px]">
+    <loader v-if="store.isLoading"/>
     <div class="flex tablet:flex-row flex-col-reverse gap-[13px]">
       <FormContainer class="w-full max-w-[941px]">
         <lotForm :managment="store.fieldsManagmant" v-if="store.step === 1" />

@@ -1,6 +1,6 @@
 import { ApiClient, Endpoints, BASE_API } from "shared/api";
 
-export const getCarModelByBrandid = async (id: number) => {
+export const getCarModelByBrandID = async (id: number) => {
   const result = await ApiClient(
     {
       url: `${Endpoints.CAR_MODEL}?brandid=${id}`,

@@ -79,6 +79,12 @@ export const fieldsManager = () => {
     return result;
   };
 
+  const clearFields = () => {
+    for (let key in object.value) {
+      object.value[key].data = null;
+    }
+  };
+
   return {
     object,
     generateQueryString,
@@ -86,5 +92,6 @@ export const fieldsManager = () => {
     addLazyProps,
     checkError,
     validateProps,
+    clearFields,
   };
 };

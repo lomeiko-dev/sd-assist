@@ -5,4 +5,5 @@ export interface IFieldsManager {
   generateQueryString: (ignore_list?: string[]) => string;
   checkError: (key: string) => any;
   validateProps: (indexForm: number) => boolean;
+  clearFields: () => void;
 }

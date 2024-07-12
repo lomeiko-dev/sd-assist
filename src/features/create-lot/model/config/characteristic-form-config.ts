@@ -11,7 +11,7 @@ import {
 export const characteristicFormConfig: IConfigField[] = [
   {
     type: "dropdwn",
-    isValid: true,
+    isValid: false,
     key: "car_body",
     placeholder: "Кузов",
     optionLabel: "title",

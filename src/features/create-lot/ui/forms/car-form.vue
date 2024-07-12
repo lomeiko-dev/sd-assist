@@ -2,7 +2,13 @@
 import { generateForm, IConfigField, IFieldsManager } from "shared/ui/input";
 import { ref, onMounted, watch } from "vue";
 import { carFormConfig_primary, carFormConfig_secondary } from "../../model/config/car-form-config";
-import { getAllCarBrand, getAllCarModel, getCarBrandById, getCarGenerationByModelid, getCarModelByBrandid } from "shared/services/car-service";
+import {
+  getAllCarBrand,
+  getAllCarModel,
+  getCarBrandById,
+  getCarGenerationByModelid,
+  getCarModelByBrandID,
+} from "shared/services/car-service";
 
 interface IProps {
   managment: IFieldsManager;
@@ -31,7 +37,7 @@ watch(
     const modelConfig = config_2.value.find((item) => item.key === "car_model");
     if (modelConfig) {
       const id = props.managment.object["car_brand"]?.data?.id;
-      if (id) modelConfig.options = (await getCarModelByBrandid(id)).data;
+      if (id) modelConfig.options = (await getCarModelByBrandID(id)).data;
     }
   },
   { deep: true }
@@ -41,12 +47,18 @@ watch(
   () => props.managment.object["car_model"],
   async () => {
     if (props.managment.object["car_brand"]) {
-      const data = (await getCarBrandById(props.managment.object["car_model"]?.data?.brandid)).data[0];
-      props.managment.object["car_brand"].data = data;
+      if (props.managment.object["car_model"].data !== null) {
+        const data = (await getCarBrandById(props.managment.object["car_model"]?.data?.brandid)).data[0];
+        props.managment.object["car_brand"].data = data;
+      }
 
-      const generationField = config_2.value.find((item) => item.key === "car_generation");
-      if (generationField) {
-        generationField.options = (await getCarGenerationByModelid(props.managment.object["car_model"]?.data?.id)).data;
+      if (props.managment.object["car_model"].data !== null) {
+        const generationField = config_2.value.find((item) => item.key === "car_generation");
+        if (generationField) {
+          generationField.options = (
+            await getCarGenerationByModelid(props.managment.object["car_model"]?.data?.id)
+          ).data;
+        }
       }
     }
   },

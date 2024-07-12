@@ -3,7 +3,7 @@ import { onMounted, ref, watch } from "vue";
 import { createNewLot } from "../api/create-lot";
 import { IFieldsManager, fieldsManager } from "shared/ui/input";
 import { useRouter } from "vue-router";
-import { uploadFiles } from "shared/services/file-service";
+import { IFileImage, uploadFiles } from "shared/services/file-service";
 import { IFile } from "shared/services/file-service";
 import { generateID } from "shared/lib/utils/generateID";
 import { generateName } from "shared/lib/utils/generateName";
@@ -18,6 +18,7 @@ export const createLotStore = defineStore("create-lot", () => {
   const router = useRouter();
   const isShowModal = ref(false);
   const fieldsManagmant = ref<IFieldsManager>(fieldsManager());
+  const isLoading = ref(false);
 
   const auth = authStore();
 
@@ -48,13 +49,14 @@ export const createLotStore = defineStore("create-lot", () => {
 
   const createLot = async () => {
     isShowModal.value = false;
+    isLoading.value = true;
 
     const data = fieldsManagmant.value.generateDataFields(IGNORE_LIST);
 
     const images = fieldsManagmant.value.object["images"]?.data;
     const files = fieldsManagmant.value.object["files"]?.data;
 
-    const media_images: IFile[] = [];
+    const media_images: IFileImage[] = [];
     const media_files: IFile[] = [];
 
     data["userId"] = auth.authData?.id || 0;
@@ -68,7 +70,7 @@ export const createLotStore = defineStore("create-lot", () => {
 
     for (let i = 0; i < images.length; i++) {
       const generatingName = `[image]${generateName(10)}.${generateID(5)}`;
-      media_images.push({ name: generatingName, data: images[i] });
+      media_images.push({ name: generatingName, data: images[i].src, rotateIndex: images[i].rotateIndex });
     }
 
     if (files) {
@@ -85,13 +87,17 @@ export const createLotStore = defineStore("create-lot", () => {
     await uploadFiles(media_files);
     await createNewLot(data);
 
+    fieldsManagmant.value.clearFields();
+    step.value = 1;
     router.push({ name: Routes.SUCCESS.name });
+    isLoading.value = false;
   };
 
   return {
     step,
     isShowModal,
     fieldsManagmant,
+    isLoading,
     nextStep,
     createLot,
   };

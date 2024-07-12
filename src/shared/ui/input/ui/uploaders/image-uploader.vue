@@ -3,6 +3,7 @@ import { ref } from "vue";
 import FileUploader from "../components/file-uploader.vue";
 import { useWindowSize } from "@vueuse/core";
 import { convertToBase64 } from "shared/lib/utils/convertToBase64";
+import { IImage } from "shared/ui/image";
 
 interface IProps {
   errorMessage?: string;
@@ -10,7 +11,7 @@ interface IProps {
 
 const props = defineProps<IProps>();
 
-const model = defineModel<any[]>()
+const model = defineModel<IImage[]>()
 
 const {width} = useWindowSize()
 const isAvailable = ref(true);
@@ -19,10 +20,10 @@ const converFilesToImages = (Files: File[]) => {
   isAvailable.value = false;
   Files.forEach(async (file) => {
     if(model.value === null){
-      model.value = [await convertToBase64(file, "data:image/png;base64,")]
+      model.value = [{src: await convertToBase64(file, "data:image/png;base64,"), rotateIndex: 0}]
     }
     else{
-      model.value?.push(await convertToBase64(file, "data:image/png;base64,"))
+      model.value?.push({src: await convertToBase64(file, "data:image/png;base64,"), rotateIndex: 0})
     }
   });
 };

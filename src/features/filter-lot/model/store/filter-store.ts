@@ -1,4 +1,4 @@
-import { getTotalCountLots } from "entities/lot";
+import { lotStore } from "entities/lot";
 import { defineStore } from "pinia";
 import { localStorageKey } from "shared/config/local-storage";
 import { fieldsManager, IFieldsManager } from "shared/ui/input";
@@ -11,10 +11,11 @@ export const filterStore = defineStore("filter", () => {
   const searchedString = ref("");
   const filterString = ref("");
   const foundTotalCount = ref(0);
+  const storeLot = lotStore();
 
   onMounted(async () => {
     fieldsManagmant.value = fieldsManager();
-    foundTotalCount.value = (await getTotalCountLots(filterString.value)) || 0;
+    foundTotalCount.value = storeLot.total_count;
   });
 
   watch(
@@ -28,9 +29,16 @@ export const filterStore = defineStore("filter", () => {
   watch(
     () => filterString.value,
     async () => {
-      foundTotalCount.value = (await getTotalCountLots(filterString.value)) || 0;
+      foundTotalCount.value = storeLot.total_count;
     }
   );
+
+  const getFullQueryString = () => {
+    const filter = filterString.value;
+    const search = searchedString.value;
+
+    return `${filter}${search}`;
+  };
 
   const changeSearchedString = (str: string) => {
     searchedString.value = str;
@@ -80,6 +88,7 @@ export const filterStore = defineStore("filter", () => {
     filterString,
     foundTotalCount,
     searchedString,
+    getFullQueryString,
     changeSearchedString,
     saveFilterString,
     loadFilterString,

@@ -43,7 +43,7 @@ const props = defineProps<IProps>();
       </div>
       <div class="flex flex-col w-full">
         <ItemData name="Пробег:" :data="`${props.data.mileage} км`" />
-        <ItemData name="Пасспорт (ПТС):" :data="transferOption(typePassportPTS, props.data.passport_pts)" />
+        <ItemData name="Паспорт (ПТС):" :data="transferOption(typePassportPTS, props.data.passport_pts)" />
       </div>
     </div>
     <div class="flex flex-col gap-[30px] bg-smoky-white rounded-[10px] p-10 mt-[30px]">

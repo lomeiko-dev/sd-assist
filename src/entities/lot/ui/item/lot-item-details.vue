@@ -8,6 +8,7 @@ import { getFileByName } from "shared/services/file-service";
 import { imageExplorer } from "shared/ui/image-explorer";
 import { transferOption } from "../../model/lib/utils/transfer-option";
 import { typeEngine, typeTransmission } from "shared/config/selectors";
+import { IImage } from "shared/ui/image";
 
 interface IProps {
   data: ILot;
@@ -19,12 +20,12 @@ const { width } = useWindowSize();
 const thisWidth = ref(width.value);
 const thisElement = ref<HTMLDivElement | undefined>(undefined);
 
-const images = ref<string[]>([]);
+const images = ref<IImage[]>([]);
 
 onMounted(async () => {
   for (const image of props.data.images) {
     const result = await getFileByName(image);
-    images.value.push(result.data[0].data);
+    images.value.push({ src: result.data[0].data, rotateIndex: result.data[0].rotateIndex });
   }
 });
 
@@ -42,7 +43,7 @@ const isHover = ref(false);
     :class="thisWidth < 768 ? 'flex-col' : ''"
     class="flex flex-row gap-[21px] w-full duration-300 p-[12px] rounded-[10px] bg-smoky-white"
   >
-    <imageExplorer :images="images" />
+    <imageExplorer :class="width < 788 ? '' : 'max-w-[538px]'" :images="images" />
     <div class="mt-[8px] w-full">
       <div>
         <div class="flex flex-wrap flex-row items-center justify-between gap-y-[10px]">

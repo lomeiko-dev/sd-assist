@@ -4,25 +4,21 @@ import { IImage } from "../model/types";
 
 interface IProps {
   image: IImage;
-  width?: number;
-  height?: number;
-  sizeSign?: string;
 }
 
-const props = withDefaults(defineProps<IProps>(), {
-  sizeSign: "px"
-});
+const props = defineProps<IProps>()
 
 const rotate = computed(() => {
   return 90 * (props.image.rotateIndex || 0);
 });
-
 </script>
 <template>
+  <div>
     <div
       class="image rounded-[10px]"
-      :style="`width: 100%; max-width: ${props.width}${props.sizeSign}; height: ${props.height}${props.sizeSign}; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
+      :style="`width: 100%; height: 100%; background-image: url(${props.image.src}); transform: rotate(${rotate}deg)`"
     ></div>
+  </div>
 </template>
 <style scoped lang="scss">
 .image {

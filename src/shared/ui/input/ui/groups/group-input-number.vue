@@ -9,6 +9,6 @@ const model = defineModel<number>();
 </script>
 <template>
   <GroupContainer :isError="props.isError" :placeholder="props.placeholder">
-    <InputNumber v-model="model" inputId="integeronly" />
+    <InputNumber class="w-full" v-model="model" inputId="integeronly" />
   </GroupContainer>
 </template>

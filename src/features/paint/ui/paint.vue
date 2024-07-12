@@ -9,9 +9,12 @@ import FormCrop from "./components/forms/form-crop.vue";
 interface IProps {
   image: string;
   closeModal: () => void;
+  isMobile?: boolean
 }
 
-const props = defineProps<IProps>();
+const props = withDefaults(defineProps<IProps>(), {
+  isMobile: false
+});
 const emits = defineEmits(['onChanged']);
 
 const methods = ref<IPaintMethods | undefined>(undefined);
@@ -43,7 +46,7 @@ const save = () => {
 
 </script>
 <template>
-  <div class="relative w-[980px] bg-black">
+  <div class="relative w-fit bg-black">
     <div
       class="absolute top-0 left-5 z-20 h-full flex items-center justify-center duration-300"
       :class="isHideUI ? 'opacity-20 left-[5px] pointer-events-none' : ''"
@@ -66,8 +69,8 @@ const save = () => {
       @control-methods="(data: IPaintMethods) => (methods = data)"
       @mousedown="!isShowCrop ? (isHideUI = true) : null"
       @mouseup="!isShowCrop ? (isHideUI = false) : null"
-      :width="980"
-      :height="588"
+      :width="props.isMobile ? 600 : 980"
+      :height="props.isMobile ? 680 : 588"
       :type-drow="tool"
       :background="props.image"
       :type-background="enumTypeBackground.IMAGE"

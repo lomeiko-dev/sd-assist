@@ -23,9 +23,9 @@ const isShowDocumentUploader = ref(false);
       <div class="mt-3 flex flex-wrap gap-[10px]">
         <ImagePreview
           v-for="(image, index) in props.managment.object['images'].data"
-          @on-change="(image) => (props.managment.object['images'].data[index] = image.src)"
+          @on-change="(image) => (props.managment.object['images'].data[index] = image)"
           @on-delete="props.managment.object['images'].data.splice(index, 1)"
-          :image="{ src: image, rotateIndex: 0 }"
+          :image="{ src: image.src, rotateIndex: image.rotateIndex }"
           :width="230"
           :height="230"
         />

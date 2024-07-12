@@ -4,6 +4,7 @@ import { getAllCities, getAllRegions, getCitiesById, getRegionsById } from "shar
 import { IConfigField, generateForm, IFieldsManager } from "shared/ui/input";
 import { lotFormConfig } from "../../model/config/lot-form-config";
 import TimeShow from "../components/time-show.vue";
+import { useWindowSize } from "@vueuse/core";
 
 interface IProps {
   managment: IFieldsManager;
@@ -15,6 +16,8 @@ const config = ref<IConfigField[]>(lotFormConfig);
 
 const dateStart = computed(() => props.managment.object["date_start"]?.data);
 const dateEnd = computed(() => props.managment.object["date_deadline"]?.data);
+
+const { width } = useWindowSize();
 
 onMounted(async () => {
   const regionField = config.value.find((item) => item.key === "region");
@@ -42,7 +45,7 @@ watch(
 watch(
   () => props.managment.object["region"],
   async () => {
-    if (props.managment.object["region"]) {
+    if (props.managment.object["region"]?.data !== null && props.managment.object["region"]?.data !== undefined) {
       const cityField = config.value.find((item) => item.key === "city");
       if (cityField) {
         cityField.options = (await getCitiesById(props.managment.object["region"]?.data?.id)).data;
@@ -69,7 +72,7 @@ watch(
 
 <template>
   <generateForm :manager="props.managment" :config="config">
-    <template #timeViewer>
+    <template v-if="width > 430" #timeViewer>
       <TimeShow v-if="dateStart !== null && dateEnd !== null" :begin-date="dateStart" :end-date="dateEnd" />
     </template>
   </generateForm>

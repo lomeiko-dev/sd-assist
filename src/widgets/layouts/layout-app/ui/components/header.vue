@@ -49,8 +49,8 @@ onMounted(async () => {
         </div>
       </div>
 
-      <div class="flex flex-row w-fit h-full items-center">
-        <search />
+      <div class="flex flex-row justify-end w-full h-full items-center">
+        <search/>
         <buttonCreateLot class="mx-[20px] sxga:min-w-[180px] sxga:w-[180px] w-[50px] min-w-[50px]" v-if="store.isAuth && width > 768" />
         <div
           :class="

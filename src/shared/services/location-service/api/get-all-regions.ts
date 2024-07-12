@@ -8,6 +8,5 @@ export const getAllRegions = async () => {
     BASE_API
   );
 
-  console.log(result);
   return result;
 };

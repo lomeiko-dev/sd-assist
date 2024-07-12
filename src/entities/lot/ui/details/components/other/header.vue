@@ -16,6 +16,7 @@ const getStyleSelection = () => {
 </script>
 <template lang="html">
   <div
+    :class="width < 768 ? 'h-[640px]' : ''"
     class="flex tablet:flex-row flex-col tablet:items-center items-start tablet:w-full w-[140px] justify-around text-base font-bold text-primary/50 border-y border-solid border-y-primary/20"
   >
     <button

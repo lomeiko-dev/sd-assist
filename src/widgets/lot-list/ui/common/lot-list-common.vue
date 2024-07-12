@@ -17,13 +17,7 @@ const auth = authStore();
 const loadLots = async () => {
   store.setLoading();
   const { data, total } =
-    (await getLotPages(
-      store.page,
-      store.LIMIT,
-      `${sort.sortString}${filter.filterString !== "" ? `&${filter.filterString}` : ``}${
-        filter.searchedString !== "" ? `&${filter.searchedString}` : ``
-      }`
-    )) || {};
+    (await getLotPages(store.page, store.LIMIT, `${sort.sortString}${filter.getFullQueryString()}`)) || {};
   store.setLots(data || []);
   store.setTotalCount(Number(total));
 };

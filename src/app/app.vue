@@ -31,10 +31,6 @@ const loadCounting = async () => {
 
 onMounted(async () => {
   store.loadAuth();
-
-  if (store.isAuth) {
-    await loadCounting();
-  }
 });
 
 watch(

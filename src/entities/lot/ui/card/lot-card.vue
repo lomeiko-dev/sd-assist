@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { ILot } from "../../model/types";
+import { ref, onMounted } from "vue";
 import { useWindowSize } from "@vueuse/core";
-import ItemData from "./item-data.vue";
+import { ILot } from "../../model/types";
 import { transferOption } from "../../model/lib/utils/transfer-option";
 import { typeEngine, typeTransmission } from "shared/config/selectors";
 import { getFileByName } from "shared/services/file-service";
-import { onMounted } from "vue";
+import { IImage, image as Image } from "shared/ui/image";
+import ItemData from "./item-data.vue";
 
 interface IProps {
   data: ILot;
@@ -18,14 +18,12 @@ const isHover = ref(false);
 const { width } = useWindowSize();
 const emit = defineEmits(["to"]);
 
-const imageData = ref<string>('')
+const imageData = ref<IImage>();
 
 onMounted(async () => {
   const result = await getFileByName(props.data.images[0]);
-  imageData.value = result.data[0].data;
-})
-
-
+  imageData.value = { src: result.data[0].data, rotateIndex: result.data[0].rotateIndex };
+});
 </script>
 <template>
   <div
@@ -36,7 +34,7 @@ onMounted(async () => {
     class="relative border border-solid overflow-hidden border-gray/30 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
   >
     <div class="relative">
-      <div :style="`background-image: url(${imageData})`" class="preview rounded-[10px]"></div>
+      <Image class="w-full h-[203px]" v-if="imageData" :image="imageData"/>
       <div
         class="flex items-center justify-center bg-primary absolute top-[13px] left-0 w-[192px] h-[39px] rounded-r-lg"
       >
@@ -57,7 +55,7 @@ onMounted(async () => {
         <ItemData name="Город" :data="props.data.city.name" />
         <ItemData name="Пробег" :data="`${String(props.data.mileage)} км`" />
         <ItemData name="КПП" :data="transferOption(typeTransmission, props.data.type_transmission)" />
-        <ItemData name="Двигатель" :data="transferOption(typeEngine ,props.data.type_engine)" />
+        <ItemData name="Двигатель" :data="transferOption(typeEngine, props.data.type_engine)" />
       </div>
       <button
         @click="$emit('to')"
@@ -80,19 +78,12 @@ onMounted(async () => {
 
   .content {
     transition: 0.3s;
-    transform: translate(0, -25px) scaleY(.9);
+    transform: translate(0, -25px) scaleY(0.9);
   }
 }
 
 .hovered-mobile:hover {
   box-shadow: 0px 14px 24px 0px #00000040;
-}
-
-.preview {
-  height: 203px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .sell {

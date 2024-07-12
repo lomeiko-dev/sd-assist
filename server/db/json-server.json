@@ -163,7 +163,10 @@
       "id_lot": "51731/2",
       "title": "BMW 3 Series E90",
       "files": [],
-      "images": ["[image]IHXtCNAsNk.97066/1", "[image]QsUMFzLBwx.74536/6"],
+      "images": [
+        "[image]IHXtCNAsNk.97066/1",
+        "[image]QsUMFzLBwx.74536/6"
+      ],
       "id": 1
     },
     {
@@ -250,8 +253,12 @@
       "currency": "₽",
       "id_lot": "69891/1",
       "title": "BMW 3 Series E90",
-      "files": ["[file]RGPBZipRma.89003/7"],
-      "images": ["[image]EYFBZELBwu.20565/3"],
+      "files": [
+        "[file]RGPBZipRma.89003/7"
+      ],
+      "images": [
+        "[image]EYFBZELBwu.20565/3"
+      ],
       "id": 2
     },
     {
@@ -339,7 +346,9 @@
       "id_lot": "12703/0",
       "title": "BMW 3 Series E90",
       "files": [],
-      "images": ["[image]PYqfOmxxsW.62124/2"],
+      "images": [
+        "[image]PYqfOmxxsW.62124/2"
+      ],
       "id": 3
     },
     {
@@ -417,7 +426,9 @@
       "id_lot": "64204/6",
       "title": "Toyota RAV4 XA40",
       "files": [],
-      "images": ["[image]sKyimtwPxU.98679/2"],
+      "images": [
+        "[image]sKyimtwPxU.98679/2"
+      ],
       "id": 4
     },
     {
@@ -495,7 +506,9 @@
       "id_lot": "25958/2",
       "title": "Mercedes-Benz C-Class W202",
       "files": [],
-      "images": ["[image]ZDUJqCYNjh.58882/6"],
+      "images": [
+        "[image]ZDUJqCYNjh.58882/6"
+      ],
       "id": 5
     },
     {
@@ -566,7 +579,11 @@
       "id_lot": "20584/4",
       "title": "Toyota RAV4 XA30",
       "files": [],
-      "images": ["[image]mnUrNxnZhh.66935/6", "[image]ZyWcShycsY.47480/2", "[image]AbZhsQdFFt.66217/3"],
+      "images": [
+        "[image]mnUrNxnZhh.66935/6",
+        "[image]ZyWcShycsY.47480/2",
+        "[image]AbZhsQdFFt.66217/3"
+      ],
       "id": 6
     },
     {
@@ -674,7 +691,10 @@
       "id_lot": "46380/5",
       "title": "BMW 3 Series G20",
       "files": [],
-      "images": ["[image]gxopFNzsFN.03286/1", "[image]UFlNjtLZUx.24292/4"],
+      "images": [
+        "[image]gxopFNzsFN.03286/1",
+        "[image]UFlNjtLZUx.24292/4"
+      ],
       "id": 7
     },
     {
@@ -834,10 +854,32 @@
           "date": "2024-07-02T18:38:18.357Z",
           "userId": 1,
           "rate": 5022000
+        },
+        {
+          "date": "2024-07-12T21:50:03.704Z",
+          "userId": 6,
+          "rate": 5023000
+        },
+        {
+          "date": "2024-07-12T21:50:06.629Z",
+          "userId": 6,
+          "rate": 5024000
+        },
+        {
+          "date": "2024-07-12T21:50:10.813Z",
+          "userId": 6,
+          "rate": 5025000
+        },
+        {
+          "date": "2024-07-12T21:50:12.141Z",
+          "userId": 6,
+          "rate": 5026000
         }
       ],
       "files": [],
-      "images": ["[image]Vgmkjlkxle.39697/0"],
+      "images": [
+        "[image]Vgmkjlkxle.39697/0"
+      ],
       "id": 8
     },
     {
@@ -930,8 +972,14 @@
           "rate": 2304000
         }
       ],
-      "files": ["[file]ipEunsaEsn.02985/5"],
-      "images": ["[image]jcYPfkkhDA.68778/8", "[image]PwfzuGgdpz.94302/8", "[image]cVHjBjbusw.90216/8"],
+      "files": [
+        "[file]ipEunsaEsn.02985/5"
+      ],
+      "images": [
+        "[image]jcYPfkkhDA.68778/8",
+        "[image]PwfzuGgdpz.94302/8",
+        "[image]cVHjBjbusw.90216/8"
+      ],
       "id": 9
     },
     {
@@ -1002,8 +1050,14 @@
       "date_create": "2024-07-08T20:37:16.208Z",
       "title": "BMW i3 First Generation",
       "bids": [],
-      "files": ["[file]NnkFQIPUJT.13476/3"],
-      "images": ["[image]PygFvvnFSn.36295/6", "[image]lbUiukGzzh.19005/6", "[image]eHqOiBEYTp.05354/3"],
+      "files": [
+        "[file]NnkFQIPUJT.13476/3"
+      ],
+      "images": [
+        "[image]PygFvvnFSn.36295/6",
+        "[image]lbUiukGzzh.19005/6",
+        "[image]eHqOiBEYTp.05354/3"
+      ],
       "id": 10
     },
     {
@@ -1075,7 +1129,9 @@
       "title": "BMW 3 Series E90",
       "bids": [],
       "seller": "Никита Тест#7176501b0ca8e",
-      "files": ["[file]NHRdaoLnDG.79078/6"],
+      "files": [
+        "[file]NHRdaoLnDG.79078/6"
+      ],
       "images": [
         "[image]AmTVxSgPur.22038/8",
         "[image]dGikgvDdzk.84166/8",
@@ -1088,6 +1144,655 @@
         "[image]uJESsLIaaf.34073/1"
       ],
       "id": 11
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-12T21:42:25.000Z",
+      "date_deadline": "2024-07-16T21:42:25.000Z",
+      "offer_period": "44",
+      "case_number": "124-141-41",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "12313124141241241",
+      "frame_number": "12412412412412412",
+      "car_type": "lungs",
+      "release_year": 2006,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Белый",
+        "style": {
+          "backgroundColor": "#FFFFFF",
+          "border": "1px solid #8C8C8C"
+        }
+      },
+      "mileage": 2009,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 2009,
+      "power_engine": 2009,
+      "engine_damage": "no-damage",
+      "type_drive": "front",
+      "type_transmission": "mechanic",
+      "KPP_damage": "no-damage",
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": null,
+      "comment": "dfdsdsdgsdg",
+      "default_rate": 124124124124,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "68421/3",
+      "date_create": "2024-07-12T16:43:52.601Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]dXuywaXuvz.58498/8"
+      ],
+      "id": 12
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-12T21:34:46.000Z",
+      "date_deadline": "2024-07-18T21:34:46.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 2,
+        "name": "Московская Область"
+      },
+      "city": {
+        "id": 6,
+        "name": "Королёв",
+        "regionid": 2
+      },
+      "VIN_number": "13123123123123123",
+      "frame_number": "13123123123123123",
+      "car_type": "lungs",
+      "release_year": 222222,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 2,
+        "brandid": 1,
+        "model": "X5"
+      },
+      "car_generation": {
+        "id": 6,
+        "modelid": 2,
+        "generation": "G05"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Серебристый",
+        "style": {
+          "background": "linear-gradient(90deg, #C6C6C6 4.6%, #EFEEEE 43.91%, #EFEEEE 56.78%, #C6C6C6 98.21%)",
+          "color": "#333"
+        }
+      },
+      "mileage": 123123,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": "petrol",
+      "volume_engine": 213123,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123123,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "02009/6",
+      "date_create": "2024-07-12T17:46:38.331Z",
+      "title": "BMW X5 G05",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]apuASfPBgG.09567/9"
+      ],
+      "id": 13
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-25T21:49:51.000Z",
+      "date_deadline": "2024-07-26T21:49:51.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "release_year": 123123,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Оранжевый",
+        "style": {
+          "backgroundColor": "#FC882B",
+          "color": "white"
+        }
+      },
+      "mileage": null,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123123,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "94837/3",
+      "date_create": "2024-07-12T17:52:56.449Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]xasxxNMAuN.37109/8",
+        "[image]CnybArynAA.99468/4"
+      ],
+      "id": 14
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-16T21:22:22.000Z",
+      "date_deadline": "2024-07-23T21:22:22.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "12312312312321312",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "release_year": 2000,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "pickup",
+      "car_color": {
+        "title": "Синий",
+        "style": {
+          "backgroundColor": "#0049E5",
+          "color": "white"
+        }
+      },
+      "mileage": 200024,
+      "car_damage": "strong-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": "hybrid",
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": "full",
+      "type_transmission": "automatic",
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": "вымывп",
+      "default_rate": 123123123,
+      "currency": "$",
+      "userId": 6,
+      "id_lot": "92154/3",
+      "date_create": "2024-07-12T18:26:53.798Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]BepfANAbci.01305/4"
+      ],
+      "id": 15
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-12T21:16:16.000Z",
+      "date_deadline": "2024-07-19T21:16:16.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "release_year": 2000,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Бордовый",
+        "style": {
+          "backgroundColor": "#BF0813",
+          "color": "white"
+        }
+      },
+      "mileage": 123123,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": true,
+      "isMarkTermitionRegistrationCar": true,
+      "isMarkMVD": true,
+      "type_engine": "petrol",
+      "volume_engine": 2009,
+      "power_engine": 123123,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 213123123,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "87351/2",
+      "date_create": "2024-07-12T19:17:08.260Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]DiTJjalrCS.86925/2"
+      ],
+      "id": 16
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-28T21:17:38.000Z",
+      "date_deadline": "2024-07-30T21:17:38.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 4,
+        "name": "Краснодарский Край"
+      },
+      "city": {
+        "id": 17,
+        "name": "Армавир",
+        "regionid": 4
+      },
+      "VIN_number": "23123123123123123",
+      "frame_number": "12312312312312312",
+      "car_type": "truck",
+      "release_year": 123123,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": null,
+      "mileage": null,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123123,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "07809/2",
+      "date_create": "2024-07-12T19:18:32.901Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]GKzxVaGPLp.32636/7"
+      ],
+      "id": 17
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-12T21:59:27.000Z",
+      "date_deadline": "2024-06-30T21:59:25.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 4,
+        "name": "Краснодарский Край"
+      },
+      "city": {
+        "id": 15,
+        "name": "Краснодар",
+        "regionid": 4
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "release_year": 123123,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": null,
+      "car_color": null,
+      "mileage": null,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 555555,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "34355/3",
+      "date_create": "2024-07-12T20:01:57.254Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]rKSsuoVOvM.02563/9"
+      ],
+      "id": 18
+    },
+    {
+      "VIN_number": "12312312312312312",
+      "frame_number": null,
+      "car_type": "lungs",
+      "release_year": 123,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 3,
+        "modelid": 1,
+        "generation": "G20"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Оранжевый",
+        "style": {
+          "backgroundColor": "#FC882B",
+          "color": "white"
+        }
+      },
+      "mileage": 123123,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123123,
+      "currency": "₽",
+      "userId": 6,
+      "id_lot": "32063/8",
+      "date_create": "2024-07-12T21:21:23.205Z",
+      "title": "BMW 3 Series G20",
+      "bids": [],
+      "seller": "Никита Тест#7176501b0ca8e",
+      "files": [],
+      "images": [
+        "[image]hZlBdOZrTf.73660/2",
+        "[image]LQmOyetpYR.75861/4"
+      ],
+      "id": 19
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-12T22:37:48.837Z",
+      "date_deadline": "2024-07-19T21:37:58.000Z",
+      "offer_period": "44",
+      "case_number": "123-123-12",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 3,
+        "name": "Аксай",
+        "regionid": 1
+      },
+      "VIN_number": "12312312312312312",
+      "frame_number": "12312312312312312",
+      "car_type": "lungs",
+      "release_year": 123,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": "sedan",
+      "car_color": {
+        "title": "Розовый",
+        "style": {
+          "backgroundColor": "#FE3EB1",
+          "color": "white"
+        }
+      },
+      "mileage": null,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123,
+      "currency": "₽",
+      "userId": 7,
+      "id_lot": "62375/5",
+      "date_create": "2024-07-12T22:38:32.145Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#ed165bbf919c1",
+      "files": [],
+      "images": [
+        "[image]xAaAvVXyHr.28254/9"
+      ],
+      "id": 20
     }
   ],
   "users": [
@@ -1168,6 +1873,19 @@
       "dateCreated": "2024-07-08T19:12:05.179Z",
       "dateUpdated": "2024-07-08T19:12:05.179Z",
       "id": 6
+    },
+    {
+      "username": "Никита Тест#ed165bbf919c1",
+      "typeAccount": 1,
+      "INN": "",
+      "nickname": "Никита Тест",
+      "phone": "70000000000",
+      "email": "tes123t@mail.com",
+      "password": "34129078",
+      "roleAuctioneer": 1,
+      "dateCreated": "2024-07-12T22:37:42.969Z",
+      "dateUpdated": "2024-07-12T22:37:42.969Z",
+      "id": 7
     }
   ],
   "cities": [

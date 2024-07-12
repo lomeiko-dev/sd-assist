@@ -13,7 +13,7 @@ const isShow = ref(false);
       <inlineSvg :src="settingsIcon"/>
   </button>
 
-  <Dialog class="w-1/2 -mt-[60px]" v-model:visible="isShow" modal>
+  <Dialog class="tablet:w-1/2 w-[98%] -mt-[60px]" v-model:visible="isShow" modal>
     <template #container>
       <FilterForm class="w-full"/>
     </template>

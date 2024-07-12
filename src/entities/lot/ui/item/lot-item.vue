@@ -8,6 +8,7 @@ import { getFileByName } from "shared/services/file-service";
 import { watchEffect } from "vue";
 import { transferOption } from "../../model/lib/utils/transfer-option";
 import { typeEngine, typeTransmission } from "shared/config/selectors";
+import { IImage, image as Image } from "shared/ui/image";
 
 interface IProps {
   data: ILot;
@@ -19,11 +20,11 @@ const { width } = useWindowSize();
 const thisWidth = ref(width.value);
 const thisElement = ref<HTMLDivElement | undefined>(undefined);
 
-const imageData = ref<string>();
+const imageData = ref<IImage>();
 
 watchEffect(async () => {
   const result = await getFileByName(props.data.images[0]);
-  imageData.value = result.data[0].data;
+  imageData.value = { src: result.data[0].data, rotateIndex: result.data[0].rotateIndex };
 });
 
 watch(width, () => {
@@ -40,11 +41,9 @@ const isHover = ref(false);
     :class="thisWidth < 768 ? 'flex-col' : ''"
     class="flex flex-row gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] hover:bg-smoky-white"
   >
-    <div
-      :style="`background-image: url(${imageData})`"
-      :class="thisWidth < 768 ? 'w-full h-[300px]' : 'w-[294px] min-w-[294px] max-h-[400px]'"
-      class="preview rounded-[10px]"
-    ></div>
+    <div :class="thisWidth < 768 ? 'w-full h-[300px]' : 'w-[294px] min-w-[294px] max-h-[400px]'">
+      <Image class="w-full h-full" v-if="imageData" :image="imageData" />
+    </div>
     <div class="mt-[8px] w-full">
       <div>
         <div class="flex flex-wrap flex-row items-center justify-between gap-y-[10px]">
@@ -72,10 +71,7 @@ const isHover = ref(false);
           {{ props.data.bids[props.data.bids.length - 2].rate }}₽
         </h5>
       </div>
-      <div
-        class="duration-200"
-        :class="`${isHover || thisWidth < 768 ? 'opacity-100' : 'opacity-0'}`"
-      >
+      <div class="duration-200" :class="`${isHover || thisWidth < 768 ? 'opacity-100' : 'opacity-0'}`">
         <slot name="features"></slot>
       </div>
     </div>

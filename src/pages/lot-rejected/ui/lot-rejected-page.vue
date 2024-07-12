@@ -26,7 +26,7 @@ onMounted(async () => {
 <template>
   <layoutApp is-show-navigator :selected-link="enumAccountNavigator.REJECTED" :counting="rejectedLots.length">
     <container class="mt-10 mb-10">
-      <LotRejectedList title="Отклоненно администрацией сайта:" :lots="rejectedLots" />
+      <LotRejectedList title="Отклонено администрацией сайта:" :lots="rejectedLots" />
     </container>
   </layoutApp>
 </template>

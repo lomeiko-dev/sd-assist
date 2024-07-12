@@ -7,7 +7,7 @@ export const mediaFormConfig_primary: IConfigField[] = [
     isValid: true,
     title: "Фотографии",
     subTitle:
-      "Разрешение загружаемых фото не должно превышать 6000x6000 пикселей, размер — 5 MB. Допустимые форматы фото jpeg, bmp, png",
+      "Разрешение загружаемых фото не должно превышать 600x600 пикселей, размер — 5 MB. Допустимые форматы фото jpeg, bmp, png",
     errorMessage: "Лот должен иметь как минимум 1 изображение",
     nameSlot: "images",
   },
