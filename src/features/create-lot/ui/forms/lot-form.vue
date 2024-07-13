@@ -43,6 +43,17 @@ watch(
 );
 
 watch(
+  () => dateEnd,
+  () => {
+    const dateStartConfig = config.value.find((item) => item.key === "date_start");
+    if (dateStartConfig) {
+      dateStartConfig.max = dateEnd.value;
+    }
+  },
+  { deep: true }
+);
+
+watch(
   () => props.managment.object["region"],
   async () => {
     if (props.managment.object["region"]?.data !== null && props.managment.object["region"]?.data !== undefined) {

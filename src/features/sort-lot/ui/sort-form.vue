@@ -13,6 +13,7 @@ const store = sortStore();
 const { width } = useWindowSize();
 
 const changeTypeSortHanlder = (item: IItemSort) => {
+  store.changeSelectSort(item);
   switch (item.typeSort) {
     case enumSorting.ALL:
       store.changeSortString("");

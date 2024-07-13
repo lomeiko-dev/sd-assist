@@ -38,7 +38,7 @@ onMounted(async () => {
     <div class="my-10" v-if="store.lots.length === 0">
       <notData />
     </div>
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-5">
       <skeletonItem v-if="store.isLoading" v-for="_ in Array(store.LIMIT).fill('')" />
       <div v-else v-for="item in store.lots" class="w-full border-b border-solid border-primary/20">
         <lotItem :data="item">
@@ -49,7 +49,7 @@ onMounted(async () => {
         </lotItem>
       </div>
       <pagination
-        v-if="store.total_count !== 0"
+        v-if="store.total_count !== 0 && store.total_count > 0"
         @set-page="(index) => store.setPage(index)"
         class="my-10"
         :total-count="Math.ceil(store.total_count / store.LIMIT)"
