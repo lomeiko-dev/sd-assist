@@ -1793,6 +1793,75 @@
         "[image]xAaAvVXyHr.28254/9"
       ],
       "id": 20
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-07-13T11:56:26.920Z",
+      "date_deadline": "2024-07-25T21:56:36.000Z",
+      "offer_period": "44",
+      "case_number": "123-131-31",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "13131313131131313",
+      "frame_number": "13131313131312313",
+      "car_type": "lungs",
+      "release_year": 123,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 1,
+        "brandid": 1,
+        "model": "3 Series"
+      },
+      "car_generation": {
+        "id": 1,
+        "modelid": 1,
+        "generation": "E90"
+      },
+      "car_body": null,
+      "car_color": null,
+      "mileage": null,
+      "car_damage": null,
+      "passport_pts": null,
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": null,
+      "isHidingMechanicDamage": null,
+      "isFullEquipment": null,
+      "isGOTSParkingLotSK": null,
+      "comment": null,
+      "default_rate": 123123,
+      "currency": "₽",
+      "userId": 7,
+      "id_lot": "34528/3",
+      "date_create": "2024-07-13T11:57:11.946Z",
+      "title": "BMW 3 Series E90",
+      "bids": [],
+      "seller": "Никита Тест#ed165bbf919c1",
+      "files": [],
+      "images": [
+        "[image]aiwEHugOIP.20318/2"
+      ],
+      "id": 21
     }
   ],
   "users": [

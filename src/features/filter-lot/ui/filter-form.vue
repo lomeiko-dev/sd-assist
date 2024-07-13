@@ -8,14 +8,14 @@ import ButtonSave from "./components/button-save.vue";
 import ButtonReset from "./components/button-reset.vue";
 import { getAllCarBrand, getAllCarModel, getCarBrandById, getCarModelByBrandID } from "shared/services/car-service";
 import { watch } from "vue";
-import {filterStore} from '../model/store/filter-store'
+import { filterStore } from "../model/store/filter-store";
 
-const store = filterStore()
+const store = filterStore();
 const config = ref<IConfigField[]>(configForm);
 
 onMounted(() => {
   store.loadFilterString();
-})
+});
 
 onMounted(async () => {
   const brandConfig = config.value.find((item) => item.key === "car_brand.brand_like");
@@ -31,12 +31,11 @@ onMounted(async () => {
 
 const saveFilterHandler = () => {
   store.saveFilterString();
-}
+};
 
 const resetFilterHandler = () => {
   store.resetFilterString();
-}
-
+};
 
 watch(
   () => store.fieldsManagmant.object["car_brand.brand_like"],
@@ -55,14 +54,14 @@ watch(
   async () => {
     if (store.fieldsManagmant.object["car_brand.brand_like"]) {
       if (store.fieldsManagmant.object["car_model.model_like"].data !== null) {
-        const data = (await getCarBrandById(store.fieldsManagmant.object["car_model.model_like"]?.data?.brandid)).data[0];
+        const data = (await getCarBrandById(store.fieldsManagmant.object["car_model.model_like"]?.data?.brandid))
+          .data[0];
         store.fieldsManagmant.object["car_brand.brand_like"].data = data;
       }
     }
   },
   { deep: true }
 );
-
 </script>
 <template>
   <div class="bg-smoky-white rounded-[10px] p-[25px] h-fit">

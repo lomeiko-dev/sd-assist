@@ -30,7 +30,7 @@ const props = defineProps<IProps>();
         {{ conf.subTitle }}
       </p>
 
-      <InputContainer :init="() => props.manager?.addLazyProps(conf.key, conf.isValid, conf.indexForm)">
+      <InputContainer :init="() => props.manager?.addLazyProps(conf.key, conf.isValid, conf.indexForm, conf.propsName)">
         <template #default>
           <CompactDropdown
             v-if="conf.type === 'dropdwn'"

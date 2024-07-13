@@ -3,7 +3,7 @@ import { ref } from "vue";
 export const fieldsManager = () => {
   const object = ref<any>({});
 
-  const addLazyProps = (name?: string, isCheckedNull?: boolean, indexForm?: number) => {
+  const addLazyProps = (name?: string, isCheckedNull?: boolean, indexForm?: number, propsName?: string) => {
     if (name !== undefined && isCheckedNull !== undefined) {
       if (object.value[name] === undefined) {
         object.value[name] = {
@@ -11,6 +11,7 @@ export const fieldsManager = () => {
           isCheckedNull: isCheckedNull,
           indexForm: indexForm,
           isError: false,
+          propsName: propsName,
         };
       }
     }
@@ -47,7 +48,9 @@ export const fieldsManager = () => {
       }
 
       if (object.value[key].data !== null && object.value[key].data !== undefined && isValid) {
-        resultString += `${key}=${object.value[key].data}&`;
+        if (object.value[key].propsName)
+          resultString += `${key}=${object.value[key].data[object.value[key].propsName]}&`;
+        else resultString += `${key}=${object.value[key].data}&`;
       }
     }
 

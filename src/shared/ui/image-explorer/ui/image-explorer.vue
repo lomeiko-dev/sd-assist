@@ -45,7 +45,7 @@ const resetLimit = () => {
       <button
         v-if="width > 430"
         @click="isShowModal = true"
-        :class="isHovered ? 'opacity-100' : 'opacity-0'"
+        :class="isHovered || width < 768 ? 'opacity-100' : 'opacity-0'"
         class="absolute top-5 right-5 z-20 bg-black/30 p-2 rounded-[10px] duration-300"
       >
         <vueInlineSvg :src="fullScreenIcon" />

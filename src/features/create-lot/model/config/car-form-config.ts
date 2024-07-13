@@ -66,9 +66,9 @@ export const carFormConfig_secondary: IConfigField[] = [
   },
   {
     type: "dropdwn",
-    isValid: false,
+    isValid: true,
     key: "car_generation",
-    placeholder: "Поколение",
+    placeholder: "Поколение*",
     optionLabel: "generation",
     options: [],
     indexForm: 2,

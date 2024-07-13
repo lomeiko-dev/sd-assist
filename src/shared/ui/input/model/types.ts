@@ -19,6 +19,7 @@ export interface IConfigField {
   subTitle?: string;
   nameSlot?: string;
   isValid?: boolean;
+  propsName?: string;
   key?: string;
   placeholder?: string;
   errorMessage?: string;

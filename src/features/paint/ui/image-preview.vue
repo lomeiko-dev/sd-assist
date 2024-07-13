@@ -20,6 +20,7 @@ const emits = defineEmits(["onDelete", "onChange"]);
 const isChanged = ref(false);
 const isHover = ref(false);
 const {width} = useWindowSize();
+
 </script>
 <template>
   <div
@@ -28,8 +29,8 @@ const {width} = useWindowSize();
     class="relative cursor-pointer"
     :style="`width: ${props.width}px; height: ${props.height}px;`"
   >
-    <Image :width="props.width" :height="props.height" :image="props.image" />
-    <div @mouseenter="isHover = true" class="absolute top-[10px] right-[10px] flex flex-col gap-[5px]" v-if="isHover">
+    <Image :class="`w-full h-full`" :image="props.image" />
+    <div @mouseenter="isHover = true" class="absolute top-[10px] right-[10px] flex flex-col gap-[5px]" v-if="isHover || width < 768">
       <button
         @click="$emit('onDelete')"
         class="w-[36px] h-[36px] flex items-center justify-center rounded-full bg-white duration-300 hover:bg-white/70"

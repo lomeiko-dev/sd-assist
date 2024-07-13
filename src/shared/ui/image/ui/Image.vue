@@ -11,6 +11,7 @@ const props = defineProps<IProps>()
 const rotate = computed(() => {
   return 90 * (props.image.rotateIndex || 0);
 });
+
 </script>
 <template>
   <div>

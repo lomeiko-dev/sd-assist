@@ -1,10 +1,11 @@
 import { lotStore } from "entities/lot";
 import { defineStore } from "pinia";
 import { localStorageKey } from "shared/config/local-storage";
+import { getYYMMDDdate } from "shared/lib/utils/getYYMMDDdate";
 import { fieldsManager, IFieldsManager } from "shared/ui/input";
 import { onMounted, ref, watch } from "vue";
 
-const IGNORE_LIST: string[] = ["car_model.model_like", "car_brand.brand_like"];
+const IGNORE_LIST = ["date_deadline_like", "date_start_like"];
 
 export const filterStore = defineStore("filter", () => {
   const fieldsManagmant = ref<IFieldsManager>(fieldsManager());
@@ -48,16 +49,20 @@ export const filterStore = defineStore("filter", () => {
     filterString.value = "";
     filterString.value = fieldsManagmant.value.generateQueryString(IGNORE_LIST);
 
-    const carModel = fieldsManagmant.value.object["car_model.model_like"];
-    const carBrand = fieldsManagmant.value.object["car_brand.brand_like"];
+    const dateStart = fieldsManagmant.value.object["date_start_like"];
+    const dateDeadline = fieldsManagmant.value.object["date_deadline_like"];
 
-    if (carModel !== undefined && carBrand !== undefined) {
-      if (carModel.data !== null && carModel.data !== undefined) {
-        filterString.value += `car_model.model_like=${carModel.data.model}&`;
+    if (dateStart) {
+      if (dateStart.data !== null) {
+        const date: Date = dateStart.data;
+        filterString.value += `date_start_like=${getYYMMDDdate(date)}`;
       }
+    }
 
-      if (carBrand.data !== null && carBrand.data !== undefined) {
-        filterString.value += `car_brand.brand_like=${carBrand.data.brand}&`;
+    if (dateDeadline) {
+      if (dateDeadline.data !== null) {
+        const date: Date = dateDeadline.data;
+        filterString.value += `date_deadline_like=${getYYMMDDdate(date)}`;
       }
     }
   };
