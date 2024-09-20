@@ -1,5 +1,5 @@
-import { router } from "app/routing/routing";
-import { IPage } from "app/routing/types";
+import { router } from "../../routing";
+import { IPage } from "../../types";
 import { authStore } from "entities/auth";
 import { Routes } from "shared/config/routes";
 import { RouteRecordRaw } from "vue-router";

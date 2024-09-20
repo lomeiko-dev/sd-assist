@@ -1,24 +1,30 @@
 <script setup lang="ts">
-import Intro from "./components/intro.vue";
-import CustomerBase from "./components/customer-base.vue";
+import { watch, onMounted, ref } from "vue";
 import { layoutApp } from "widgets/layouts/layout-app";
 import { lotListPreview } from "widgets/lot-list";
 import { container } from "shared/ui/container";
 import { Routes } from "shared/config/routes";
-import { watch, onMounted, ref } from "vue";
-import Dialog from "primevue/dialog";
 import { authForm } from "features/auth-form";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+import Intro from "./components/intro.vue";
+import CustomerBase from "./components/customer-base.vue";
+import Dialog from "primevue/dialog";
 
 const showAuth = ref(false);
 const route = useRoute();
+const router = useRouter()
 
 onMounted(() => checkParamsAuth());
-
 watch(
   () => route.params.auth,
   () => checkParamsAuth()
 );
+
+watch(() => showAuth.value, () => {
+  if(showAuth.value === false){
+    router.push({name: Routes.HOME.name})
+  }
+})
 
 const checkParamsAuth = () => {
   if (route.params.auth === "true") showAuth.value = true;

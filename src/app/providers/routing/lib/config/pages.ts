@@ -1,4 +1,4 @@
-import { IPage } from "app/routing/types";
+import { IPage } from "../../types";
 import { homePage } from "pages/home";
 import { lotActivePage } from "pages/lot-active";
 import { lotArchivePage } from "pages/lot-archive";
