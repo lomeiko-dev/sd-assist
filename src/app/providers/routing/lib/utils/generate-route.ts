@@ -17,6 +17,8 @@ export const generateRoute = (pages: IPage[]) => {
           const store = authStore();
           if (!store.isAuth) router.push({ path: `${Routes.HOME.name}/true` });
         }
+        to;
+        from;
         next();
       },
     });
