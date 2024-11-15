@@ -15,10 +15,10 @@ const {width} = useWindowSize()
       <h3 class="text-[32px] font-bold text-black mt-[32px]">Все предложения</h3>
       <sortForm class="mt-[18px]" />
       <div :class="width > 740 ? 'flex-row' : 'flex-col'" class="flex gap-5 py-[23px] w-full">
-        <filterForm v-if="width > 740" class="w-[370px]"/>
-        <div v-else class="ml-auto">
+        <filterForm v-show="width > 740" class="w-[370px]"/>
+        <!-- <div v-show="width < 740" class="ml-auto">
           <filterFormModal />
-        </div>
+        </div> -->
         <lotListCommon class="w-full" />
       </div>
     </Container>

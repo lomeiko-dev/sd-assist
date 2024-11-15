@@ -30,7 +30,7 @@ const props = defineProps<IProps>();
         {{ conf.subTitle }}
       </p>
 
-      <InputContainer :init="() => props.manager?.addLazyProps(conf.key, conf.isValid, conf.indexForm, conf.propsName)">
+      <InputContainer :key="conf.key" :init="() => props.manager?.addLazyProps(conf.key, conf.isValid, conf.indexForm, conf.propsName)">
         <template #default>
           <CompactDropdown
             v-if="conf.type === 'dropdwn'"
@@ -50,6 +50,7 @@ const props = defineProps<IProps>();
             :is-error="props.manager?.checkError(conf.key || '')"
             v-model="props.manager.object[conf.key || ''].data"
             :placeholder="conf.placeholder"
+            :id="conf.key"
           />
           <CompactInputMask
             v-else-if="conf.type === 'mask'"

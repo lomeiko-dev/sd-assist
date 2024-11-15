@@ -282,6 +282,41 @@
           "date": "2024-07-08T20:18:51.078Z",
           "userId": 6,
           "rate": 447444
+        },
+        {
+          "date": "2024-09-24T09:34:03.241Z",
+          "userId": 7,
+          "rate": 448444
+        },
+        {
+          "date": "2024-09-24T09:34:04.201Z",
+          "userId": 7,
+          "rate": 449444
+        },
+        {
+          "date": "2024-09-24T09:34:04.563Z",
+          "userId": 7,
+          "rate": 450444
+        },
+        {
+          "date": "2024-09-24T09:34:04.853Z",
+          "userId": 7,
+          "rate": 451444
+        },
+        {
+          "date": "2024-09-24T09:34:05.132Z",
+          "userId": 7,
+          "rate": 452444
+        },
+        {
+          "date": "2024-09-24T09:34:24.155Z",
+          "userId": 7,
+          "rate": 453444
+        },
+        {
+          "date": "2024-09-24T09:34:24.444Z",
+          "userId": 7,
+          "rate": 454444
         }
       ],
       "date_start": "2024-06-28T21:54:05.000Z",
@@ -1787,6 +1822,82 @@
         "[image]aiwEHugOIP.20318/2"
       ],
       "id": 21
+    },
+    {
+      "object_auction": "ts",
+      "type_insurance": "osago",
+      "isOpen": true,
+      "date_start": "2024-10-29T17:31:54.179Z",
+      "date_deadline": "2024-10-30T21:32:03.000Z",
+      "offer_period": "44",
+      "case_number": "325-341-24",
+      "region": {
+        "id": 1,
+        "name": "Ростовская Область"
+      },
+      "city": {
+        "id": 1,
+        "name": "Ростов-на-Дону",
+        "regionid": 1
+      },
+      "VIN_number": "52352353253253253",
+      "frame_number": "32532532523532523",
+      "car_type": "lungs",
+      "release_year": 2006,
+      "car_brand": {
+        "id": 1,
+        "brand": "BMW"
+      },
+      "car_model": {
+        "id": 2,
+        "brandid": 1,
+        "model": "X5"
+      },
+      "car_generation": {
+        "id": 5,
+        "modelid": 2,
+        "generation": "F15"
+      },
+      "car_body": "wagon",
+      "car_color": {
+        "title": "Черный",
+        "style": {
+          "backgroundColor": "#000000",
+          "color": "white"
+        }
+      },
+      "mileage": 2000000000,
+      "car_damage": "no-damage",
+      "passport_pts": "paper",
+      "isNotFreeField": null,
+      "isMarkTermitionRegistrationCar": null,
+      "isMarkMVD": null,
+      "type_engine": null,
+      "volume_engine": null,
+      "power_engine": null,
+      "engine_damage": null,
+      "type_drive": null,
+      "type_transmission": null,
+      "KPP_damage": null,
+      "isWithdrawalAccountingGBDD": true,
+      "isHidingMechanicDamage": true,
+      "isFullEquipment": true,
+      "isGOTSParkingLotSK": null,
+      "comment": "vsdgsdgsdg",
+      "default_rate": 2000000,
+      "currency": "$",
+      "userId": 7,
+      "id_lot": "28108/0",
+      "date_create": "2024-10-29T17:38:20.737Z",
+      "title": "BMW X5 F15",
+      "bids": [],
+      "seller": "Никита Тест#ed165bbf919c1",
+      "files": [],
+      "images": [
+        "[image]ghupEmZuYt.59541/8",
+        "[image]JfXcsmKUTj.87246/2"
+      ],
+      "id": 22
     }
   ],
   "users": [

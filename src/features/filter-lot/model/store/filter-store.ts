@@ -76,6 +76,8 @@ export const filterStore = defineStore("filter", () => {
 
     if (result !== null) {
       const object = JSON.parse(result);
+      object["date_start_like"].data = new Date(object["date_start_like"].data);
+      object["date_deadline_like"].data = new Date(object["date_deadline_like"].data);
       fieldsManagmant.value.object = object;
     }
   };

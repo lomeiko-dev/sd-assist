@@ -20,9 +20,13 @@ const model = defineModel<any>();
 const valueDate = ref("");
 const isShow = ref(false);
 
+watch(valueDate, () => {
+  console.log(valueDate)
+})
+
 watch(model, () => {
-  valueDate.value = `${model.value?.toLocaleDateString()} | ${model.value?.toLocaleTimeString()}`;
-  isShow.value = false;
+    valueDate.value = `${model.value?.toLocaleDateString()} | ${model.value?.toLocaleTimeString()}`;
+    isShow.value = false;
 });
 
 onMounted(() => {

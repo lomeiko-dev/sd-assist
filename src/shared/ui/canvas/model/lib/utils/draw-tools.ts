@@ -25,7 +25,7 @@ export const drawTools = (options: IDrawOptions): IDrawToolsMethods => {
     if (context.value) {
       context.value.fillStyle = color;
       context.value.strokeStyle = color;
-      context.value.lineWidth = size * 2;
+      context.value.lineWidth = size * 2; 
       this_size = size;
     }
   };

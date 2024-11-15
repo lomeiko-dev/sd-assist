@@ -38,8 +38,8 @@ const isHover = ref(false);
     ref="thisElement"
     @mouseenter="isHover = true"
     @mouseleave="isHover = false"
-    :class="thisWidth < 768 ? 'flex-col' : ''"
-    class="flex flex-row gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] hover:bg-smoky-white"
+    :class="thisWidth < 768 ? 'flex-col' : 'flex-row'"
+    class="flex gap-[21px] w-full cursor-pointer duration-300 p-[12px] rounded-[10px] hover:bg-smoky-white"
   >
     <div :class="thisWidth < 768 ? 'w-full h-[300px]' : 'w-[294px] min-w-[294px] max-h-[400px]'">
       <Image class="w-full h-full" v-if="imageData" :image="imageData" />

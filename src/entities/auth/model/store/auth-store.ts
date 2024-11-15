@@ -16,10 +16,7 @@ export const authStore = defineStore("auth", () => {
 
     if (jsonData) {
       const auth = JSON.parse(jsonData || "") as IAuth;
-      if (auth) {
-        authData.value = auth;
-        isAuth.value = true;
-      }
+      if (auth) login(auth);
     }
   };
 
