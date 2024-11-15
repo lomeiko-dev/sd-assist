@@ -34,7 +34,7 @@ onMounted(async () => {
     class="relative border border-solid overflow-hidden border-gray/30 p-[7px] w-full rounded-[10px] duration-300 cursor-pointer z-20"
   >
     <div class="relative">
-      <Image class="w-full h-[203px]" v-if="imageData" :image="imageData"/>
+      <Image class="img w-full h-[203px]" v-if="imageData" :image="imageData"/>
       <div
         class="flex items-center justify-center bg-primary absolute top-[13px] left-0 w-[192px] h-[39px] rounded-r-lg"
       >
@@ -68,6 +68,11 @@ onMounted(async () => {
   </div>
 </template>
 <style scoped lang="scss">
+.img{
+    transition: 0.3s;
+    transform: translate(0, 0) scaleY(1);
+  }
+
 .hovered:hover {
   transform: translate(0, 45px) scaleX(1.05) scaleY(1.2);
   position: relative;
@@ -79,6 +84,11 @@ onMounted(async () => {
   .content {
     transition: 0.3s;
     transform: translate(0, -25px) scaleY(0.9);
+  }
+
+  .img{
+    transition: 0.3s;
+    transform: translate(0, -10px) scaleY(.9);
   }
 }
 
