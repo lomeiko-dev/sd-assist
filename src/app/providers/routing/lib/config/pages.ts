@@ -12,6 +12,10 @@ import { Routes } from "shared/config/routes";
 
 export const pages: IPage[] = [
   {
+    routeOpt: { isProtected: false, path: "/", name: "" },
+    component: homePage,
+  },
+  {
     routeOpt: Routes.HOME,
     component: homePage,
   },

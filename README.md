@@ -37,8 +37,11 @@
     - Возможность учавствовать в торгах, делать ставки, просматривать ставки других людей
 
 __Команды:__
-- yarn server _(запускает json-server)_
-- yarn dev _(запускает сайт в dev режиме)_
+- npm install _(скачивает зависимости проекта)_
+- npm run build _(создаёт dist)_
+- npm run preview _(запускает приложение)_
+- npm run server _(запускает json-server)_
+- npm run server-file _(запускает json file server (base64))_
 
 __Полезные ссылки:__
 
